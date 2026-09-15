@@ -1,0 +1,66 @@
+---
+title: "RGCP: A Self-Service GPU Compute Bridge"
+locale: en
+description: "Standing up a HyperStack-based cloud compute platform to keep a university research group running GPU workloads through a hardware transition — solo, on a limited budget."
+icon: "server"
+tags: ["HyperStack", "GPU compute", "Self-service infrastructure", "Cost governance"]
+featured: false
+order: 1
+year: 2026
+role: "Sole architect & implementer"
+services: ["GPU Infrastructure", "Cost Governance"]
+placeholder: false
+image: ../../../assets/rgcp-portal-screenshot.png
+imageAlt: "RGCP self-service GPU compute portal interface"
+---
+
+## The situation
+
+A university research computing group needed continued access to GPU
+compute after its on-prem systems were taken offline. Researchers
+couldn't pause their work while a new on-prem system was procured and
+built out — a compute gap that could stretch for months had to be
+bridged with something usable almost immediately.
+
+## Constraints
+
+- No dedicated ops team — this had to be built and run by one person alongside other full-time responsibilities
+- Temporary by design — the platform needed to be easy to wind down once new hardware went live, not a permanent fixture
+- Cost had to stay predictable and visible — researchers are not infrastructure specialists and can easily overspend on cloud GPU time without guardrails
+- Users ranged from GPU beginners to advanced researchers, so onboarding had to work for both
+
+## Approach
+
+I designed and stood up a self-service GPU cloud platform on
+HyperStack, giving researchers a way to provision compute themselves
+rather than filing tickets and waiting. On top of that, I built cost
+governance into the platform from day one — usage visibility and
+limits — so that self-service didn't turn into runaway spend. I also
+produced onboarding material covering both beginner and advanced
+usage scenarios, and ran live onboarding sessions to get users
+comfortable quickly.
+
+## Key decisions
+
+**Self-service provisioning instead of a ticket-based request queue.**
+A ticket queue doesn't scale with one person behind it, and it adds
+friction exactly when researchers need to move fast. Self-service
+removed me as a bottleneck, at the cost of needing stronger guardrails
+around spend.
+
+**Cost governance built into the platform, not bolted on as reporting.**
+After-the-fact usage reports catch overspend too late to prevent it.
+Building limits and visibility into the platform itself meant problems
+were caught before they became a budget conversation.
+
+**Treated as explicitly temporary, not over-built.**
+Over-engineering a bridge solution wastes effort that should go toward
+the permanent on-prem system. Scoping it as temporary kept the build
+lean and easy to decommission cleanly.
+
+## Outcome
+
+Researchers kept working through the hardware transition without a
+compute gap. The platform is now being wound down in a controlled way
+as the new on-prem system approaches go-live, exactly as designed from
+the start.
