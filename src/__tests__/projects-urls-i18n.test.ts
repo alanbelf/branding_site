@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 // Exercise the project URL helpers with i18n turned ON and two locales. The
 // default locale stays at the site root; the secondary locale is prefixed.
 // This guards the locale-prefixed project routing wired up for #437, mirroring
-// the blog coverage in `blog-urls-i18n.test.ts`.
+// the project URL behavior when i18n is enabled.
 vi.mock('astro:content', () => ({
   getCollection: vi.fn(async () => []),
 }));

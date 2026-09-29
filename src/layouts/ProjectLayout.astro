@@ -7,7 +7,7 @@ import Header from '@/components/layout/Header.astro';
 import Footer from '@/components/layout/Footer.astro';
 import Breadcrumbs from '@/components/seo/Breadcrumbs.astro';
 import ProjectHero from '@/components/projects/ProjectHero.astro';
-import TableOfContents from '@/components/blog/TableOfContents.astro';
+import TableOfContents from '@/components/seo/TableOfContents.astro';
 import CtaBand from '@/components/patterns/CtaBand.astro';
 import ProjectCard from '@/components/projects/ProjectCard.astro';
 import Button from '@/components/ui/form/Button/Button.astro';
@@ -57,7 +57,7 @@ const {
 
 const locale = getLocaleFromPath(Astro.url.pathname);
 
-// Raster only — see the note in BlogLayout: an SVG cover cannot serve as a
+// Raster only — an SVG cover cannot serve as a
 // share image, so projects without a screenshot fall back to the card generated
 // at build time (see src/pages/og/projects/[slug].png.ts). `slug` is the full
 // (locale-prefixed) project id, so strip the locale to match the OG route.
@@ -70,15 +70,13 @@ const ogImage =
 
 const ogImageAlt = ogImage === image?.src ? imageAlt || title : title;
 
-// Mirror the blog TOC wiring — projects use the same site-wide config.
+// Project pages use the site-wide table-of-contents config.
 const tocConfig = siteConfig.articleFeatures?.toc;
 const showToc = !!tocConfig?.enabled && tocOverride !== false;
 const tocLayout = tocConfig?.layout ?? 'auto';
 const sidebarActive = showToc && (tocLayout === 'sidebar' || tocLayout === 'auto');
-// Inline TOC is now opt-in: 'auto' shows only the desktop sidebar so the
-// mobile/landscape/tablet experience isn't dominated by a TOC card the
-// majority of visitors don't use. Posts that want the inline TOC visible
-// everywhere can set `toc.layout: 'inline'` in frontmatter.
+// Inline TOC is opt-in: 'auto' shows only the desktop sidebar, while
+// 'inline' displays the TOC above project content.
 const inlineActive = showToc && tocLayout === 'inline';
 const sidebarOnLeft = (tocConfig?.sidebarPosition ?? 'right') === 'left';
 
@@ -93,8 +91,7 @@ const contactUrl = localizedPath('/contact', locale);
 
 // Resolve this project's real per-locale URLs so the hreflang tags and the
 // LanguageSwitcher point at the matching translation. Projects share one slug
-// across locales, so unlike the blog (which uses canonical uids) matching the
-// locale-stripped slug is enough. hreflang lists only verified translations;
+// across locales, so matching the locale-stripped slug is enough. hreflang lists only verified translations;
 // the switcher shows every locale, falling back to a locale's projects index
 // when this project has no translation there, so switching never 404s.
 const projectTranslations = await getProjectTranslations(getProjectSlug(slug, locale), locale);
@@ -144,7 +141,7 @@ const languageAlternates = Object.fromEntries(
           : 'xl:grid xl:grid-cols-[minmax(0,1fr)_15rem] xl:gap-10'),
       ]}>
         {sidebarActive && sidebarOnLeft && (
-          <aside class="hidden xl:block" aria-label={t('blog.tableOfContents', locale)}>
+          <aside class="hidden xl:block" aria-label={t('common.tableOfContents', locale)}>
             <TableOfContents
               headings={headings}
               maxDepth={tocConfig?.maxDepth ?? 3}
@@ -197,7 +194,7 @@ const languageAlternates = Object.fromEntries(
         </div>
 
         {sidebarActive && !sidebarOnLeft && (
-          <aside class="hidden xl:block" aria-label={t('blog.tableOfContents', locale)}>
+          <aside class="hidden xl:block" aria-label={t('common.tableOfContents', locale)}>
             <TableOfContents
               headings={headings}
               maxDepth={tocConfig?.maxDepth ?? 3}

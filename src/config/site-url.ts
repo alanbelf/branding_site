@@ -2,7 +2,7 @@
  * The URL used when the `SITE_URL` environment variable is not set.
  *
  * Two places need the site's own address and they must agree: `astro.config.mjs`
- * sets `site`, which produces every canonical tag, `og:url`, `og:image`, RSS
+ * sets `site`, which produces every canonical tag, `og:url`, `og:image`
  * link and sitemap entry — and `site.config.ts` sets `url`, which the JSON-LD,
  * the share cards and the footer read. `astro.config.mjs` runs before
  * `astro:env` exists, so it cannot import `site.config.ts`; without a shared

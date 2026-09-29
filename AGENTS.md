@@ -13,7 +13,7 @@ src/i18n/             All user-facing interface text
 src/components/      Components, grouped by purpose — check component-registry.json
 src/pages/            Routes; a file here is a URL
 src/layouts/          Page shells the routes render into
-src/lib/               Helpers for blog, projects, tags, SEO, themes
+src/lib/               Helpers for projects, tags, SEO, themes
 src/styles/            Design tokens and colour themes
 component-registry.json   Catalogue of every component, with category, purpose, props
 ```
@@ -31,7 +31,6 @@ it usually does.
 | Languages | `src/config/i18n.config.ts` |
 | Cookie-consent behaviour | `src/config/consent.config.ts` |
 | Any interface text, including `aria-label`, `alt`, `placeholder`, `title` | `src/i18n/en.json` |
-| A blog post | a new `.mdx` file in `src/content/blog/` |
 | A project / case study | a new `.mdx` file in `src/content/projects/` |
 | Colours | `src/styles/themes/*.css` — tokens only, never a hard-coded hex |
 

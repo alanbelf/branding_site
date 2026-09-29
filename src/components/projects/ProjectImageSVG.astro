@@ -2,7 +2,7 @@
 /**
  * ProjectImageSVG — inline, theme-aware SVG hero for a project.
  *
- * Mirrors the blog's BlogImageSVG: the SVG is inlined (not served as an
+ * The SVG is inlined (not served as an
  * <img>) so its `var(--brand-*)` classes resolve against the live colour
  * theme — the artwork recolours with every colour theme and stays sharp at
  * any size. Set `svgSlug` in a project's frontmatter to use one instead of
@@ -44,7 +44,7 @@ const svgContent = svgs[`/src/assets/projects/${slug}.svg`] ?? '';
     display: block;
   }
 
-  /* Same zoom the blog covers use, so an icon and wordmark read at the same
+  /* The zoom lets an icon and wordmark read at the same
      weight on a project hero as they do on a post cover. Art that fills its
      own canvas — a drawn interface rather than an icon and a word — sets
      `class="no-zoom"` on the root <svg> to keep its edges inside the frame. */
@@ -55,7 +55,7 @@ const svgContent = svgs[`/src/assets/projects/${slug}.svg`] ?? '';
 
   /* ── Light mode ─────────────────────────────────────────────────────────
      Brand-600 background with light icons and text on top, matching the
-     blog covers so a project hero and a post cover read as one system.
+    set of scales so a project hero and a project card read as one system.
   ── */
   .svg-host :global(.bg)  { fill: var(--brand-600); }
   .svg-host :global(.ico) { stroke: var(--brand-50); }

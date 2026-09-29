@@ -20,12 +20,6 @@ const recoveryLinks = [
     href: '/projects',
   },
   {
-    icon: 'book',
-    title: t('blog.title', locale),
-    description: t('errors.blogDesc', locale),
-    href: '/blog',
-  },
-  {
     icon: 'mail',
     title: t('errors.contactTitle', locale),
     description: t('errors.contactDesc', locale),
@@ -59,8 +53,8 @@ const recoveryLinks = [
         <Icon name="arrow-left" size="sm" />
         {t('errors.backHome', locale)}
       </Button>
-      <Button href="/blog" variant="brand-outline" size="lg">
-        {t('errors.browseBlog', locale)}
+      <Button href="/projects" variant="brand-outline" size="lg">
+        {t('errors.browseProjects', locale)}
         <Icon name="arrow-right" size="sm" />
       </Button>
     </div>
@@ -75,7 +69,7 @@ const recoveryLinks = [
         </h2>
       </div>
 
-      <div class="grid gap-6 lg:grid-cols-3">
+      <div class="grid gap-6 sm:grid-cols-2">
         {recoveryLinks.map((link, i) => (
           <Card hover href={link.href} class="group" data-reveal data-reveal-delay={i}>
             <div class="flex items-start gap-4">

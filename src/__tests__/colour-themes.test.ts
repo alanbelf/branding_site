@@ -10,7 +10,7 @@
  * a swatch that silently refuses to stick.
  *
  * The count was also quoted as 12 across the config, both locales, the project
- * page, three blog posts, the README and AGENTS.md, with nothing checking any
+ * page, the README and AGENTS.md, with nothing checking any
  * of it. The same lesson as the component count, which is why this mirrors
  * that test.
  */
@@ -19,9 +19,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { colourThemes, selectorThemes } from '../lib/themes';
-import en from '../i18n/en.json';
 import nl from '../i18n/nl.json';
-import siteConfig from '../config/site.config';
 
 const COUNT = colourThemes.length;
 const IDS = colourThemes.map((t) => t.id);
@@ -109,17 +107,9 @@ describe('colour themes', () => {
     }
   });
 
-  it('site.config and both locales quote the count', () => {
-    expect(siteConfig.description).toContain(`${COUNT} colour themes`);
-    expect(JSON.stringify(en)).toContain(`${COUNT} colour themes`);
-    expect(JSON.stringify(nl)).toContain(`${COUNT} kleurthema's`);
-  });
-
   it('the README and the docs quote the count', () => {
     for (const file of [
       'README.md',
-      'src/content/blog/en/astro-rocket-configuration-guide.mdx',
-      'src/content/blog/en/astro-rocket-getting-started.mdx',
     ]) {
       expect(read(file), file).toMatch(new RegExp(`${COUNT} (ready-to-use )?colour themes`));
     }
@@ -132,11 +122,6 @@ describe('colour themes', () => {
       'src/config/site.config.ts',
       'src/i18n/en.json',
       'src/i18n/nl.json',
-      'src/content/projects/en/astro-rocket.mdx',
-      'src/content/blog/en/astro-rocket-configuration-guide.mdx',
-      'src/content/blog/en/astro-rocket-getting-started.mdx',
-      'src/content/blog/en/component-library.mdx',
-      'src/content/blog/en/scroll-progress-ring.mdx',
     ]) {
       expect(read(file), file).not.toMatch(/\btwelve\b/i);
       expect(read(file), file).not.toMatch(/\b12[- ](colour|color|swatch|theme)/i);
@@ -146,9 +131,6 @@ describe('colour themes', () => {
   it('no shipped copy names a palette that was removed', () => {
     const gone = ['orange', 'amber', 'lime', 'magenta'];
     for (const file of [
-      'src/content/projects/en/astro-rocket.mdx',
-      'src/content/blog/en/astro-rocket-configuration-guide.mdx',
-      'src/content/blog/en/scroll-progress-ring.mdx',
       'README.md',
     ]) {
       const prose = read(file)

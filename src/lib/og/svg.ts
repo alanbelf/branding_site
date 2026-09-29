@@ -6,10 +6,7 @@
  *
  * `og:image` has to point at a raster file: Facebook, X, LinkedIn, WhatsApp
  * and Slack all document JPEG/PNG/GIF/WEBP and none of them render SVG, so an
- * SVG `og:image` shows up as a blank or missing preview. The blog's cover SVGs
- * are worse still — they take their colours from CSS custom properties, which
- * only exist on the page, so fetched on their own every fill resolves to
- * nothing and the file is fully transparent.
+ * SVG `og:image` shows up as a blank or missing preview.
  *
  * This file imports nothing native and nothing from `astro:*`, so it is safe
  * in any runtime and can be loaded from `astro.config.mjs`. `sharp` lives in
@@ -110,7 +107,7 @@ function layoutTitle(title: string): { lines: string[]; fontSize: number } {
 export interface OgImageOptions {
   /** Title shown large in the centre. */
   title: string;
-  /** Small uppercase label (e.g. "BLOG", "PROJECTS"). */
+  /** Small uppercase label (e.g. "PROJECTS"). */
   kind?: string;
   /** Optional subtitle line under the title (truncated to one line). */
   subtitle?: string;
@@ -194,16 +191,6 @@ function truncate(text: string, max: number): string {
   return kept.replace(/[\s.,;:—-]+$/, '') + '…';
 }
 
-
-/** Path (relative to site root) for a blog post's generated OG image. */
-export function getBlogOgPath(slug: string): string {
-  return `/og/blog/${slug}.png`;
-}
-
-/** Path (relative to site root) for a blog tag archive's generated OG image. */
-export function getBlogTagOgPath(tagSlug: string): string {
-  return `/og/blog/tag/${tagSlug}.png`;
-}
 
 /** Path (relative to site root) for a project's generated OG image. */
 export function getProjectOgPath(slug: string): string {

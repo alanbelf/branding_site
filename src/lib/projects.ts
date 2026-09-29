@@ -1,7 +1,7 @@
 /**
  * Shared helpers for the project listing and tag-archive pages.
  *
- * Mirrors `lib/blog` so projects get the same locale support and tag
+ * Provides locale support and tag
  * conventions (slugging, tag clouds, archives) without the two drifting apart.
  * The default locale stays at the site root (`/projects/...`); additional
  * locales live under a prefix (`/<locale>/projects/...`).
@@ -23,8 +23,7 @@ export const PROJECTS_PER_PAGE = siteConfig.projects?.perPage ?? 12;
 
 /**
  * Strip the locale prefix (and any `.md`/`.mdx` extension) from a project id to
- * get its URL slug (e.g. "en/astro-rocket" → "astro-rocket"). Mirrors
- * `getPostSlug` in `./blog`.
+ * get its URL slug (e.g. "en/rgcp" → "rgcp").
  */
 export function getProjectSlug(projectId: string, locale: string = defaultLocale): string {
   // Strip the leading locale-folder segment and any file extension, leaving a
@@ -115,8 +114,7 @@ export async function getProjectPageCount(locale: string = defaultLocale): Promi
 /**
  * Resolve a project's real per-locale URLs by matching slugs across locales.
  * Projects share one slug across locales (one folder per locale, same filename),
- * so unlike the blog — which links translations via canonical `uid`s — matching
- * the locale-stripped slug is enough. Returns one entry per locale that has a
+ * matching the locale-stripped slug is enough. Returns one entry per locale that has a
  * project at this slug, used for hreflang tags and the language switcher.
  */
 export async function getProjectTranslations(

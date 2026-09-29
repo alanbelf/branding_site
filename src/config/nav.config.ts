@@ -17,9 +17,8 @@
  * You write each link once. When i18n is enabled, the Header and Footer
  * localize it automatically for the active locale:
  *
- * - **href** is locale-prefixed via `localizedPath` — `/blog` stays `/blog`
- *   on the default locale and becomes `/<locale>/blog` elsewhere — so nav
- *   keeps the visitor inside their locale. External, `mailto:`/`tel:`, and
+ * - **href** is locale-prefixed via `localizedPath` on translated pages.
+ *   External, `mailto:`/`tel:`, and
  *   `#anchor` hrefs are left untouched.
  * - **label** is translated when you give the item a `labelKey` pointing at
  *   a string in `src/i18n/<locale>.json` (resolved with `t()`); without one,
@@ -45,7 +44,7 @@ export interface NavItem {
   href: string;
   order: number;
   external?: boolean;
-  /** i18n dictionary key for the label (e.g. `'nav.items.blog'`). Falls back to `label`. */
+  /** i18n dictionary key for the label (e.g. `'nav.items.projects'`). Falls back to `label`. */
   labelKey?: string;
   /** Per-locale label/path overrides, keyed by locale code. */
   locales?: Record<string, NavItemOverride>;
@@ -87,19 +86,17 @@ export const navItems: NavItem[] = [
   { label: 'Home', href: '/', order: 0, labelKey: 'nav.items.home' },
   { label: 'Services', href: '/services', order: 1, labelKey: 'nav.items.services' },
   { label: 'Projects', href: '/projects', order: 2, labelKey: 'nav.items.projects' },
-  { label: 'Blog', href: '/blog', order: 3, labelKey: 'nav.items.blog' },
-  { label: 'About', href: '/about', order: 4, labelKey: 'nav.items.about' },
-  { label: 'Contact', href: '/contact', order: 5, labelKey: 'nav.items.contact' },
+  { label: 'About', href: '/about', order: 3, labelKey: 'nav.items.about' },
+  { label: 'Contact', href: '/contact', order: 4, labelKey: 'nav.items.contact' },
 ];
 
 export const footerNavItems: NavItem[] = [
   { label: 'Home', href: '/', order: 0, labelKey: 'nav.items.home' },
   { label: 'Services', href: '/services', order: 1, labelKey: 'nav.items.services' },
   { label: 'Projects', href: '/projects', order: 2, labelKey: 'nav.items.projects' },
-  { label: 'Blog', href: '/blog', order: 3, labelKey: 'nav.items.blog' },
-  { label: 'About', href: '/about', order: 4, labelKey: 'nav.items.about' },
-  { label: 'Contact', href: '/contact', order: 5, labelKey: 'nav.items.contact' },
-  { label: 'GitHub', href: 'https://github.com/hansmartensdev/Astro-Rocket', order: 6, external: true },
+  { label: 'About', href: '/about', order: 3, labelKey: 'nav.items.about' },
+  { label: 'Contact', href: '/contact', order: 4, labelKey: 'nav.items.contact' },
+  { label: 'GitHub', href: 'https://github.com/hansmartensdev/Astro-Rocket', order: 5, external: true },
 ];
 
 export const legalLinks: LegalLink[] = [];

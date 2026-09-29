@@ -1,8 +1,8 @@
 /**
- * Tag-slug conventions shared across content types (blog, projects).
+ * Tag-slug conventions for project archives.
  *
- * Kept here — rather than inside `lib/blog` — so blog and project tag
- * archives derive identical, collision-free slugs from the same rules.
+ * Kept in one helper so project tag archives derive collision-free slugs
+ * from the same rules.
  */
 
 /**

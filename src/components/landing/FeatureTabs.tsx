@@ -36,7 +36,7 @@ const tabContent: Record<string, TabContent> = {
   content: {
     title: 'Content & Search',
     content:
-      'Type-safe content collections with Zod schemas, MDX support, RSS feeds, and Pagefind integration for lightning-fast static search.',
+      'Type-safe content collections with Zod schemas, MDX support, and Pagefind integration for lightning-fast static search.',
   },
 };
 
@@ -177,15 +177,12 @@ const title = t('hero.title'); // "Ship faster..."`,
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const blog = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
   schema: ({ image }) =>
     z.object({
       title: z.string().max(100),
       description: z.string().max(200),
-      publishedAt: z.coerce.date(),
-      updatedAt: z.coerce.date().optional(),
-      author: z.string().default('Team'),
       image: image().optional(),
       tags: z.array(z.string()).default([]),
       featured: z.boolean().default(false),
@@ -194,7 +191,7 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog, pages, authors, faqs };
+export const collections = { projects, pages, authors, faqs };
 // + Pagefind indexes all content at build time`,
     filename: 'src/content.config.ts',
   },
@@ -429,7 +426,7 @@ const tabs: VerticalTab[] = [
     icon: LayoutGrid,
   },
   { id: 'i18n', label: 'i18n Ready', description: 'Optional multi-language', icon: Globe },
-  { id: 'content', label: 'Content', description: 'Blog, MDX & search', icon: Newspaper },
+  { id: 'content', label: 'Content', description: 'Projects, MDX & search', icon: Newspaper },
 ];
 
 export function FeatureTabs() {

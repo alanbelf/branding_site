@@ -915,8 +915,8 @@
     padding-left: 1.5em;
   }
 
-  /* Restore list markers. Tailwind's preflight sets `list-style: none`, which
-     left blog prose with no bullets, no ordered numbers, and no footnote
+    /* Restore list markers. Tailwind's preflight sets `list-style: none`, which
+      left prose with no bullets, no ordered numbers, and no footnote
      numbers — you couldn't tell a list was a list. */
   .prose ul { list-style: disc; }
   .prose ul ul { list-style: circle; }
@@ -1242,8 +1242,7 @@
 [data-reveal-children] > *:nth-child(12)   { transition-delay: calc(var(--reveal-stagger) * 11); }
 [data-reveal-children] > *:nth-child(n+13) { transition-delay: calc(var(--reveal-stagger) * 12); }
 
-/* Per-block reveal for long-form article bodies (single blog posts /
-   single project pages). Each direct child of the prose container —
+/* Per-block reveal for long-form project pages. Each direct child of the prose container —
    paragraph, heading, list, image, blockquote, custom MDX block — is
    given its own observer so it springs in as the reader scrolls to it. */
 [data-reveal-content] > * {
@@ -1484,7 +1483,7 @@ html:not(.dark) .bg-background-secondary .bg-card .bg-background-tertiary {
   background-color: var(--color-background-tertiary);
 }
 
-/* Media frames (blog hero images, project screenshots): saturated or dark
+/* Media frames (project screenshots): saturated or dark
    artwork can't take the theme's grey-wash shadow tiers — the same physics
    as the LetterGlitch band. Light mode gets a heavy drop shadow with a soft
    halo; dark mode gets a brand glow, since a dark shadow can never show on

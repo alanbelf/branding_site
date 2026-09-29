@@ -19,7 +19,6 @@ import { getNavItems, getLogoHref, resolveNavItem, type NavItem } from '@/config
 describe('nav config — locale resolution (en default, nl secondary)', () => {
   it('keeps default-locale hrefs at the site root', () => {
     const items = getNavItems('en');
-    expect(items.find((i) => i.label === 'Blog')?.href).toBe('/blog');
     expect(items.find((i) => i.label === 'About')?.href).toBe('/about');
   });
 
@@ -29,7 +28,6 @@ describe('nav config — locale resolution (en default, nl secondary)', () => {
       '/nl',
       '/nl/services',
       '/nl/projects',
-      '/nl/blog',
       '/nl/about',
       '/nl/contact',
     ]);

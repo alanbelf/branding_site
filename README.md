@@ -60,7 +60,7 @@
 
 **Astro Rocket is an Astro 7 theme.**
 
-It ships as a working site: homepage, about, services, contact, a blog and a projects portfolio — both with tags and pagination — a components showcase, and a 404 page. Underneath sits a library of **44 designed, accessible, TypeScript components** on a three-tier design-token system, with static search, SEO, opt-in i18n, dark mode, and 8 colour themes you can switch live in the browser.
+It ships as a working site: homepage, about, services, contact, a projects portfolio with tags and pagination, a components showcase, and a 404 page. Underneath sits a library of **44 designed, accessible, TypeScript components** on a three-tier design-token system, with static search, SEO, opt-in i18n, dark mode, and 8 colour themes you can switch live in the browser.
 
 Content is Markdown in `src/content/`, the rest is `site.config.ts`, and it deploys to Vercel, Netlify, Cloudflare, or as static files.
 
@@ -78,8 +78,8 @@ Use all of it or only the parts you need. The site you build on it is yours.
 |---------|-------------|
 | **Astro 7** | Latest version with the Rust compiler, Vite 8, Content Layer API, and performance optimizations |
 | **Tailwind CSS v4** | CSS-first configuration with OKLCH color system and fluid typography |
-| **8 Colour Themes** | All 8 colour swatches are shown in the header dropdown — click one and the logo badge, blog image gradients, and every brand color update live instantly. No file edits, no rebuilds. The selector can be removed from the header once you've settled on a color. |
-| **Scroll Progress Bar** | A thin 2px brand-coloured bar on the header edge that fills as you scroll. Enabled on the homepage (above the floating header), blog index, and post pages (below the solid header). Controlled via `showScrollProgress` and `scrollProgressPosition` props on the Header component. |
+| **8 Colour Themes** | All 8 colour swatches are shown in the header dropdown — click one and the logo badge and every brand color update live instantly. No file edits, no rebuilds. The selector can be removed from the header once you've settled on a color. |
+| **Scroll Progress Bar** | A thin 2px brand-coloured bar on the header edge that fills as you scroll. Enabled on the homepage and project pages. Controlled via `showScrollProgress` and `scrollProgressPosition` props on the Header component. |
 | **Design Tokens** | Three-tier token architecture (reference → semantic → component) |
 | **44 Components** | 34 UI, 7 patterns, 2 layout, 1 hero — every entry in `component-registry.json`, all accessible with TypeScript |
 | **Auto Logo & Favicon** | First letter of your site name on brand color — generated automatically from `site.config.ts`, no design tools needed. Prefer your own logo? Set `branding.logo.image` to a file in `public/`. |
@@ -89,13 +89,11 @@ Use all of it or only the parts you need. The site you build on it is yours.
 | **SEO Toolkit** | Meta tags, JSON-LD structured data, sitemap, and robots.txt |
 | **Static OG Image** | A polished default Open Graph image serves as social preview for all pages — no build-time generation required |
 | **Colour Mode** | 3-state picker — **System / Light / Dark** with `localStorage` persistence and live OS-preference tracking under 'System'; surfaced as a pill dropdown in the header (and inside the mobile menu) |
-| **Content Collections** | Type-safe blog, pages, authors, and FAQs with Zod validation |
+| **Content Collections** | Type-safe projects, pages, authors, and FAQs with Zod validation |
 | **API Routes** | Contact form and newsletter endpoints with validation |
-| **Newsletter Signup** | Optional email signup in the "follow along" section of the blog index and every post, posting to a Resend audience. Off by default — set `RESEND_API_KEY` and `RESEND_AUDIENCE_ID`, then `newsletter.enabled` in `site.config.ts`. The `NewsletterForm` component can be placed anywhere else too. See [Newsletter Signup](#newsletter-signup) |
-| **Table of Contents** | Optional table of contents on blog posts, auto-generated from MDX headings, with three layouts: inline card, sticky desktop sidebar, or `auto` (sidebar on `xl+`, inline card below). Includes `IntersectionObserver` scroll-spy. Off by default; per-post `toc: false` in frontmatter hides on a single post |
-| **Blog Comments (Giscus / Cusdis / Artalk)** | Optional comments at the bottom of blog posts via a pluggable provider — [Giscus](https://giscus.app) (GitHub Discussions), the privacy-friendly [Cusdis](https://cusdis.com) (hosted or self-hosted), or self-hosted [Artalk](https://artalk.js.org) (point `comments.artalk.server` at your own instance — use an `https://` URL in production). Choose with `comments.provider`. **Lazy-loaded** so readers who don't scroll to comments pay zero network cost; reserved `min-height` prevents CLS. Theme and language follow the site. Off by default; per-post `comments: false` in frontmatter hides on a single post |
-| **Durable Internal Links** | Link between posts by a stable canonical id with `<PostLink uid="…">` instead of a slug, so renaming a post never breaks inbound links. Ids resolve to the correct locale-aware URL at build time, and a broken reference **fails the build** rather than shipping a 404. Add an optional `uid` to a post's frontmatter to make it linkable |
-| **Build-Time Content Validation** | The build fails with a clear error if two pieces of content resolve to the same URL within a locale (duplicate slugs across posts, projects, and pages), or if two posts claim the same canonical id — catching silent content mistakes before they ship |
+| **Newsletter Signup** | Optional email signup in the site footer, posting to a Resend audience. Off by default — set `RESEND_API_KEY` and `RESEND_AUDIENCE_ID`, then `newsletter.enabled` in `site.config.ts`. The `NewsletterForm` component can be placed anywhere. |
+| **Table of Contents** | Optional table of contents on project pages, auto-generated from MDX headings, with three layouts: inline card, sticky desktop sidebar, or `auto` (sidebar on `xl+`, inline card below). Includes `IntersectionObserver` scroll-spy. |
+| **Build-Time Content Validation** | The build fails with a clear error if two projects or pages resolve to the same URL within a locale, catching silent content mistakes before they ship |
 | **Independent Footer Menu** | Header and footer navigation configured separately in `nav.config.ts` (`navItems`, `footerNavItems`, `legalLinks`) — add a Privacy or Imprint link to the footer without cluttering the main nav |
 | **Static Search (Pagefind)** | Site-wide search in the header — a ⌘K / Ctrl+K modal powered by a [Pagefind](https://pagefind.app) index generated at build time. Zero JS until the modal opens; works on every deploy target. Hide it with `showSearch={false}` on the Header |
 | **Project Galleries** | Multiple images per project: a `gallery` array in frontmatter swaps the hero image for a swipeable carousel, and the `<ProjectGallery>` MDX component renders an in-body carousel with a click-to-zoom lightbox. See [Project Galleries](#project-galleries) |
@@ -163,7 +161,7 @@ routes, which a container does not carry.
 contact form and newsletter are the theme's only routes that are not
 prerendered — they become a serverless function on a real deploy. In the
 container they answer with an explanation instead, which the form displays.
-Everything else — all pages, search, the colour themes, RSS, the sitemap — is
+Everything else — all pages, search, the colour themes, the sitemap — is
 the real thing. For a full preview including the forms, use `pnpm dev` or
 deploy to Vercel, Netlify or Cloudflare.
 
@@ -188,10 +186,8 @@ astro-rocket/
 │   │   ├── patterns/        # Composed patterns (ContactForm, SearchInput, StatCard, etc.)
 │   │   ├── layout/          # Header, Footer, Navigation, ThemeModeDropdown, ThemeSelector(Dropdown)
 │   │   ├── seo/             # SEO, JsonLd, Breadcrumbs
-│   │   ├── blog/            # Blog-specific components
 │   │   └── landing/         # Landing page components
 │   ├── content/             # Content collections
-│   │   ├── blog/            # Blog posts (en/, es/, fr/)
 │   │   ├── projects/        # Portfolio project pages
 │   │   ├── authors/         # Author profiles
 │   │   └── faqs/            # FAQ entries
@@ -199,7 +195,6 @@ astro-rocket/
 │   ├── lib/                 # Utilities (schema, cn)
 │   ├── pages/               # Routes and API endpoints
 │   │   ├── api/             # Contact, newsletter endpoints
-│   │   └── blog/            # Blog routes
 │   ├── styles/              # Global CSS and design tokens
 │   │   ├── tokens/          # colors.css, typography.css, spacing.css
 │   │   └── themes/          # 8 colour theme files
@@ -263,13 +258,13 @@ branding: {
 },
 ```
 
-That single field swaps the monogram for your image in the header, footer, and anywhere `<Logo>` is rendered — **no layout edits needed**. Leave `image` unset to keep the monogram. Square marks and wide wordmarks both render correctly, and blog author avatars keep their initials.
+That single field swaps the monogram for your image in the header, footer, and anywhere `<Logo>` is rendered — **no layout edits needed**. Leave `image` unset to keep the monogram. Square marks and wide wordmarks both render correctly.
 
 ### Environment Variables
 
 Create a `.env` file from `.env.example`:
 
-`SITE_URL` is the one that matters everywhere: canonical tags, `og:url`, `og:image`, RSS links and the sitemap are all built from it, and your host needs it set as an environment variable too, not only in your local `.env`. Leave it unset and the build says so and falls back to `https://example.com`.
+`SITE_URL` is the one that matters everywhere: canonical tags, `og:url`, `og:image` and the sitemap are all built from it, and your host needs it set as an environment variable too, not only in your local `.env`. Leave it unset and the build says so and falls back to `https://example.com`.
 
 ```bash
 # Required
@@ -300,7 +295,7 @@ Both are the same silent failure: the script loads, the page is fine, and nothin
 
 ### Newsletter Signup
 
-A newsletter signup can appear in the "follow along" section at the foot of the blog index and of every blog post. It is **off by default**, because the form posts to `/api/newsletter`, which needs a Resend API key and audience. Without them the endpoint answers *"Newsletter service is not configured"* — so a site that showed the form before its owner had a mailing list would only be collecting failures.
+A newsletter signup can appear in the site footer. It is **off by default**, because the form posts to `/api/newsletter`, which needs a Resend API key and audience. Without them the endpoint answers *"Newsletter service is not configured"* — so a site that showed the form before its owner had a mailing list would only be collecting failures.
 
 To turn it on, set both variables in `.env`:
 
@@ -356,7 +351,7 @@ Astro's native i18n is wired up automatically when `enabled: true` AND `locales.
 
 ### Pages in another language
 
-The bundled pages — the **home page, About, Services and Contact** — are already locale-aware, exactly like the blog and projects. Enable a second locale and `/<locale>`, `/<locale>/about`, `/<locale>/services` and `/<locale>/contact` are generated automatically, so the `LanguageSwitcher` never lands on a 404. You do **not** create `src/pages/<locale>/about.astro` files for these — remove any you added previously, as they would collide with the generated routes.
+The bundled pages — the **home page, About, Services and Contact** — are locale-aware. Enable a second locale and `/<locale>`, `/<locale>/about`, `/<locale>/services` and `/<locale>/contact` are generated automatically, so the `LanguageSwitcher` never lands on a 404. You do **not** create `src/pages/<locale>/about.astro` files for these — remove any you added previously, as they would collide with the generated routes.
 
 Their text lives in the locale dictionaries under the `pages.*` keys (`pages.home`, `pages.about`, `pages.services`, `pages.contact`). **To translate a page, copy those keys from `src/i18n/en.json` into your locale file (e.g. `src/i18n/nl.json`) and translate the values — there is no markup to touch.** Anything you haven't translated yet falls back to the default locale, so a localized page is never blank. The design lives in one shared view per page under `src/components/pages/views/`, rendered by both the default route and the `/<locale>/…` route.
 
@@ -406,7 +401,7 @@ import { t, getLocaleFromPath } from '@/i18n';
 const locale = getLocaleFromPath(Astro.url.pathname);
 ---
 
-<a href="/blog">{t('common.readMore', locale)}</a>
+<a href="/projects">{t('common.readMore', locale)}</a>
 ```
 
 To add another language, drop a new `src/i18n/<code>.json` mirroring the structure of `en.json` — it's loaded automatically, with no edits to `src/i18n/index.ts`. Just add the locale code to `locales` in `src/config/i18n.config.ts` so it gets served. Missing keys fall back to the default locale's value, then to the key itself — so partial translations are safe.
@@ -415,7 +410,7 @@ To add another language, drop a new `src/i18n/<code>.json` mirroring the structu
 
 You write each navigation entry once in `nav.config.ts` (`navItems`, `footerNavItems`, `legalLinks`); the Header and Footer localize it for the active locale automatically, so the nav and logo keep visitors inside their locale:
 
-- **Paths** are locale-prefixed via `localizedPath` — `/blog` stays `/blog` on the default locale and becomes `/<locale>/blog` elsewhere. External, `mailto:`/`tel:`, and `#anchor` hrefs are left untouched, and the logo points at the locale's home (`/` or `/<locale>`).
+- **Paths** are locale-prefixed via `localizedPath`. External, `mailto:`/`tel:`, and `#anchor` hrefs are left untouched, and the logo points at the locale's home (`/` or `/<locale>`).
 - **Labels** are translated when an item carries a `labelKey` pointing at a string in `src/i18n/<locale>.json` (the bundled items use `nav.items.*`). Without a `labelKey`, the literal `label` is used as-is.
 
 For the rare case where a locale needs a structurally different label or path (e.g. a localized slug like `/over-ons`), add a per-locale `locales` override to the item:
@@ -429,22 +424,16 @@ With i18n off, none of this runs and the nav renders exactly as written.
 
 ### Content collections
 
-Blog posts, projects, and pages already carry a `locale` field on their schema (`src/content.config.ts`), validated against the `locales` you list in `src/config/i18n.config.ts` — register a locale there and the content schema accepts it automatically, with no enum to edit. Organize translated content by locale folder:
+Projects and pages already carry a `locale` field on their schema (`src/content.config.ts`), validated against the `locales` you list in `src/config/i18n.config.ts` — register a locale there and the content schema accepts it automatically, with no enum to edit. Organize translated project content by locale folder:
 
 ```
-src/content/blog/en/hello-world.mdx
-src/content/blog/nl/hallo-wereld.mdx
 src/content/projects/en/studio-portfolio.mdx
 src/content/projects/nl/studio-portfolio.mdx
 ```
 
-> **Switching the default locale.** Changing `defaultLocale` in `i18n.config.ts` is a routing label — it controls which locale serves at the site root, not which content folder gets read. To make a different language the default, also rename the matching content folder (e.g. `src/content/blog/en/` → `src/content/blog/zh-CN/`) so the root URL resolves to the right posts. The locale code in `i18n.config.ts` and the folder name under `src/content/blog/` must match.
+> **Switching the default locale.** Changing `defaultLocale` in `i18n.config.ts` is a routing label — it controls which locale serves at the site root, not which content folder gets read. To make a different language the default, also rename the matching project content folder (e.g. `src/content/projects/en/` → `src/content/projects/zh-CN/`) so the root URL resolves to the right projects. The locale code in `i18n.config.ts` and the folder name under `src/content/projects/` must match.
 
-> **Localized blog routing is automatic.** Enable a locale in `i18n.config.ts`, drop posts under its folder (e.g. `src/content/blog/nl/`), and the whole blog is served at that locale's prefix with no extra wiring: the index (`/nl/blog`), individual posts (`/nl/blog/<slug>`), pagination (`/nl/blog/page/N`) and tag archives (`/nl/blog/tag/<tag>`) are all generated, and every in-locale link — cards, tag chips, pagination, breadcrumbs, related posts — stays inside that locale. The `defaultLocale` keeps its prefix-free URLs (`/blog`). A locale with no posts yet still gets a `/<locale>/blog` index that shows the empty state, so the `LanguageSwitcher` never lands on a 404. You do **not** create `src/pages/<locale>/blog*` files yourself — remove any you added previously, as they would collide with the generated routes. (The bundled static pages — home, About, Services and Contact — are generated for every locale the same way; you translate their text in `src/i18n/<locale>.json`, as shown in *Pages in another language* above.)
->
-> On blog posts, the `LanguageSwitcher` and the `hreflang` tags link to each translation's **real** URL — paired by canonical `uid` when the posts declare one (so a translation can live at a different slug, `/blog/hello` ↔ `/nl/blog/hallo`), otherwise by an identical slug. A locale with no translation of the current post is dropped from `hreflang`, and the switcher falls back to that locale's blog index instead of a dead URL. (Other page types resolve alternates by swapping the locale segment, which is correct when slugs match across locales.)
->
-> **Projects are localized the same way.** Drop translations under `src/content/projects/<locale>/` and the whole projects section is served at that locale's prefix — index (`/nl/projects`), each project (`/nl/projects/<slug>`), pagination (`/nl/projects/page/N`), and tag archives (`/nl/projects/tag/<tag>`), with every in-locale link, `hreflang`, and the `LanguageSwitcher` resolving inside that locale. Projects share one slug across locales: keep the same filename in each locale folder (e.g. `en/studio-portfolio.mdx` ↔ `nl/studio-portfolio.mdx`) and the theme pairs them automatically. As with the blog, you do **not** create `src/pages/<locale>/projects*` files yourself.
+> **Localized projects routing is automatic.** Enable a locale in `i18n.config.ts`, add projects under `src/content/projects/<locale>/`, and the localized index, project pages, pagination, and tag archives are generated automatically. Project slugs must match across locale folders so the `LanguageSwitcher` and `hreflang` tags can resolve the corresponding project. You do **not** create `src/pages/<locale>/projects*` files yourself.
 
 ### Performance
 
@@ -462,7 +451,7 @@ Astro Rocket uses a three-tier design token system with OKLCH colors for percept
 
 ### Switching Themes
 
-Astro Rocket ships with 8 colour themes, all based on Tailwind's color palette. All 8 are shown as colour swatches in the header dropdown (`ThemeSelectorDropdown`) on desktop and in the mobile menu (`ThemeSelector`). Clicking a swatch applies the theme instantly — the logo badge, blog image gradients, and every brand color on the page update live. No file edits, no rebuilds. This is a key difference from the original Velocity theme, where switching theme requires editing a CSS import file and rebuilding.
+Astro Rocket ships with 8 colour themes, all based on Tailwind's color palette. All 8 are shown as colour swatches in the header dropdown (`ThemeSelectorDropdown`) on desktop and in the mobile menu (`ThemeSelector`). Clicking a swatch applies the theme instantly — the logo badge and every brand color on the page update live. No file edits, no rebuilds. This is a key difference from the original Velocity theme, where switching theme requires editing a CSS import file and rebuilding.
 
 The 8 themes in order: Purple, Violet, Indigo, Blue (default), Sky, Cyan, Teal, and Emerald. The `colourThemes` array in `src/lib/themes.ts` is the registry: it controls which swatches are shown, in what order, and whether each is offered at all (`showInSelector`). You can also **remove the selector from the header entirely** once you've settled on a color — just remove `showThemeSelector` from the layout file.
 
@@ -547,7 +536,7 @@ import ThemeModeDropdown from '@/components/layout/ThemeModeDropdown.astro';
 <ThemeModeDropdown />
 ```
 
-The full design — bootstrap script, dropdown anatomy, the live "Currently dark/light" sub-line under 'System', and how two component instances stay state-synced — is written up in the [System, Light, Dark blog post](https://astrorocket.dev/blog/colour-mode-system).
+The full design is documented in the theme configuration and component source.
 
 > **Why `localStorage` for colour mode but `sessionStorage` for the colour palette?** They serve different intents. The colour mode is the user's accessibility / preference setting and should survive reloads and new tabs — `localStorage`. The 8-swatch colour palette is a brand-discovery toy that should reset on every new visit so first impressions stay on-brand — `sessionStorage`. Keeping them on different storage tiers is intentional, not accidental.
 
@@ -681,7 +670,7 @@ Astro Rocket includes 44 components across four categories. All UI components us
 | Layout | 2 | Header (with scroll progress bar), Footer |
 | Hero | 1 | Hero section with centered/split layouts, grid pattern, and typing effect |
 
-`src/components/` also holds components built for this site's own pages — blog, landing, SEO and theme-switching pieces, the `YouTube` embed for MDX, and the `Callout`, `CtaBand` and `LetterGlitchBand` patterns. They are outside the 44 that `component-registry.json` counts.
+`src/components/` also holds components built for this site's own pages — landing, SEO and theme-switching pieces, the `YouTube` embed for MDX, and the `Callout`, `CtaBand` and `LetterGlitchBand` patterns. They are outside the 44 that `component-registry.json` counts.
 
 ### Usage Example
 
@@ -724,26 +713,6 @@ All UI components are imported via barrel exports from `@/components/ui`. View a
 ---
 
 ## Content Management
-
-### Blog Posts
-
-Create posts in `src/content/blog/[locale]/`:
-
-```markdown
----
-title: "Your Post Title"
-description: "Brief description for SEO"
-publishedAt: 2026-01-30
-author: "Author Name"
-tags: ["astro", "tutorial"]
-uid: "your-post-id"        # optional — stable id used by <PostLink> for internal links
-locale: en
----
-
-Your content here...
-```
-
-To link from one post to another, use `<PostLink uid="target-post-id">link text</PostLink>` in your MDX instead of a hard-coded `/blog/...` URL. The id resolves to the right URL at build time, and a broken reference fails the build — so renaming a post never leaves a dead internal link. Give a post an optional `uid` (above) to make it a link target. The [configuration guide](/blog/astro-rocket-configuration-guide) post has the full walkthrough.
 
 ### Project Cards
 
@@ -815,7 +784,7 @@ Both carousels are dependency-free (native scroll-snap plus a small vanilla scri
 ---
 import { getCollection } from 'astro:content';
 
-const posts = await getCollection('blog', ({ data }) => {
+const projects = await getCollection('projects', ({ data }) => {
   return import.meta.env.PROD ? !data.draft : true;
 });
 ---
@@ -830,10 +799,10 @@ const posts = await getCollection('blog', ({ data }) => {
 - **Meta tags**: Title, description, canonical URL
 - **Open Graph**: Complete OG tags for social sharing
 - **Twitter Cards**: Large image cards
-- **JSON-LD**: WebSite, Organization, BlogPosting, Breadcrumb, FAQ schemas
+- **JSON-LD**: WebSite, Organization, Breadcrumb, FAQ schemas
 - **Sitemap**: Auto-generated at `/sitemap-index.xml`
 - **robots.txt**: Dynamic generation with sitemap reference
-- **OG Images**: A static default OG image serves all pages and blog posts
+- **OG Images**: A static default OG image serves all pages
 
 ### Using the SEO Component
 
@@ -852,9 +821,9 @@ import SEO from '@/components/seo/SEO.astro';
 
 ### OG Image
 
-Every post, project and blog tag archive gets its own 1200×630 share card, drawn at build time from the page title and your brand colour and written out as a PNG under `/og/`. Pages without a card of their own use `/og/default.png`, generated from `name` and `tagline` in `src/config/site.config.ts`. Point `ogImage` at a file in `public/` to use your own instead.
+Every project gets its own 1200×630 share card, drawn at build time from the page title and your brand colour and written out as a PNG under `/og/`. Pages without a card of their own use `/og/default.png`, generated from `name` and `tagline` in `src/config/site.config.ts`. Point `ogImage` at a file in `public/` to use your own instead.
 
-A post or project that has its own **raster** cover (`.png`, `.jpg`, `.webp`, `.gif`) uses that as its share image. An SVG cover does not: social platforms don't render SVG, and the theme's cover SVGs colour themselves from CSS custom properties that only exist on the page — fetched on their own, they come out transparent. Posts with an SVG cover get the generated card instead.
+A project that has its own **raster** cover (`.png`, `.jpg`, `.webp`, `.gif`) uses that as its share image. An SVG cover does not: social platforms don't render SVG, and CSS custom properties only exist on the page — fetched on their own, they come out transparent. Projects without a raster cover get the generated card instead.
 
 Cards are drawn with `sharp` using the fonts on the build machine. Hosted builders ship fonts; a bare container image may not, and the build warns if it finds none.
 
@@ -1008,7 +977,7 @@ A thin 2px brand-coloured bar on the header edge that grows from left to right a
 | `showScrollProgress` | `boolean` | `false` | Renders the progress bar |
 | `scrollProgressPosition` | `'top'` \| `'bottom'` | `'bottom'` | Edge of the header where the bar sits |
 
-The bar is enabled by default on three page types: the **homepage** (above the floating header), the **blog index**, and **individual blog posts** (both below the solid bar header). Use `scrollProgressPosition="top"` on a floating capsule header and `'bottom'` on a solid bar header. The bar colour always matches `--color-brand-500` and updates instantly when the visitor switches themes.
+The bar is enabled by default on the **homepage** (above the floating header) and project pages. Use `scrollProgressPosition="top"` on a floating capsule header and `'bottom'` on a solid bar header. The bar colour always matches `--color-brand-500` and updates instantly when the visitor switches themes.
 
 ### Card hover effects
 

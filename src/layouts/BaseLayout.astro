@@ -11,7 +11,6 @@ import { createWebsiteSchema, createOrganizationSchema, createPersonSchema, crea
 import type { Thing, WithContext } from 'schema-dts';
 import siteConfig from '@/config/site.config';
 import { t, getLocaleFromPath } from '@/i18n';
-import { getRssUrl } from '@/lib/blog';
 
 interface Props {
   title?: string;
@@ -65,26 +64,6 @@ if (includeProfessionalServiceSchema) {
 schemas.push(...extraSchemas);
 
 const locale = getLocaleFromPath(Astro.url.pathname);
-const commentsConfig = siteConfig.articleFeatures?.comments;
-
-let commentsPreconnectHref: string | null = null;
-
-if (commentsConfig?.enabled) {
-  if (commentsConfig.provider === 'cusdis') {
-    commentsPreconnectHref = commentsConfig.cusdis?.host ?? 'https://cusdis.com';
-  } else if (commentsConfig.provider === 'artalk') {
-    const server = commentsConfig.artalk?.server;
-    if (server) {
-      try {
-        commentsPreconnectHref = new URL(server).origin;
-      } catch {
-        commentsPreconnectHref = server;
-      }
-    }
-  } else {
-    commentsPreconnectHref = 'https://giscus.app';
-  }
-}
 ---
 
 <!doctype html>
@@ -98,7 +77,6 @@ if (commentsConfig?.enabled) {
     <link rel="preload" as="font" type="font/woff2" href={manropeFont} crossorigin="anonymous" />
     <link rel="preload" as="font" type="font/woff2" href={outfitFont} crossorigin="anonymous" />
 
-    {commentsPreconnectHref && <link rel="preconnect" href={commentsPreconnectHref} crossorigin />}
 
     <!-- Favicon. The SVG letter is outlined to a vector path at build time (see
          src/lib/favicon), and PNG/ICO fallbacks are provided so search-engine
@@ -121,9 +99,6 @@ if (commentsConfig?.enabled) {
       nofollow={nofollow}
       localeAlternates={localeAlternates}
     />
-
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href={getRssUrl(locale)} />
 
     <!-- JSON-LD Structured Data -->
     <JsonLd schema={schemas} />
@@ -469,7 +444,7 @@ if (commentsConfig?.enabled) {
           );
 
           // Also observe each direct child of [data-reveal-content] so long
-          // article bodies (blog posts, project pages) animate block-by-block.
+          // long-form project pages animate block-by-block.
           document.querySelectorAll('[data-reveal-content]').forEach(function (container) {
             Array.prototype.forEach.call(container.children, function (child) {
               if (!child.classList.contains('is-visible')) els.push(child);

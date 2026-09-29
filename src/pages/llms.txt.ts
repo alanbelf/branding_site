@@ -1,7 +1,6 @@
 import type { APIRoute } from 'astro';
 import siteConfig from '@/config/site.config';
 import { defaultLocale } from '@/i18n';
-import { getPublishedPosts, getPostUrl, getRssUrl } from '@/lib/blog';
 import { getVisibleProjects, getProjectUrl } from '@/lib/projects';
 import { getNavItems } from '@/config/nav.config';
 
@@ -22,12 +21,8 @@ import { getNavItems } from '@/config/nav.config';
  * drifts out of sync with the real pages. There is nothing to keep updated by
  * hand.
  *
- * The Pages list used to be five hardcoded lines and had already drifted: it
- * named Home, About, Projects, Blog and Contact while the nav also carried
- * Services, and it never mentioned the components page at all — so an
- * assistant asked about this theme had no way to learn that the page
- * documenting every component exists. It now comes from `getNavItems`, so it
- * follows whatever nav a site configures.
+ * The Pages list comes from `getNavItems`, so it follows whatever pages a
+ * site configures.
  *
  * External nav entries are left out: this file is a map of *this* site, and a
  * link to somewhere else is not part of it.
@@ -48,16 +43,10 @@ const hasComponentsPage = Object.keys(componentsPage).length > 0;
 export const GET: APIRoute = async ({ site }) => {
   const base = (site?.toString() || siteConfig.url).replace(/\/$/, '');
 
-  const posts = await getPublishedPosts(defaultLocale);
   const projects = await getVisibleProjects(defaultLocale);
 
   const line = (title: string, url: string, description?: string) =>
     description ? `- [${title}](${url}): ${description}` : `- [${title}](${url})`;
-
-  const postLines = [...posts]
-    .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
-    .map((post) => line(post.data.title, `${base}${getPostUrl(post.id, defaultLocale)}`, post.data.description))
-    .join('\n');
 
   const projectLines = [...projects]
     .sort((a, b) => a.data.order - b.data.order)
@@ -94,16 +83,11 @@ export const GET: APIRoute = async ({ site }) => {
     sections.push(``, `## Projects`, ``, projectLines);
   }
 
-  if (postLines) {
-    sections.push(``, `## Blog posts`, ``, postLines);
-  }
-
   sections.push(
     ``,
     `## More`,
     ``,
     line('Sitemap', `${base}/sitemap-index.xml`),
-    line('RSS feed', `${base}${getRssUrl(defaultLocale)}`),
     ``,
     `---`,
     ``,

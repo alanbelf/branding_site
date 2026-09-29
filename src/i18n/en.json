@@ -17,7 +17,6 @@
       "home": "Home",
       "services": "Services",
       "projects": "Projects",
-      "blog": "Blog",
       "about": "About",
       "contact": "Contact"
     }
@@ -48,58 +47,11 @@
     "notifications": "Notifications",
     "closeDialog": "Close dialog",
     "tabs": "Tabs",
-    "verticalTabs": "Vertical tabs"
-  },
-  "blog": {
-    "title": "Blog",
-    "description": "Latest articles and updates",
-    "readingTime": "{minutes} min read",
-    "publishedOn": "Published on {date}",
-    "updatedOn": "Updated on {date}",
-    "writtenBy": "Written by {author}",
-    "tagsLabel": "Tags",
-    "featured": "Featured",
-    "draft": "Draft",
-    "noPostsFound": "No posts found.",
+    "verticalTabs": "Vertical tabs",
     "tableOfContents": "Table of contents",
-    "shareThisPost": "Share this post",
-    "relatedPosts": "Related Posts",
-    "share": "Share:",
-    "shareOn": "Share on {platform}",
-    "copyLink": "Copy link",
-    "metaTitle": "Blog",
-    "metaDescription": "The Astro Rocket blog: practical guides to setting up, configuring, and building with the theme.",
-    "heroBadge": "All posts",
-    "heroDescription": "Everything you need to know about Astro\u00a0Rocket, explained in practical guides.",
-    "allPosts": "All posts",
-    "noPosts": "No posts found",
-    "pageMetaTitle": "Blog — Page {page}",
-    "pageMetaDescription": "Page {page} of {total} — practical guides to setting up, configuring, and building with Astro Rocket.",
-    "pageBadge": "Page {page} of {total}",
-    "newestPosts": "Newest posts",
-    "tagMetaTitle": "#{tag} — Blog",
-    "tagMetaDescription": "Posts tagged \"{tag}\".",
-    "tagBadge": "Tag",
-    "tagCountOne": "{count} post tagged \"{tag}\".",
-    "tagCountOther": "{count} posts tagged \"{tag}\".",
-    "tagEmpty": "No posts found for this tag.",
-    "tagBackToAll": "Back to all posts",
     "onThisPage": "On this page",
     "tocShow": "Show",
-    "tocHide": "Hide",
-    "backToBlog": "Back to Blog",
-    "updated": "Updated",
-    "rssFeed": "RSS Feed",
-    "cta": {
-      "heading": "Ready to build?",
-      "description": "Clone Astro Rocket, pick a theme, and launch your next project in minutes.",
-      "button": "Get Started"
-    }
-  },
-  "comments": {
-    "title": "Comments",
-    "loadError": "Comments failed to load. Please refresh and try again.",
-    "requiresJs": "Comments require JavaScript to load."
+    "tocHide": "Hide"
   },
   "projects": {
     "title": "Projects",
@@ -157,16 +109,15 @@
     "titleHighlight": "found.",
     "description": "This page has moved, been removed, or never existed in the first place. Let's get you back on track.",
     "backHome": "Back to home",
-    "browseBlog": "Browse the blog",
+    "browseProjects": "View projects",
     "tryInstead": "Try one of these instead",
     "projectsDesc": "Selected work and case studies.",
-    "blogDesc": "Notes on design, code, and the craft.",
     "contactTitle": "Contact",
     "contactDesc": "Start a conversation about your project."
   },
   "newsletter": {
     "heading": "Subscribe to the newsletter",
-    "description": "Get the latest posts in your inbox.",
+    "description": "Get occasional updates in your inbox.",
     "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "subscribing": "Subscribing…",
@@ -582,11 +533,6 @@
         "stat2": "Cloud HPC",
         "stat3": "Cost governance",
         "basedIn": ""
-      },
-      "blog": {
-        "badge": "From the blog",
-        "heading": "Featured",
-        "viewAll": "View all posts"
       },
       "cta": {
         "badge": "Contact",

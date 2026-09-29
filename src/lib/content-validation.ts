@@ -16,11 +16,11 @@
 
 /** A single URL a piece of content will be published at, within a locale. */
 export interface SlugRecord {
-  /** Human-readable origin for diagnostics, e.g. `blog: en/getting-started`. */
+  /** Human-readable origin for diagnostics, e.g. `projects: en/rgcp`. */
   source: string;
   /** Locale the entry belongs to; collisions are only checked within a locale. */
   locale: string;
-  /** URL path within the locale, e.g. `/blog/getting-started` or `/about`. */
+  /** URL path within the locale, e.g. `/projects/rgcp` or `/about`. */
   path: string;
 }
 
@@ -40,9 +40,7 @@ interface ContentEntryLike {
 
 /**
  * Strip a leading `<locale>/` segment from a collection entry id to get its
- * slug. Mirrors `getPostSlug` in `./blog`, kept here free of the
- * `astro:content` runtime import so it stays unit-testable and can be reused
- * by other build-time helpers (e.g. canonical-id resolution).
+ * slug. Kept independent of the `astro:content` runtime for unit testing.
  */
 export function localeStrippedSlug(id: string, locale: string): string {
   const prefix = `${locale}/`;
@@ -50,25 +48,14 @@ export function localeStrippedSlug(id: string, locale: string): string {
 }
 
 /**
- * Build the list of published URLs from the blog, pages, and projects
- * collections. Blog posts live under `/blog/<slug>`; projects under
- * `/projects/<slug>`; pages live at the site root `/<slug>`.
+ * Build the list of published URLs from the pages and projects collections.
+ * Projects live under `/projects/<slug>`; pages live at the site root `/<slug>`.
  */
 export function collectSlugRecords(
-  posts: ContentEntryLike[],
   pages: ContentEntryLike[],
   projects: ContentEntryLike[] = []
 ): SlugRecord[] {
   const records: SlugRecord[] = [];
-
-  for (const post of posts) {
-    const { locale } = post.data;
-    records.push({
-      source: `blog: ${post.id}`,
-      locale,
-      path: `/blog/${localeStrippedSlug(post.id, locale)}`,
-    });
-  }
 
   for (const project of projects) {
     const { locale } = project.data;
@@ -135,23 +122,21 @@ export function formatSlugCollisions(collisions: SlugCollision[]): string {
 }
 
 /**
- * Build-time guard: throw if any two published entries collide on the same URL
+ * Build-time guard: throw if any two page or project entries collide on the same URL
  * within a locale. Drafts are excluded — they are not emitted in production, so
  * they cannot cause a real collision. Call this from a route's
  * `getStaticPaths`; a throw here aborts `astro build`.
  */
 export async function assertNoSlugCollisions(): Promise<void> {
   const { getCollection } = await import('astro:content');
-  const [posts, pages, projects] = await Promise.all([
-    getCollection('blog'),
+  const [pages, projects] = await Promise.all([
     getCollection('pages'),
     getCollection('projects'),
   ]);
 
-  const publishablePosts = posts.filter((post) => post.data.draft !== true);
   const publishableProjects = projects.filter((project) => project.data.draft !== true);
   const collisions = findSlugCollisions(
-    collectSlugRecords(publishablePosts, pages, publishableProjects)
+    collectSlugRecords(pages, publishableProjects)
   );
 
   if (collisions.length > 0) {

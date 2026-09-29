@@ -106,7 +106,7 @@ jobs:
         run: curl -fsS http://localhost:4321/ | grep -q '<title>'
 
       - name: A nested page is served
-        run: curl -fsS http://localhost:4321/blog/ | grep -q '<title>'
+        run: curl -fsS http://localhost:4321/projects/ | grep -q '<title>'
 
       # SITE_URL reaches the build through compose, so a preview built with an
       # address writes that address and not the localhost default.

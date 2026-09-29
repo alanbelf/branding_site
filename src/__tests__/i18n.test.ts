@@ -31,12 +31,7 @@ describe('i18n t() helper', () => {
   });
 
   it('interpolates {placeholder} variables', () => {
-    expect(t('blog.readingTime', 'en', { minutes: 5 })).toBe('5 min read');
-    expect(t('blog.readingTime', 'nl', { minutes: 5 })).toBe('5 min leestijd');
-  });
-
-  it('leaves unknown placeholders untouched', () => {
-    expect(t('blog.readingTime', 'en', {})).toBe('{minutes} min read');
+    expect(t('pages.contact.basedIn', 'en', { country: 'Qatar' })).toBe('Based in Qatar');
   });
 });
 
@@ -91,7 +86,7 @@ describe('i18n localizedPath()', () => {
     // With default config (locales: ['en']), i18n is effectively off
     expect(localizedPath('/about')).toBe('/about');
     expect(localizedPath('/')).toBe('/');
-    expect(localizedPath('blog/hello')).toBe('/blog/hello');
+    expect(localizedPath('contact')).toBe('/contact');
   });
 });
 
@@ -122,13 +117,13 @@ describe('i18n getLocaleFromPath()', () => {
 
   it('returns the default locale when no recognized prefix is present', () => {
     expect(getLocaleFromPath('/about')).toBe('en');
-    expect(getLocaleFromPath('/blog/hello-world')).toBe('en');
+    expect(getLocaleFromPath('/projects/rgcp')).toBe('en');
   });
 
   it('returns the default locale when the first segment is not a configured locale', () => {
     // Default config only has 'en' active — 'nl' is not recognized
     expect(getLocaleFromPath('/nl/about')).toBe('en');
-    expect(getLocaleFromPath('/zh-cn/blog')).toBe('en');
+    expect(getLocaleFromPath('/zh-cn/projects')).toBe('en');
   });
 
   it('normalizes paths without a leading slash', () => {
@@ -161,7 +156,7 @@ describe('i18n swapLocaleInPath()', () => {
 describe('i18n meta titles never embed the site name', () => {
   // SEO.astro renders the document <title> as `${title} — ${siteConfig.name}`,
   // so any meta-title dictionary value that already contains the site name
-  // would render it twice (e.g. "Blog — Astro Rocket — Astro Rocket"). Every
+  // would render it twice. Every
   // key below feeds that `title` prop and must therefore stay brand-free.
   //
   // The shipped brand is checked as a literal on purpose: importing
@@ -169,9 +164,6 @@ describe('i18n meta titles never embed the site name', () => {
   // and this guards the theme's own default dictionaries against a regression.
   const SITE_NAME = 'Astro Rocket';
   const METATITLE_KEYS = [
-    'blog.metaTitle',
-    'blog.pageMetaTitle',
-    'blog.tagMetaTitle',
     'projects.metaTitle',
     'projects.pageMetaTitle',
     'projects.tagMetaTitle',

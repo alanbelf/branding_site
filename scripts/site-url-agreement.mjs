@@ -3,7 +3,7 @@
  *
  * The theme reads that address from two places, and it has to, because
  * neither can do the other's job. `astro.config.mjs` sets `site` — which
- * writes every canonical tag, `og:url`, RSS link and sitemap entry — and it
+ * writes every canonical tag, `og:url` and sitemap entry — and it
  * runs before `astro:env` exists, so it can only read `process.env`.
  * `site.config.ts` sets `url` — which the JSON-LD, the share cards and the
  * footer read — and it uses `astro:env/server`, because Cloudflare Workers

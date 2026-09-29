@@ -65,7 +65,7 @@ function resolveAdapter() {
  * Build-time check that the site knows its own address.
  *
  * With `SITE_URL` unset the build still succeeds, and every canonical tag,
- * `og:url`, `og:image`, RSS link and sitemap entry is written against the
+ * `og:url`, `og:image` and sitemap entry is written against the
  * placeholder above — pointing search engines and social crawlers at a domain
  * that isn't yours. Nothing in the output looks broken, so it survives to
  * production easily. Warn where it will be read: the build log.
@@ -77,7 +77,7 @@ function siteUrlCheck() {
       'astro:build:start': ({ logger }) => {
         if (process.env.SITE_URL) return;
         logger.warn(
-          `SITE_URL is not set, so canonical URLs, og:image, RSS and the sitemap ` +
+          `SITE_URL is not set, so canonical URLs, og:image and the sitemap ` +
             `will all be written against ${SITE_URL_FALLBACK}. Set SITE_URL in ` +
             `your host's environment variables to your own domain.`
         );
@@ -175,9 +175,8 @@ function faviconAssets() {
  * These used to be prerendered endpoints under `src/pages/og/`, and they hit
  * the same wall as the favicons in #600: rasterising needs `sharp`, which
  * cannot load in the workerd runtime the Cloudflare adapter prerenders in.
- * Worse than the favicons, `src/lib/og.ts` also held the `getBlogOgPath`
- * helpers that `BlogLayout` and `ProjectLayout` import — so `sharp` was
- * reachable from every blog and project page, not just from the card routes.
+ * `src/lib/og.ts` also held path helpers imported by layouts, so `sharp` was
+ * reachable from every page, not just from the card routes.
  * The library is split in two now: `og/svg.ts` is safe anywhere, `og/raster.ts`
  * is Node-only and reached only from here.
  *
@@ -189,11 +188,7 @@ function faviconAssets() {
  * from the same page's `og:title` and `og:description`.
  */
 function ogCards() {
-  const KINDS = [
-    [/^\/og\/blog\/tag\//, 'BLOG'],
-    [/^\/og\/blog\//, 'BLOG'],
-    [/^\/og\/projects\//, 'PROJECTS'],
-  ];
+  const KINDS = [[/^\/og\/projects\//, 'PROJECTS']];
 
   async function htmlFiles(directory) {
     const found = [];
@@ -263,8 +258,8 @@ function ogCards() {
  * Stops a build whose pages disagree about the site's own address.
  *
  * The address is read from two places that cannot share code: `site` here,
- * from `process.env`, which writes the canonical tags, the sitemap, the RSS
- * links and robots.txt; and `url` in `src/config/site.config.ts`, from
+ * from `process.env`, which writes the canonical tags, the sitemap and robots.txt;
+ * and `url` in `src/config/site.config.ts`, from
  * `astro:env/server`, which writes the JSON-LD, the share cards and the
  * footer. See `scripts/site-url-agreement.mjs` for why neither can do the
  * other's job.
