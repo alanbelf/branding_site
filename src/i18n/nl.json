@@ -220,7 +220,6 @@
     "builtWith": "Gebouwd met Astro Rocket",
     "groups": {
       "site": "Site",
-      "topics": "Onderwerpen",
       "projects": "Projecten",
       "questions": "Vragen?"
     },

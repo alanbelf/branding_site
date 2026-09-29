@@ -108,8 +108,7 @@ export const legalLinks: LegalLink[] = [];
  * Extra columns for the footer's `columns` layout.
  *
  * Leave this empty and the footer builds its own from the site: a Site column
- * from `footerNavItems`, a Topics column from the most-used blog tags, and a
- * Projects column from the visible projects. Each is dropped when it has
+ * from `footerNavItems` and a Projects column from the visible projects. Each is dropped when it has
  * nothing in it, so a new site shows one column and fills out as it grows.
  *
  * Anything here is *added* to those, which is what this is for: a column the
