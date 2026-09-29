@@ -454,21 +454,21 @@
     },
     "contact": {
       "meta": {
-        "title": "Contact",
-        "description": "Iets nieuws van plan? Ik ontwerp en bouw nieuwe websites vanaf nul — vertel me over je project en ik reageer binnen 1 werkdag."
+        "title": "Contact met Alan Belferrag",
+        "description": "Vertel me wat je wilt draaien, waar kosten of capaciteit knellen en wat je wilt bereiken."
       },
       "hero": {
-        "badge": "Start een project",
+        "badge": "Contact",
         "titleLead": "Vertel me over je",
-        "titleHighlight": "nieuwe project",
-        "description": "Ik hoor graag van je. Stuur een bericht via het formulier hieronder, of gebruik een van de andere kanalen hieronder."
+        "titleHighlight": "workload",
+        "description": "Vertel me wat je wilt draaien, waar kosten of capaciteit knellen en wat je wilt bereiken."
       },
-      "formTitle": "Projectdetails",
-      "channelsTitle": "Andere kanalen",
-      "channelsSubtitle": "Liever een direct kanaal? Kies wat het beste werkt.",
+      "formTitle": "Workload en infrastructuur",
+      "channelsTitle": "Direct contact",
+      "channelsSubtitle": "Gebruik het formulier of neem contact op via een van de kanalen hier.",
       "emailLabel": "E-mail",
-      "emailNote": "Stuur een bericht",
-      "socialNote": "Volg mee",
+      "emailNote": "Stuur me een e-mail",
+      "socialNote": "Neem contact op",
       "basedIn": "Gevestigd in {country}"
     },
     "home": {

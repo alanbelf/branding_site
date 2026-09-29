@@ -35,10 +35,6 @@ export interface SiteConfig {
   header?: {
     showSocialLinks?: boolean;
   };
-  twitter?: {
-    site: string;
-    creator: string;
-  };
   verification?: {
     google?: string;
     bing?: string;
@@ -162,27 +158,21 @@ const siteConfig: SiteConfig = {
   // (PNG or JPEG): social platforms don't render SVG share images.
   ogImage: '/og/default.png',
   author: 'Alan Belferrag',
-  email: 'hello@hansmartens.dev',
+  email: 'hello@alan-ops.dev',
   address: {
     street: '',
-    city: 'Amsterdam',
+    city: 'Doha',
     state: '',
     zip: '',
-    country: 'the Netherlands',
+    country: 'Qatar',
   },
   socialLinks: [
-    'https://github.com/hansmartensdev',
-    'https://x.com/hansmartens_dev',
-    'https://www.linkedin.com/in/hansmartensdev',
-    'https://bsky.app/profile/hansmartensdev.bsky.social',
+    'https://github.com/alanbelf',
+    'https://www.linkedin.com/in/alan-belferrag-74755b94/',
   ],
   header: {
     // Flip to `true` to show the social icons (incl. GitHub) in the header.
     showSocialLinks: false,
-  },
-  twitter: {
-    site: 'https://x.com/hansmartens_dev',
-    creator: '@hansmartens_dev',
   },
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
