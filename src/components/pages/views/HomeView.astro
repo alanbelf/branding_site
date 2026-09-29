@@ -71,7 +71,7 @@ const posts = [...postItems]
 // the same `stack` collection so icons and links stay single-sourced. Seven logos
 // are wide enough to fill the constrained hero width and loop seamlessly on their
 // own; the Tech-stack section further down still shows the full stack.
-const heroStackOrder = ['Astro', 'Tailwind CSS', 'TypeScript', 'React', 'GitHub', 'Vercel', 'Claude'];
+const heroStackOrder = ['AWS ParallelCluster', 'Azure CycleCloud', 'Slurm', 'Spack', 'MPI', 'Apptainer', 'Hyperstack', 'GitHub', 'Claude'];
 const heroStackItems = (await getCollection('stack'))
   .filter((e) => heroStackOrder.includes(e.data.name))
   .sort((a, b) => heroStackOrder.indexOf(a.data.name) - heroStackOrder.indexOf(b.data.name))
