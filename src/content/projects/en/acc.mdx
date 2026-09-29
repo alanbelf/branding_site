@@ -1,0 +1,96 @@
+---
+title: "ACC: A Production Azure HPC Platform for 10-20 Researchers"
+description: "Designing a secure, Azure CycleCloud-based HPC cluster to bridge a compute-capacity gap for a university research community, with production-grade MPI performance and a managed scientific software stack."
+icon: "server-cog"
+tags: ["Azure CycleCloud", "HPC", "Slurm", "MPI", "Scientific Computing"]
+featured: true
+order: 2
+year: 2026
+role: "Solution architect & technical lead — cluster design, scheduling, software stack, and capacity/budget planning, in partnership with the university's cloud implementation team"
+services: ["HPC/Cloud Consulting"]
+meta: ["10-20 concurrent researchers", "960 CPU cores", "200 Gb/s InfiniBand"]
+draft: false
+placeholder: false
+---
+
+## The situation
+
+A university research group needed continuity of serious CPU-based HPC
+capacity during a period when its long-term on-premises environment
+wasn't available — a documented six-month gap, expected to transition
+to cloud-as-burst-capacity once on-prem computing returned. The users
+were 10-20 concurrent researchers running a mix of tightly-coupled MPI
+applications (molecular dynamics, computational chemistry, atmospheric
+and ocean modeling) and high-memory single-node workloads (genomics,
+data science), all needing a shared, familiar scientific software
+stack, secure institutional access, and real spend control.
+
+## Constraints
+
+- Designed for operation by a very small administrative team — favoring managed orchestration and automation over manually assembled infrastructure
+- A defined six-month production lifecycle, not a permanent data center — favoring pay-as-you-go, scale-to-zero capacity over fixed reservations
+- Mixed workload profile: both multi-node MPI jobs and memory-heavy single-node jobs needed to coexist under one scheduling policy
+- Required institutional-grade security: private network access only, institutional identity integration, and multi-factor authentication
+- A fixed, capped project budget, requiring active capacity planning rather than treating compute as an unconstrained resource
+
+## Approach
+
+I designed the full solution — cluster architecture, Slurm scheduling
+policy, storage layout, identity model, budget controls, and the
+scientific software stack — with Azure-side implementation carried out
+by the university's cloud infrastructure team based on my
+specifications.
+
+## Key decisions
+
+**Azure CycleCloud instead of reproducing the existing AWS ParallelCluster design.**
+The prior environment already ran on AWS with a comparable Slurm-based
+architecture. Rather than rebuilding that on Azure by default, I
+evaluated CycleCloud on its own merits: it matched the required
+orchestration and autoscaling needs and integrated more directly with
+the institution's existing identity, storage, and cost-control
+services. Cost modeling was one input among several — platform fit and
+operational simplicity for a small admin team were the deciding
+factors, not price alone.
+
+**A homogeneous compute pool with workload-shaped scheduling, instead of dedicated hardware per workload type.**
+Rather than splitting the cluster into separate pools of hardware for
+serial, high-memory, and multi-node jobs, I kept the compute nodes
+homogeneous and instead redesigned the Slurm policy around four
+overlapping partitions with per-project quotas, fair-share priority,
+and enforceable core-hour budgets. This preserved full flexibility to
+run any job type on any node, while still giving small jobs and large
+MPI jobs appropriate scheduling behavior without permanently reserving
+capacity for either.
+
+**Reduced peak capacity to stay within budget after costs came in higher than modeled.**
+Regional pricing and storage costs ended up higher than the original
+estimate. Rather than requesting a larger budget or cutting capacity
+sharply, I reduced peak capacity by roughly 11% and tracked early
+utilization closely — betting correctly that onboarding-phase usage
+wouldn't need full capacity from day one, preserving nearly all of the
+platform's scientific capability within the approved budget.
+
+**Centrally managed scientific software and reusable "golden" environments, instead of per-user or fully baked-into-the-image installs.**
+I considered two simpler alternatives: let each researcher manage their
+own software stack (maximum flexibility, but slow onboarding and
+inconsistent results across projects), or bake everything into the
+node image (fast for users, but brittle — every update requires
+rebuilding and re-coordinating the image). Instead, I built a shared
+platform using Spack and Lmod modules, distributed via shared storage
+so every autoscaled node sees the same validated stack, plus reusable
+"golden" environments for data science and machine learning. This gave
+researchers a working, reproducible environment from day one, without
+the maintenance fragility of the image-based approach or the
+inconsistency of everyone building their own.
+
+## Outcome
+
+The platform is deployed and validated: CycleCloud-managed Slurm,
+autoscaling compute, persistent home storage, high-performance parallel
+scratch, institutional identity and MFA, accounting, and monitoring are
+all in production. Multi-node MPI over the InfiniBand backend has been
+benchmarked at roughly 23,584 MB/s bandwidth at 4 MiB message size and
+approximately 1.7 μs small-message latency — solid, representative
+evidence the multi-node MPI path performs as designed. The platform is
+now in active researcher onboarding.
