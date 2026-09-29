@@ -533,8 +533,8 @@
         "titleLine3": "Consulting",
         "description": "I help AI teams set up GPU infrastructure and control compute and token costs. I also design cloud HPC environments for research and engineering workloads.",
         "descriptionMobile": "I help AI teams set up GPU infrastructure and control compute and token costs. I also design cloud HPC for research and engineering workloads.",
-        "github": "Get it on GitHub",
-        "getStarted": "Get started"
+        "primaryAction": "Get in touch",
+        "secondaryAction": "See my work"
       },
       "services": {
         "badge": "Services",

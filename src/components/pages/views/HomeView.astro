@@ -91,8 +91,8 @@ const hero = tData<{
   description: string;
   /** Shorter variant shown below the `sm` breakpoint so the hero stays compact on phones. */
   descriptionMobile: string;
-  github: string;
-  getStarted: string;
+  primaryAction: string;
+  secondaryAction: string;
 }>('pages.home.hero', locale)!;
 const workWithMe = tData<{ badge: string; heading: string; lead: string; cards: IconCard[]; cta: string }>(
   'pages.home.workWithMe',
@@ -132,8 +132,6 @@ const contactUrl = localizedPath('/contact', locale);
 const blogUrl = localizedPath('/blog', locale);
 // The getting-started guide lives at the default-locale URL; link there so the
 // CTA always resolves even before a locale has translated that post.
-const getStartedUrl = '/blog/astro-rocket-getting-started';
-
 // About-teaser copy with the configured location woven in (mirrors the original
 // page's conditional). Falls back to a location-free sentence when no city is set.
 const city = siteConfig.address?.city;
@@ -181,13 +179,12 @@ const basedInDisplay = `${city ?? 'Your City'}${country ? `, ${country}` : ''}`;
     </p>
 
    <Fragment slot="actions">
-      <Button size="lg" href="https://github.com/hansmartensdev/Astro-Rocket">
-        {hero.github}
+      <Button size="lg" href={contactUrl}>
+        {hero.primaryAction}
         <Icon name="arrow-right" size="sm" />
       </Button>
-      <Button size="lg" variant="outline" href={getStartedUrl}>
-        <Icon name="rocket" size="sm" />
-        {hero.getStarted}
+      <Button size="lg" variant="outline" href={projectsUrl}>
+        {hero.secondaryAction}
         <Icon name="arrow-right" size="sm" />
       </Button>
     </Fragment>
