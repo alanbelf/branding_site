@@ -469,12 +469,6 @@
         "lead": "Examples of GPU infrastructure and cloud HPC work.",
         "viewAll": "View all projects"
       },
-      "testimonials": {
-        "badge": "Project evidence",
-        "heading": "Work documented in case studies",
-        "lead": "The case studies above describe my work on GPU infrastructure and cloud HPC.",
-        "items": []
-      },
       "aboutTeaser": {
         "badge": "About me",
         "headingLine1": "HPC and cloud",

@@ -40,7 +40,6 @@ interface Testimonial {
   name: string;
   role: string;
 }
-
 const { locale = defaultLocale } = Astro.props;
 
 // Featured projects for this locale, falling back to the default locale so the
@@ -93,7 +92,7 @@ const portfolio = tData<{ badge: string; heading: string; lead: string; viewAll:
 const testimonials = tData<{ badge: string; heading: string; lead: string; items: Testimonial[] }>(
   'pages.home.testimonials',
   locale
-)!;
+);
 const aboutTeaser = tData<{
   badge: string;
   headingLine1: string;
@@ -174,22 +173,10 @@ const basedInDisplay = `${city ?? 'Your City'}${country ? `, ${country}` : ''}`;
       </Button>
     </Fragment>
 
-    <!-- Tech-stack marquee floored into the hero in place of the scroll indicator:
-         the content stays at the top and the marquee sits low near the bottom, with
-         a roomy gap above it (a guaranteed minimum gap, so it never crowds the
-         CTAs). Constrained to the content width; one decorative row; hidden on
-         phones. cardWidth="auto" lets each card hug its logo + name so the logos sit
-         close together; StackMarquee repeats the set to fill the row so the loop
-         stays seamless. -->
     <div slot="bottom" class="mx-auto w-full max-w-6xl px-6">
-      <!-- Tablet & up: the animated tech-stack marquee. -->
       <div class="hp-hero-marquee" aria-hidden="true">
         <StackMarquee items={heroStackItems} rows={1} duration={55} pauseOnHover={false} linked={false} cardWidth="auto" gap="1rem" />
       </div>
-      <!-- Portrait phone: a static, non-animated row of the four core-stack logos.
-           No marquee machinery — no duplicated track and no infinite animation — so
-           there's zero ongoing compositor/battery cost on mobile. Logos only,
-           non-interactive, with a one-time fade-in to match the marquee's entrance. -->
       <div class="hp-hero-logos" aria-hidden="true">
         {heroStackItems.slice(0, 4).map((item) => (
           <span class="hp-hero-logo">
@@ -306,7 +293,7 @@ const basedInDisplay = `${city ?? 'Your City'}${country ? `, ${country}` : ''}`;
     </div>
   </section>
 
-  <!-- Testimonials -->
+  {testimonials && (
   <section class="relative z-10 py-[var(--space-section-md)] bg-background border-t border-border">
     <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
       <div class="flex flex-col items-center gap-4 text-center" data-reveal>
@@ -353,6 +340,7 @@ const basedInDisplay = `${city ?? 'Your City'}${country ? `, ${country}` : ''}`;
       </div>
     </div>
   </section>
+  )}
 
   <!-- About Teaser -->
   <section class="relative z-10 py-[var(--space-section-md)] bg-background-secondary border-t border-border">
@@ -378,54 +366,54 @@ const basedInDisplay = `${city ?? 'Your City'}${country ? `, ${country}` : ''}`;
            <Button variant="brand-outline" href={aboutUrl} class="self-start sm:self-center glitch:self-start sm:hidden glitch:inline-flex">
             {aboutTeaser.moreAboutMe}
             <Icon name="arrow-right" size="sm" />
-          </Button>
-        </div>
-        <Card variant="elevated" padding="lg" class="h-full flex flex-col" data-reveal data-reveal-delay="1" data-reveal-ease="smooth">
-          <p class="text-sm font-bold text-brand-500 mb-5 text-center sm:hidden glitch:block">{aboutTeaser.statsIntro}</p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 glitch:grid-cols-2 gap-3 flex-1 auto-rows-fr">
-            <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
-              <Icon name="history" class="w-10 h-10 text-brand-500" />
-              <p class="text-sm font-semibold text-foreground">{aboutTeaser.stat1}</p>
-            </div>
-            <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
-              <Icon name="server" class="w-10 h-10 text-brand-500" />
-              <p class="text-sm font-semibold text-foreground">{aboutTeaser.stat2}</p>
-            </div>
-            <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
-              <Icon name="globe" class="w-10 h-10 text-brand-500" />
-              <p class="text-sm font-semibold text-foreground">{aboutTeaser.stat3}</p>
-            </div>
-            <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
-              <Icon name="map-pin" class="w-10 h-10 text-brand-500" />
-              <p class="text-sm font-semibold text-foreground">{aboutTeaser.basedIn} <br class="sm:hidden" />{basedInDisplay}</p>
-            </div>
+            </Button>
           </div>
-        </Card>
-        <div class="hidden sm:flex justify-center glitch:hidden" data-reveal data-reveal-delay="2">
-          <Button variant="brand-outline" href={aboutUrl}>
-            {aboutTeaser.moreAboutMe}
-            <Icon name="arrow-right" size="sm" />
-          </Button>
+          <Card variant="elevated" padding="lg" class="h-full flex flex-col" data-reveal data-reveal-delay="1" data-reveal-ease="smooth">
+            <p class="text-sm font-bold text-brand-500 mb-5 text-center sm:hidden glitch:block">{aboutTeaser.statsIntro}</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 glitch:grid-cols-2 gap-3 flex-1 auto-rows-fr">
+              <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
+                <Icon name="history" class="w-10 h-10 text-brand-500" />
+                <p class="text-sm font-semibold text-foreground">{aboutTeaser.stat1}</p>
+              </div>
+              <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
+                <Icon name="server" class="w-10 h-10 text-brand-500" />
+                <p class="text-sm font-semibold text-foreground">{aboutTeaser.stat2}</p>
+              </div>
+              <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
+                <Icon name="globe" class="w-10 h-10 text-brand-500" />
+                <p class="text-sm font-semibold text-foreground">{aboutTeaser.stat3}</p>
+              </div>
+              <div class="bg-background-tertiary rounded-xl p-5 flex flex-col items-center justify-center text-center gap-2 border-t-2 border-brand-500/40 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-brand-500 cursor-default h-full">
+                <Icon name="map-pin" class="w-10 h-10 text-brand-500" />
+                <p class="text-sm font-semibold text-foreground">{aboutTeaser.basedIn} <br class="sm:hidden" />{basedInDisplay}</p>
+              </div>
+            </div>
+          </Card>
+          <div class="hidden sm:flex justify-center glitch:hidden" data-reveal data-reveal-delay="2">
+            <Button variant="brand-outline" href={aboutUrl}>
+              {aboutTeaser.moreAboutMe}
+              <Icon name="arrow-right" size="sm" />
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="relative z-10 py-[var(--space-section-md)] bg-background-secondary border-t border-border">
-    <CtaBand>
-      <h2 class="font-display text-4xl font-bold text-foreground mb-4 text-balance">
-        {cta.heading}
-      </h2>
-      <p class="text-lg text-foreground-muted mb-8 text-balance">
-        {cta.description}
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button size="lg" href={contactUrl}>
-          {cta.primary}
-          <Icon name="arrow-right" size="sm" />
-        </Button>
-        <Button size="lg" variant="outline" class="cta-btn-brand" href={aboutUrl}>
+    <!-- CTA -->
+    <section class="relative z-10 py-[var(--space-section-md)] bg-background-secondary border-t border-border">
+      <CtaBand>
+        <h2 class="font-display text-4xl font-bold text-foreground mb-4 text-balance">
+          {cta.heading}
+        </h2>
+        <p class="text-lg text-foreground-muted mb-8 text-balance">
+          {cta.description}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button size="lg" href={contactUrl}>
+            {cta.primary}
+            <Icon name="arrow-right" size="sm" />
+          </Button>
+          <Button size="lg" variant="outline" class="cta-btn-brand" href={aboutUrl}>
           {cta.secondary}
           <Icon name="arrow-right" size="sm" />
         </Button>
