@@ -18,11 +18,13 @@ import Card from '@/components/ui/data-display/Card/Card.astro';
 import ProofTile from '@/components/ui/data-display/ProofTile/ProofTile.astro';
 import Button from '@/components/ui/form/Button/Button.astro';
 import { Hero } from '@/components/hero';
+import ProjectCard from '@/components/projects/ProjectCard.astro';
 import ProjectImageSVG from '@/components/projects/ProjectImageSVG.astro';
 import TypingEffect from '@/components/ui/TypingEffect.astro';
 import TechStack from '@/components/landing/TechStack.astro';
 import CtaBand from '@/components/patterns/CtaBand.astro';
 import { t, tData, defaultLocale, localizedPath } from '@/i18n';
+import { getVisibleProjects } from '@/lib/projects';
 import { Image } from 'astro:assets';
 import alanPhoto from '@/assets/alan-headshot.jpg';
 
@@ -62,10 +64,13 @@ const hero = tData<{
   typingWordsMobile: string[];
   description: string;
 }>('pages.about.hero', locale)!;
-const whatYouGet = tData<{ badge: string; heading: string; lead: string; items: IconText[] }>(
+const whatYouGet = tData<{ badge: string; heading: string; lead: string }>(
   'pages.about.whatYouGet',
   locale
 )!;
+const featuredProjects = (await getVisibleProjects(locale))
+  .filter((project) => project.data.featured)
+  .slice(0, 4);
 const principles = tData<{ badge: string; heading: string; lead: string; items: IconText[] }>(
   'pages.about.principles',
   locale
@@ -159,11 +164,9 @@ const cta = tData<{ badge: string; heading: string; description: string; button:
         </p>
       </div>
 
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {whatYouGet.items.map((item, i) => (
-          <ProofTile icon={item.icon} title={item.title} data-reveal data-reveal-delay={i % 3 || undefined}>
-            {item.description}
-          </ProofTile>
+      <div class="grid gap-6 md:grid-cols-2">
+        {featuredProjects.map((project, i) => (
+          <ProjectCard project={project} index={i} locale={project.data.locale} />
         ))}
       </div>
     </div>

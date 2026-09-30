@@ -191,56 +191,9 @@
         "description": "I’m Alan Belferrag, an HPC and cloud infrastructure engineer. In my day job, I’m a Research Computing Specialist in university research computing; this site is for my separate, independent consulting work. My project work includes RGCP: A Self-Service GPU Compute Bridge and the design of ACC: A Production Azure HPC Platform. I work directly with clients on GPU infrastructure and cloud HPC."
       },
       "whatYouGet": {
-        "badge": "Selected work",
-        "heading": "Two infrastructure projects",
-        "lead": "These case studies describe the GPU compute and cloud HPC work behind my consulting focus.",
-        "items": [
-          {
-            "icon": "server",
-            "title": "RGCP: GPU compute",
-            "description": "A self-service GPU cloud platform with cost governance, usage visibility, limits, and onboarding for researchers during an on-prem hardware transition."
-          },
-          {
-            "icon": "cloud",
-            "title": "ACC: Azure HPC design",
-            "description": "Design of an Azure CycleCloud and Slurm platform for research workloads, including scheduling, storage, identity, budget controls, and scientific software."
-          },
-          {
-            "icon": "workflow",
-            "title": "Scheduling and workload fit",
-            "description": "The ACC design used one homogeneous compute pool and Slurm policies to accommodate both multi-node MPI and memory-heavy single-node jobs."
-          },
-          {
-            "icon": "shield-check",
-            "title": "Cost controls",
-            "description": "Both projects treated spend as an infrastructure concern, using limits, visibility, capacity planning, or scale-to-zero design where appropriate."
-          },
-          {
-            "icon": "users",
-            "title": "Researcher access and onboarding",
-            "description": "The platforms were designed around researchers who needed usable compute environments, with institutional access and onboarding considered as part of the work."
-          },
-          {
-            "icon": "boxes",
-            "title": "Shared software environments",
-            "description": "The ACC design used centrally managed Spack and Lmod modules and reusable environments across autoscaled compute nodes."
-          },
-          {
-            "icon": "activity",
-            "title": "Validation and monitoring",
-            "description": "The ACC platform was deployed and validated with production monitoring and representative multi-node MPI benchmarking."
-          },
-          {
-            "icon": "database",
-            "title": "Cloud storage design",
-            "description": "The ACC design included persistent home storage and high-performance parallel scratch for research workloads."
-          },
-          {
-            "icon": "user",
-            "title": "Independent consulting",
-            "description": "This is my personal consulting work, separate from my university role. I work directly with clients."
-          }
-        ]
+        "badge": "Case studies",
+        "heading": "Selected infrastructure work",
+        "lead": "RGCP shows GPU infrastructure and cost governance; ParallelCluster and ACC cover AWS delivery and Azure HPC design; Spack Stack shows scientific software governance across HPC systems. Each case study describes my role and the constraints behind the work."
       },
       "principles": {
         "badge": "How I approach infrastructure",
