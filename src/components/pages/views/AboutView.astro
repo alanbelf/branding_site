@@ -23,6 +23,8 @@ import TypingEffect from '@/components/ui/TypingEffect.astro';
 import TechStack from '@/components/landing/TechStack.astro';
 import CtaBand from '@/components/patterns/CtaBand.astro';
 import { t, tData, defaultLocale } from '@/i18n';
+import { Image } from 'astro:assets';
+import alanPhoto from '@/assets/alan-headshot.jpg';
 
 interface Props {
   /** Locale whose copy this page renders. Defaults to the site default. */
@@ -129,9 +131,12 @@ const cta = tData<{ badge: string; heading: string; description: string; button:
          viewport's: 896px keeps the wide one, a phone's ~382px column takes
          the tall one. -->
     <div class="mt-[calc(var(--space-section-gap)_-_var(--space-stack-lg))] w-full max-w-4xl mx-auto">
-      <ProjectImageSVG
-        slug="astro-rocket"
-        title="Launch your next site with Astro Rocket — the rocket mark over a lit planet's edge, against a starfield."
+      <Image
+        src={alanPhoto}
+        alt="Alan Belferrag"
+        class="rounded-xl ring-1 ring-black/5 dark:ring-white/10 media-shadow w-full h-auto object-cover object-top"
+        width={960}
+        height={640}
       />
     </div>
   </Hero>
