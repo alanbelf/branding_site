@@ -22,7 +22,7 @@ import ProjectImageSVG from '@/components/projects/ProjectImageSVG.astro';
 import TypingEffect from '@/components/ui/TypingEffect.astro';
 import TechStack from '@/components/landing/TechStack.astro';
 import CtaBand from '@/components/patterns/CtaBand.astro';
-import { t, tData, defaultLocale } from '@/i18n';
+import { t, tData, defaultLocale, localizedPath } from '@/i18n';
 import { Image } from 'astro:assets';
 import alanPhoto from '@/assets/alan-headshot.jpg';
 
@@ -52,7 +52,7 @@ interface TitleText {
 
 const { locale = defaultLocale } = Astro.props;
 
-const GITHUB_URL = 'https://github.com/alanbelf';
+const contactUrl = localizedPath('/contact', locale);
 
 const hero = tData<{
   badge: string;
@@ -267,7 +267,7 @@ const cta = tData<{ badge: string; heading: string; description: string; button:
             {openSource.description}
           </p>
           <div class="flex flex-wrap gap-4 self-start sm:self-center sm:justify-center glitch:self-start mt-2">
-            <Button variant="brand-outline" size="lg" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+            <Button variant="brand-outline" size="lg" href={contactUrl}>
               {openSource.button}
               <Icon name="arrow-right" size="sm" />
             </Button>
@@ -298,7 +298,7 @@ const cta = tData<{ badge: string; heading: string; description: string; button:
       <p class="text-lg text-foreground-muted mb-8 text-balance">
         {cta.description}
       </p>
-      <Button size="lg" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+      <Button size="lg" href={contactUrl}>
         {cta.button}
         <Icon name="arrow-right" size="sm" />
       </Button>
