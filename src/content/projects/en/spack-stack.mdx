@@ -1,0 +1,74 @@
+---
+title: "A Reusable Spack Software Stack Across Four HPC Platforms"
+locale: en
+description: "Designing a three-layer Spack architecture and software governance policy for research computing across four heterogeneous HPC systems."
+icon: "layers"
+tags: ["Spack", "HPC", "Scientific Software", "Software Governance", "Reproducibility"]
+featured: true
+order: 4
+role: "Software stack architect & implementer"
+services: ["HPC/Cloud Consulting"]
+meta: ["4 production platforms", "3 software support tiers", "Spack-based lifecycle"]
+draft: false
+placeholder: false
+---
+
+## The situation
+
+HBKU's research computing environments spanned four HPC platforms with
+different schedulers, operating systems, and hardware generations: a Cray
+XC40, an NVIDIA Volta-era GPU cluster, a Cray XC50, and an AWS ParallelCluster
+cloud cluster. Researchers and administrators needed a maintainable way to
+build and provide scientific software across that varied estate, while making
+clear which software was centrally supported and where researchers could
+manage their own environments.
+
+## Constraints
+
+- The software stack had to accommodate platform-specific differences across four production systems.
+- Administrators needed a curated, production-validated application layer without making every researcher depend on individually managed installs.
+- Researchers needed room to build their own environments on top of shared dependencies, without duplicating the foundation stack.
+- Support expectations needed to be explicit for system-wide, community-managed, and user-managed software.
+
+## Approach
+
+I designed and deployed a three-layer software stack architecture using
+Spack. The **Foundation** layer contains administrator-managed compilers, MPI
+implementations, and core libraries. The **Application** layer provides
+administrator-curated, production-validated research applications. The
+**User** layer lets researchers build their own environments on top of the
+shared foundation.
+
+I built out a catalog spanning the Intel oneAPI toolchain, Python, PyTorch,
+TensorFlow, GROMACS, LAMMPS, CP2K, GATE, and core libraries including FFTW,
+OpenBLAS, HDF5, and NetCDF. This required resolving compatibility issues that
+varied by platform, including on the Cray XC40. I also created focused
+environments for geospatial processing with PDAL, GDAL, and rasterio, and for
+molecular dynamics with GROMACS, Intel MPI, and OpenMP.
+
+## Key decisions
+
+**Separate software into layers with distinct ownership.**
+The Foundation layer keeps core build dependencies under administrator
+management. The Application layer exposes curated software validated for
+production use. The User layer enables self-service builds while reusing the
+shared foundation rather than duplicating its dependencies.
+
+**Use Spack as the standard build and lifecycle platform.**
+Spack provided a common way to build and manage software across the four
+platforms, while leaving room to resolve each system's compatibility
+requirements.
+
+**Make support expectations part of the architecture.**
+I authored RCCG's software governance policy around three support tiers:
+system-wide, community-managed, and user-managed software. The policy sets
+expectations for each tier and standards for efficient, reproducible use of
+GPU and network resources, including containerized workflows.
+
+## Outcome
+
+The three-layer Spack architecture is in production across four HPC platforms
+and supports a broad scientific software catalog alongside research-specific
+environments. It also formed the basis for RCCG's software governance policy,
+which establishes Spack as the standard build and lifecycle platform and
+defines software support expectations and resource-use standards.
