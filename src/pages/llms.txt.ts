@@ -32,14 +32,6 @@ import { getNavItems } from '@/config/nav.config';
  * the hreflang tags the theme already emits.
  */
 
-/**
- * The components page ships with the theme but is not in the nav, so it has to
- * be named here. A site that deletes it drops out of this glob, and the link
- * goes with it rather than becoming a 404 in a file meant to be authoritative.
- */
-const componentsPage = import.meta.glob('/src/pages/components.astro');
-const hasComponentsPage = Object.keys(componentsPage).length > 0;
-
 export const GET: APIRoute = async ({ site }) => {
   const base = (site?.toString() || siteConfig.url).replace(/\/$/, '');
 
@@ -58,16 +50,6 @@ export const GET: APIRoute = async ({ site }) => {
   const pageLines = getNavItems(defaultLocale)
     .filter((item) => !item.external)
     .map((item) => line(item.label, `${base}${item.href}`));
-
-  if (hasComponentsPage) {
-    pageLines.push(
-      line(
-        'Components',
-        `${base}/components`,
-        'Every component in the theme, rendered, with its props and variants'
-      )
-    );
-  }
 
   const sections = [
     `# ${siteConfig.name}`,
