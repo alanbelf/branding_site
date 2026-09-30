@@ -418,6 +418,7 @@
         "description": "Tell me what you need to run, where cost or capacity is getting in the way, and what you’re trying to achieve."
       },
       "formTitle": "Workload and infrastructure details",
+      "nextStep": "Include the workload, current environment, and cost or capacity issue you want to address. I’ll review the details and follow up to discuss fit and possible next steps.",
       "channelsTitle": "Direct contact",
       "channelsSubtitle": "Use the form or contact me through the channels listed here.",
       "emailLabel": "Email",
