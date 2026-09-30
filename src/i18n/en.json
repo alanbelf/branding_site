@@ -268,7 +268,7 @@
             "items": [
               { "question": "What does the GPU cost-reduction offer cover?", "answer": "I review GPU and model-serving spend, identify opportunities to reduce GPU or token costs, and help implement changes. The scope and savings baseline need to be agreed for each engagement." },
               { "question": "Is there an upfront fee for that offer?", "answer": "No upfront fee for the GPU cost-reduction offer. Payment is due only after I have demonstrated real savings." },
-              { "question": "How do you establish savings?", "answer": "The costs and comparison period should be agreed before work begins; <span>[PLACEHOLDER: specify the savings measurement and verification method]</span>." },
+              { "question": "How do you establish savings?", "answer": "The method depends on the workloads and agreed scope. Before work starts, we agree on the cost baseline, comparison period, and how savings will be verified." },
               { "question": "What GPU work have you done?", "answer": "The <a href=\"/projects/rgcp\" class=\"underline underline-offset-2 decoration-brand-500 hover:text-brand-400 transition-colors\">RGCP case study</a> describes a self-service GPU compute platform with cost governance." }
             ]
           },
@@ -429,7 +429,7 @@
             "title": "GPU cost reduction",
             "items": [
               { "question": "Is there an upfront fee?", "answer": "No upfront fee for the GPU and token cost-reduction offer. Payment is due only after I demonstrate real savings." },
-              { "question": "How will savings be demonstrated?", "answer": "The baseline and comparison approach need to be agreed before work starts. <span>[PLACEHOLDER: define how savings are measured and verified]</span>." },
+              { "question": "How will savings be demonstrated?", "answer": "The method depends on the workloads and agreed scope. Before work starts, we agree on the cost baseline, comparison period, and how savings will be verified." },
               { "question": "What workloads are in scope?", "answer": "The offer focuses on GPU compute and model-serving costs. The specific workloads, access, and review scope need to be agreed for each engagement." }
             ]
           },
