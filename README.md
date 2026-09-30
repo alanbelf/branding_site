@@ -337,10 +337,10 @@ Open `src/config/i18n.config.ts` and flip the flag:
 const i18nConfig: I18nConfig = {
   enabled: true,                     // master switch
   defaultLocale: 'en',               // stays at the site root (/about)
-  locales: ['en', 'nl'],             // additional locales live at /nl/about
+  locales: ['en', 'fr'],             // additional locales live at /fr/about
   localeNames: {
     en: 'English',
-    nl: 'Nederlands',
+    fr: 'French',
     // …add more as needed; any BCP 47 code works
   },
   detectBrowserLocale: false,
@@ -353,7 +353,7 @@ Astro's native i18n is wired up automatically when `enabled: true` AND `locales.
 
 The bundled pages — the **home page, About, Services and Contact** — are locale-aware. Enable a second locale and `/<locale>`, `/<locale>/about`, `/<locale>/services` and `/<locale>/contact` are generated automatically, so the `LanguageSwitcher` never lands on a 404. You do **not** create `src/pages/<locale>/about.astro` files for these — remove any you added previously, as they would collide with the generated routes.
 
-Their text lives in the locale dictionaries under the `pages.*` keys (`pages.home`, `pages.about`, `pages.services`, `pages.contact`). **To translate a page, copy those keys from `src/i18n/en.json` into your locale file (e.g. `src/i18n/nl.json`) and translate the values — there is no markup to touch.** Anything you haven't translated yet falls back to the default locale, so a localized page is never blank. The design lives in one shared view per page under `src/components/pages/views/`, rendered by both the default route and the `/<locale>/…` route.
+Their text lives in the locale dictionaries under the `pages.*` keys (`pages.home`, `pages.about`, `pages.services`, `pages.contact`). **To translate a page, copy those keys from `src/i18n/en.json` into your locale file (for example, `src/i18n/fr.json`) and translate the values — there is no markup to touch.** Anything you haven't translated yet falls back to the default locale, so a localized page is never blank. The design lives in one shared view per page under `src/components/pages/views/`, rendered by both the default route and the `/<locale>/…` route.
 
 Adding your **own** new page follows the same three-file pattern — a view holding the design, a default-locale route, and a locale-prefixed route:
 
@@ -389,11 +389,11 @@ const { locale } = Astro.params;
 <PricingView locale={locale} />
 ```
 
-For lists and structured sections (an array of FAQ items, feature cards, …) use `tData('pages.pricing.faqs', locale)`, which returns arrays/objects from the dictionary with the same default-locale fallback as `t()`. Or, for a quick one-off, just write a standalone `src/pages/nl/pricing.astro` directly. Either way, the `LanguageSwitcher` automatically builds links to `/<locale>/<current-path>` for every configured locale.
+For lists and structured sections (an array of FAQ items, feature cards, …) use `tData('pages.pricing.faqs', locale)`, which returns arrays/objects from the dictionary with the same default-locale fallback as `t()`. Or, for a quick one-off, just write a standalone `src/pages/fr/pricing.astro` directly. Either way, the `LanguageSwitcher` automatically builds links to `/<locale>/<current-path>` for every configured locale.
 
 ### Translating UI strings
 
-UI strings (button labels, "Read more", "Published on", etc.) live in `src/i18n/<locale>.json`. Astro Rocket ships English (`en.json`) and Dutch (`nl.json`) out of the box. Use the `t()` helper in any `.astro` file:
+UI strings (button labels, "Read more", "Published on", etc.) live in `src/i18n/<locale>.json`. This site currently ships English only; enable another language by adding its dictionary and configuring the locale. Use the `t()` helper in any `.astro` file:
 
 ```astro
 ---
@@ -417,7 +417,7 @@ For the rare case where a locale needs a structurally different label or path (e
 
 ```ts
 { label: 'About', href: '/about', order: 4, labelKey: 'nav.items.about',
-  locales: { nl: { href: '/over-ons' } } },
+  locales: { fr: { href: '/a-propos' } } },
 ```
 
 With i18n off, none of this runs and the nav renders exactly as written.
@@ -428,7 +428,7 @@ Projects and pages already carry a `locale` field on their schema (`src/content.
 
 ```
 src/content/projects/en/studio-portfolio.mdx
-src/content/projects/nl/studio-portfolio.mdx
+src/content/projects/fr/studio-portfolio.mdx
 ```
 
 > **Switching the default locale.** Changing `defaultLocale` in `i18n.config.ts` is a routing label — it controls which locale serves at the site root, not which content folder gets read. To make a different language the default, also rename the matching project content folder (e.g. `src/content/projects/en/` → `src/content/projects/zh-CN/`) so the root URL resolves to the right projects. The locale code in `i18n.config.ts` and the folder name under `src/content/projects/` must match.

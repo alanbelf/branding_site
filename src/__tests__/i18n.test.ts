@@ -17,10 +17,6 @@ describe('i18n t() helper', () => {
     expect(t('common.readMore', 'en')).toBe('Read more');
   });
 
-  it('returns the Dutch translation when locale is nl', () => {
-    expect(t('common.readMore', 'nl')).toBe('Lees meer');
-  });
-
   it('falls back to the default-locale string when the locale has no entry', () => {
     // 'de' has no dictionary loaded yet — should fall back to English
     expect(t('common.readMore', 'de')).toBe('Read more');
@@ -54,11 +50,6 @@ describe('i18n tData() helper', () => {
         description: expect.any(String),
       })
     );
-  });
-
-  it('returns the Dutch structured value when locale is nl', () => {
-    const hero = tData<{ badge: string }>('pages.about.hero', 'nl');
-    expect(hero?.badge).toBe('Over');
   });
 
   it('falls back to the default-locale value when the locale has no entry', () => {
@@ -104,8 +95,6 @@ describe('i18n locale helpers', () => {
 
   it('returns the display name when configured, otherwise the code', () => {
     expect(getLocaleName('en')).toBe('English');
-    // 'nl' is in localeNames even though it's not in the active locales list
-    expect(getLocaleName('nl')).toBe('Nederlands');
     expect(getLocaleName('xx')).toBe('xx');
   });
 });
@@ -121,8 +110,8 @@ describe('i18n getLocaleFromPath()', () => {
   });
 
   it('returns the default locale when the first segment is not a configured locale', () => {
-    // Default config only has 'en' active — 'nl' is not recognized
-    expect(getLocaleFromPath('/nl/about')).toBe('en');
+    // Default config only has 'en' active — other prefixes are not recognized
+    expect(getLocaleFromPath('/fr/about')).toBe('en');
     expect(getLocaleFromPath('/zh-cn/projects')).toBe('en');
   });
 
@@ -134,7 +123,7 @@ describe('i18n getLocaleFromPath()', () => {
 describe('i18n stripLocaleFromPath()', () => {
   it('leaves a path unchanged when the first segment is not a configured locale', () => {
     expect(stripLocaleFromPath('/about')).toBe('/about');
-    expect(stripLocaleFromPath('/nl/about')).toBe('/nl/about');
+    expect(stripLocaleFromPath('/fr/about')).toBe('/fr/about');
   });
 
   it('returns "/" for the root path', () => {
@@ -149,7 +138,7 @@ describe('i18n swapLocaleInPath()', () => {
 
   it('returns the same path when i18n is disabled, regardless of target', () => {
     // With default config (single locale), localizedPath is a no-op
-    expect(swapLocaleInPath('/about', 'nl')).toBe('/about');
+    expect(swapLocaleInPath('/about', 'fr')).toBe('/about');
   });
 });
 
@@ -174,7 +163,7 @@ describe('i18n meta titles never embed the site name', () => {
     'pages.contact.meta.title',
   ];
 
-  const cases = ['en', 'nl'].flatMap((locale) =>
+  const cases = ['en', 'fr'].flatMap((locale) =>
     METATITLE_KEYS.map((key) => [locale, key] as [string, string])
   );
 

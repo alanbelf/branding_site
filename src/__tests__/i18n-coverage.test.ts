@@ -14,8 +14,7 @@ import { describe, expect, it } from 'vitest';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
-import en from '../i18n/en.json';
-import nl from '../i18n/nl.json';
+import { getLocales, getSecondaryLocales } from '../i18n';
 
 const ROOT = process.cwd();
 const SCANNED = ['src/components', 'src/layouts'];
@@ -82,13 +81,6 @@ export function findHardcodedStrings(roots: string[] = SCANNED) {
   return found;
 }
 
-const flatten = (value: unknown, prefix = ''): string[] =>
-  typeof value !== 'object' || value === null
-    ? [prefix]
-    : Object.entries(value).flatMap(([key, child]) =>
-        flatten(child, prefix ? `${prefix}.${key}` : key)
-      );
-
 describe('interface text lives in the locale files', () => {
   it('no component hard-codes a string a screen reader would announce', () => {
     const found = findHardcodedStrings();
@@ -99,22 +91,9 @@ describe('interface text lives in the locale files', () => {
   });
 });
 
-describe('every locale carries every key', () => {
-  const locales = { nl };
-
-  for (const [name, dictionary] of Object.entries(locales)) {
-    it(`${name}.json has no key missing against en.json`, () => {
-      const expected = flatten(en);
-      const actual = new Set(flatten(dictionary));
-      // A missing key falls back to the default locale silently, so the page
-      // renders the default language in place of the translation and nothing
-      // reports it.
-      expect(expected.filter((key) => !actual.has(key))).toEqual([]);
-    });
-
-    it(`${name}.json has no key that en.json does not`, () => {
-      const expected = new Set(flatten(en));
-      expect(flatten(dictionary).filter((key) => !expected.has(key))).toEqual([]);
-    });
-  }
+describe('shipped locales', () => {
+  it('serves only English and generates no locale-prefixed routes', () => {
+    expect(getLocales()).toEqual(['en']);
+    expect(getSecondaryLocales()).toEqual([]);
+  });
 });

@@ -19,7 +19,6 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { colourThemes, selectorThemes } from '../lib/themes';
-import nl from '../i18n/nl.json';
 
 const COUNT = colourThemes.length;
 const IDS = colourThemes.map((t) => t.id);
@@ -121,7 +120,6 @@ describe('colour themes', () => {
       'AGENTS.md',
       'src/config/site.config.ts',
       'src/i18n/en.json',
-      'src/i18n/nl.json',
     ]) {
       expect(read(file), file).not.toMatch(/\btwelve\b/i);
       expect(read(file), file).not.toMatch(/\b12[- ](colour|color|swatch|theme)/i);

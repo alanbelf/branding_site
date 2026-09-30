@@ -63,7 +63,7 @@ const robotsContent = [noindex ? 'noindex' : 'index', nofollow ? 'nofollow' : 'f
 // Normalize BCP-47 locale (e.g. "en") to OG language_TERRITORY format (e.g. "en_US")
 const localeMap: Record<string, string> = {
   en: 'en_US', fr: 'fr_FR', de: 'de_DE', es: 'es_ES', it: 'it_IT',
-  pt: 'pt_BR', nl: 'nl_NL', ja: 'ja_JP', ko: 'ko_KR', zh: 'zh_CN',
+  pt: 'pt_BR', ja: 'ja_JP', ko: 'ko_KR', zh: 'zh_CN',
   ru: 'ru_RU', ar: 'ar_SA', hi: 'hi_IN', pl: 'pl_PL', sv: 'sv_SE',
 };
 const rawLocale = Astro.currentLocale || 'en_US';
