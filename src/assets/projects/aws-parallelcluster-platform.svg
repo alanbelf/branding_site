@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="20" x2="1135" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10132C"/><stop offset=".55" stop-color="#102340"/><stop offset="1" stop-color="#092C3B"/>
+    </linearGradient>
+    <linearGradient id="mpi" x1="95" y1="230" x2="550" y2="455" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#123D67"/><stop offset="1" stop-color="#145A72"/>
+    </linearGradient>
+    <linearGradient id="mem" x1="610" y1="230" x2="1065" y2="455" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39265F"/><stop offset="1" stop-color="#533365"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="70" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57D7FF"/><stop offset=".5" stop-color="#8A7CFF"/><stop offset="1" stop-color="#FFB76A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="30" fill="url(#bg)"/>
+  <path d="M0 132H1200M0 524H1200" stroke="#B6C9FF" stroke-opacity=".12"/>
+  <text x="64" y="77" fill="#F1F2FF" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.5">AWS PARALLELCLUSTER</text>
+  <rect x="882" y="43" width="254" height="46" rx="23" fill="#1A2B4A" stroke="#7F9FFF" stroke-opacity=".6"/>
+  <text x="913" y="73" fill="#DFE8FF" font-family="Arial, sans-serif" font-size="22" font-weight="600">Secure · governed</text>
+
+  <rect x="64" y="157" width="1072" height="91" rx="20" fill="#1B2851" stroke="#8B83FF" stroke-width="2"/>
+  <circle cx="106" cy="202" r="15" fill="#9B83FF"/>
+  <text x="139" y="196" fill="#C9C1FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">CONTROLLED ACCESS</text>
+  <text x="139" y="228" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="27" font-weight="700">IAM + MFA</text>
+  <rect x="466" y="174" width="212" height="56" rx="16" fill="#192F4D"/>
+  <text x="491" y="210" fill="#E9F8FF" font-family="Arial, sans-serif" font-size="26" font-weight="700">SSM tunnel</text>
+  <rect x="695" y="174" width="183" height="56" rx="16" fill="#28305A"/>
+  <text x="725" y="210" fill="#E9E5FF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Simple AD</text>
+  <rect x="895" y="174" width="211" height="56" rx="16" fill="#123B45"/>
+  <text x="920" y="210" fill="#D8FFF5" font-family="Arial, sans-serif" font-size="25" font-weight="700">No public SSH</text>
+
+  <path d="M600 248V274M326 274H874M326 274V296M874 274V296" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <rect x="64" y="296" width="516" height="194" rx="24" fill="url(#mpi)" stroke="#54D4FF" stroke-width="2"/>
+  <text x="101" y="342" fill="#9AEAFF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">QUEUE 01 · MPI</text>
+  <text x="101" y="393" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="35" font-weight="700">EFA-enabled</text>
+  <text x="101" y="432" fill="#D7F7FF" font-family="Arial, sans-serif" font-size="27">Multi-node parallel jobs</text>
+  <g fill="#5DDAFF"><circle cx="109" cy="466" r="7"/><circle cx="133" cy="466" r="7"/><circle cx="157" cy="466" r="7"/><circle cx="181" cy="466" r="7"/></g>
+  <path d="M196 466H515" stroke="#5DDAFF" stroke-width="3" stroke-dasharray="8 9" opacity=".8"/>
+
+  <rect x="620" y="296" width="516" height="194" rx="24" fill="url(#mem)" stroke="#C08BFF" stroke-width="2"/>
+  <text x="657" y="342" fill="#DAB8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">QUEUE 02 · MEMORY</text>
+  <text x="657" y="393" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="35" font-weight="700">High-memory</text>
+  <text x="657" y="432" fill="#F4E2FF" font-family="Arial, sans-serif" font-size="27">Single-node research jobs</text>
+  <g fill="#D19EFF"><rect x="657" y="457" width="60" height="17" rx="8"/><rect x="728" y="457" width="60" height="17" rx="8"/><rect x="799" y="457" width="60" height="17" rx="8"/></g>
+  <path d="M877 465H1070" stroke="#D19EFF" stroke-width="3" stroke-dasharray="8 9" opacity=".8"/>
+
+  <rect x="64" y="548" width="666" height="77" rx="18" fill="#153448" stroke="#59CDE1" stroke-opacity=".8" stroke-width="2"/>
+  <text x="94" y="580" fill="#A9F2FF" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing=".8">SHARED STORAGE</text>
+  <text x="94" y="611" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">EFS  ·  FSx Lustre  ·  NVMe</text>
+
+  <rect x="752" y="548" width="384" height="77" rx="18" fill="#402D46" stroke="#FFB86E" stroke-width="2"/>
+  <circle cx="783" cy="586" r="10" fill="#FFC16E"/>
+  <text x="809" y="580" fill="#FFD7A3" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing=".8">BUDGET DAEMON</text>
+  <text x="809" y="611" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Track · block · resume</text>
+</svg>

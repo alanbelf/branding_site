@@ -28,6 +28,7 @@ interface Props {
   url?: string;
   repo?: string;
   image?: ImageMetadata;
+  imageLight?: ImageMetadata;
   imageAlt?: string;
   gallery?: GallerySlide[];
   tags?: string[];
@@ -46,6 +47,7 @@ const {
   url,
   repo,
   image,
+  imageLight,
   imageAlt,
   gallery = [],
   tags = [],
@@ -128,6 +130,7 @@ const languageAlternates = Object.fromEntries(
       url={url}
       repo={repo}
       image={image}
+      imageLight={imageLight}
       imageAlt={imageAlt}
       gallery={gallery}
       tags={tags}

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="68" y1="15" x2="1138" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#13112C"/><stop offset=".52" stop-color="#102442"/><stop offset="1" stop-color="#073B47"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="60" y1="130" x2="1140" y2="605" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171E3E"/><stop offset="1" stop-color="#102B3C"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8A63FF"/><stop offset="1" stop-color="#D279FF"/>
+    </linearGradient>
+    <linearGradient id="aqua" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#45D9E9"/><stop offset="1" stop-color="#62F0B8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="30" fill="url(#bg)"/>
+  <circle cx="1050" cy="86" r="170" fill="#197FB0" opacity=".12"/>
+  <circle cx="124" cy="570" r="180" fill="#944DF3" opacity=".12"/>
+  <text x="64" y="76" fill="#F7F0FF" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.5">RGCP · GPU COMPUTE BRIDGE</text>
+  <rect x="862" y="43" width="274" height="46" rx="23" fill="#273355" stroke="#82B6FF" stroke-opacity=".65"/>
+  <circle cx="890" cy="66" r="6" fill="#63E7BD"/>
+  <text x="999" y="72" text-anchor="middle" fill="#E3F4FF" font-family="Arial, sans-serif" font-size="18" font-weight="600">Self-service · temporary</text>
+
+  <rect x="64" y="128" width="1072" height="472" rx="25" fill="url(#screen)" stroke="#7C7DFF" stroke-opacity=".6" stroke-width="2"/>
+  <rect x="64" y="128" width="1072" height="58" rx="25" fill="#201D47"/>
+  <path d="M64 161V186H1136V161" fill="#201D47"/>
+  <circle cx="98" cy="157" r="7" fill="#FF7F9B"/>
+  <circle cx="123" cy="157" r="7" fill="#FFC56F"/>
+  <circle cx="148" cy="157" r="7" fill="#64E0B9"/>
+  <text x="191" y="165" fill="#ECE7FF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Research compute portal</text>
+  <rect x="927" y="140" width="177" height="34" rx="17" fill="#155A5A"/>
+  <text x="951" y="164" fill="#BDFFF0" font-family="Arial, sans-serif" font-size="22" font-weight="700">BRIDGE MODE</text>
+
+  <text x="100" y="236" fill="#BEB6FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">RESEARCHER FLOW</text>
+  <g>
+    <rect x="100" y="260" width="205" height="88" rx="18" fill="#2A2859" stroke="#9A83FF" stroke-width="2"/>
+    <text x="132" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Request</text>
+    <path d="M312 304H352" stroke="#A89BFF" stroke-width="4"/>
+    <path d="m344 296 10 8-10 8" stroke="#A89BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="364" y="260" width="205" height="88" rx="18" fill="#174A64" stroke="#58D7EF" stroke-width="2"/>
+    <text x="394" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Provision</text>
+    <path d="M576 304H616" stroke="#6CDCE7" stroke-width="4"/>
+    <path d="m608 296 10 8-10 8" stroke="#6CDCE7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="628" y="260" width="205" height="88" rx="18" fill="#145B67" stroke="#62E6C6" stroke-width="2"/>
+    <text x="699" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Run</text>
+    <path d="M840 304H880" stroke="#75E9BE" stroke-width="4"/>
+    <path d="m872 296 10 8-10 8" stroke="#75E9BE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="892" y="260" width="205" height="88" rx="18" fill="#453357" stroke="#E39DFF" stroke-width="2"/>
+    <text x="929" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Monitor</text>
+  </g>
+
+  <rect x="100" y="386" width="464" height="167" rx="20" fill="#18284C" stroke="#6E91FF" stroke-opacity=".85" stroke-width="2"/>
+  <text x="132" y="426" fill="#AFC4FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing=".9">GPU CAPACITY</text>
+  <rect x="132" y="449" width="90" height="62" rx="12" fill="#3A2B78"/>
+  <rect x="238" y="449" width="90" height="62" rx="12" fill="#185878"/>
+  <rect x="344" y="449" width="90" height="62" rx="12" fill="#155D64"/>
+  <g fill="#DCD7FF"><rect x="150" y="462" width="54" height="5" rx="2"/><rect x="150" y="475" width="54" height="5" rx="2"/><rect x="150" y="488" width="54" height="5" rx="2"/></g>
+  <g fill="#B7F4FF"><rect x="256" y="462" width="54" height="5" rx="2"/><rect x="256" y="475" width="54" height="5" rx="2"/><rect x="256" y="488" width="54" height="5" rx="2"/></g>
+  <g fill="#C2FFF0"><rect x="362" y="462" width="54" height="5" rx="2"/><rect x="362" y="475" width="54" height="5" rx="2"/><rect x="362" y="488" width="54" height="5" rx="2"/></g>
+  <text x="132" y="537" fill="#E6E9FF" font-family="Arial, sans-serif" font-size="23">Provisioned when researchers need it</text>
+
+  <rect x="588" y="386" width="509" height="167" rx="20" fill="#362951" stroke="#BD87FF" stroke-opacity=".9" stroke-width="2"/>
+  <text x="622" y="426" fill="#E3C8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing=".9">COST GUARDRAILS</text>
+  <text x="622" y="474" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="31" font-weight="700">Visibility + limits</text>
+  <rect x="622" y="497" width="420" height="15" rx="7" fill="#251D3D"/>
+  <rect x="622" y="497" width="274" height="15" rx="7" fill="url(#violet)"/>
+  <text x="622" y="537" fill="#EDDFFF" font-family="Arial, sans-serif" font-size="23">Spend monitored before it runs away</text>
+
+</svg>

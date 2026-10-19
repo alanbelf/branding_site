@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="mpi" x1="95" y1="230" x2="550" y2="455" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#123D67"/><stop offset="1" stop-color="#145A72"/>
+    </linearGradient>
+    <linearGradient id="mem" x1="610" y1="230" x2="1065" y2="455" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39265F"/><stop offset="1" stop-color="#533365"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="70" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57D7FF"/><stop offset=".5" stop-color="#8A7CFF"/><stop offset="1" stop-color="#FFB76A"/>
+    </linearGradient>
+  </defs>
+  <style>
+:not(text)[fill="#092C3B"] { fill: #EEF0F2; }
+text[fill="#092C3B"] { fill: #375562; }
+[stroke="#092C3B"] { stroke: #6DA3BA; }
+stop[stop-color="#092C3B"] { stop-color: #E5E9EB; }
+:not(text)[fill="#10132C"] { fill: #EEEEF2; }
+text[fill="#10132C"] { fill: #404672; }
+[stroke="#10132C"] { stroke: #6D76BA; }
+stop[stop-color="#10132C"] { stop-color: #E5E6EB; }
+:not(text)[fill="#102340"] { fill: #EEEFF2; }
+text[fill="#102340"] { fill: #405472; }
+[stroke="#102340"] { stroke: #6D8CBA; }
+stop[stop-color="#102340"] { stop-color: #E5E7EB; }
+:not(text)[fill="#123B45"] { fill: #EEF1F2; }
+text[fill="#123B45"] { fill: #406872; }
+[stroke="#123B45"] { stroke: #6DABBA; }
+stop[stop-color="#123B45"] { stop-color: #E5EAEB; }
+:not(text)[fill="#123D67"] { fill: #EDF0F2; }
+text[fill="#123D67"] { fill: #374D62; }
+[stroke="#123D67"] { stroke: #6D94BA; }
+stop[stop-color="#123D67"] { stop-color: #E5E8EB; }
+:not(text)[fill="#145A72"] { fill: #EDF1F3; }
+text[fill="#145A72"] { fill: #375762; }
+[stroke="#145A72"] { stroke: #6DA7BA; }
+stop[stop-color="#145A72"] { stop-color: #E4EAEC; }
+:not(text)[fill="#153448"] { fill: #EEF0F2; }
+text[fill="#153448"] { fill: #405F72; }
+[stroke="#153448"] { stroke: #6D9CBA; }
+stop[stop-color="#153448"] { stop-color: #E5E9EB; }
+:not(text)[fill="#192F4D"] { fill: #EDEFF2; }
+text[fill="#192F4D"] { fill: #405572; }
+[stroke="#192F4D"] { stroke: #6D8EBA; }
+stop[stop-color="#192F4D"] { stop-color: #E5E8EB; }
+:not(text)[fill="#1A2B4A"] { fill: #EEEFF2; }
+text[fill="#1A2B4A"] { fill: #405272; }
+[stroke="#1A2B4A"] { stroke: #6D89BA; }
+stop[stop-color="#1A2B4A"] { stop-color: #E5E7EB; }
+:not(text)[fill="#1B2851"] { fill: #EDEEF2; }
+text[fill="#1B2851"] { fill: #404C72; }
+[stroke="#1B2851"] { stroke: #6D80BA; }
+stop[stop-color="#1B2851"] { stop-color: #E5E6EB; }
+:not(text)[fill="#28305A"] { fill: #EDEEF3; }
+text[fill="#28305A"] { fill: #404872; }
+[stroke="#28305A"] { stroke: #6D7ABA; }
+stop[stop-color="#28305A"] { stop-color: #F5F5F7; }
+:not(text)[fill="#39265F"] { fill: #EFEDF3; }
+text[fill="#39265F"] { fill: #514072; }
+[stroke="#39265F"] { stroke: #876DBA; }
+stop[stop-color="#39265F"] { stop-color: #E7E4EC; }
+:not(text)[fill="#402D46"] { fill: #F7F5F8; }
+text[fill="#402D46"] { fill: #664072; }
+[stroke="#402D46"] { stroke: #A86DBA; }
+stop[stop-color="#402D46"] { stop-color: #F7F5F7; }
+:not(text)[fill="#533365"] { fill: #F7F4F8; }
+text[fill="#533365"] { fill: #613F74; }
+[stroke="#533365"] { stroke: #9F6DBA; }
+stop[stop-color="#533365"] { stop-color: #F7F4F8; }
+:not(text)[fill="#54D4FF"] { fill: #EAF3F6; }
+text[fill="#54D4FF"] { fill: #1D647C; }
+[stroke="#54D4FF"] { stroke: #4DB7DB; }
+stop[stop-color="#54D4FF"] { stop-color: #E0ECF0; }
+:not(text)[fill="#57D7FF"] { fill: #EAF3F6; }
+text[fill="#57D7FF"] { fill: #1D657C; }
+[stroke="#57D7FF"] { stroke: #4CBADC; }
+stop[stop-color="#57D7FF"] { stop-color: #E0ECF0; }
+:not(text)[fill="#59CDE1"] { fill: #EAF4F6; }
+text[fill="#59CDE1"] { fill: #1D6E7C; }
+[stroke="#59CDE1"] { stroke: #52C2D6; }
+stop[stop-color="#59CDE1"] { stop-color: #E0EEF0; }
+:not(text)[fill="#5DDAFF"] { fill: #EAF3F6; }
+text[fill="#5DDAFF"] { fill: #1D667C; }
+[stroke="#5DDAFF"] { stroke: #4BBBDD; }
+stop[stop-color="#5DDAFF"] { stop-color: #E0ECF0; }
+:not(text)[fill="#7F9FFF"] { fill: #EAEDF6; }
+text[fill="#7F9FFF"] { fill: #1D357C; }
+[stroke="#7F9FFF"] { stroke: #4B6FDD; }
+stop[stop-color="#7F9FFF"] { stop-color: #E0E4F0; }
+:not(text)[fill="#8A7CFF"] { fill: #EBEAF6; }
+text[fill="#8A7CFF"] { fill: #271D7C; }
+[stroke="#8A7CFF"] { stroke: #5B4BDD; }
+stop[stop-color="#8A7CFF"] { stop-color: #E2E0F0; }
+:not(text)[fill="#8B83FF"] { fill: #EBEAF6; }
+text[fill="#8B83FF"] { fill: #231D7C; }
+[stroke="#8B83FF"] { stroke: #544BDD; }
+stop[stop-color="#8B83FF"] { stop-color: #E1E0F0; }
+:not(text)[fill="#9AEAFF"] { fill: #EAF3F6; }
+text[fill="#9AEAFF"] { fill: #1D687C; }
+[stroke="#9AEAFF"] { stroke: #4BBEDD; }
+stop[stop-color="#9AEAFF"] { stop-color: #E0EDF0; }
+:not(text)[fill="#9B83FF"] { fill: #ECEAF6; }
+text[fill="#9B83FF"] { fill: #2F1D7C; }
+[stroke="#9B83FF"] { stroke: #674BDD; }
+stop[stop-color="#9B83FF"] { stop-color: #E3E0F0; }
+:not(text)[fill="#A9F2FF"] { fill: #EAF4F6; }
+text[fill="#A9F2FF"] { fill: #1D6E7C; }
+[stroke="#A9F2FF"] { stroke: #4BC7DD; }
+stop[stop-color="#A9F2FF"] { stop-color: #E0EDF0; }
+:not(text)[fill="#B6C9FF"] { fill: #EAEDF6; }
+text[fill="#B6C9FF"] { fill: #1D367C; }
+[stroke="#B6C9FF"] { stroke: #4B71DD; }
+stop[stop-color="#B6C9FF"] { stop-color: #E0E4F0; }
+:not(text)[fill="#C08BFF"] { fill: #EFEAF6; }
+text[fill="#C08BFF"] { fill: #481D7C; }
+[stroke="#C08BFF"] { stroke: #8E4BDD; }
+stop[stop-color="#C08BFF"] { stop-color: #E7E0F0; }
+:not(text)[fill="#C9C1FF"] { fill: #EBEAF6; }
+text[fill="#C9C1FF"] { fill: #291D7C; }
+[stroke="#C9C1FF"] { stroke: #5E4BDD; }
+stop[stop-color="#C9C1FF"] { stop-color: #E2E0F0; }
+:not(text)[fill="#D19EFF"] { fill: #F0EAF6; }
+text[fill="#D19EFF"] { fill: #4F1D7C; }
+[stroke="#D19EFF"] { stroke: #984BDD; }
+stop[stop-color="#D19EFF"] { stop-color: #E8E0F0; }
+:not(text)[fill="#D7F7FF"] { fill: #EAF3F6; }
+text[fill="#D7F7FF"] { fill: #1D697C; }
+[stroke="#D7F7FF"] { stroke: #4BC0DD; }
+stop[stop-color="#D7F7FF"] { stop-color: #E0EDF0; }
+:not(text)[fill="#D8FFF5"] { fill: #EAF6F3; }
+text[fill="#D8FFF5"] { fill: #1D7C64; }
+[stroke="#D8FFF5"] { stroke: #4BDDB7; }
+stop[stop-color="#D8FFF5"] { stop-color: #E0F0EC; }
+:not(text)[fill="#DAB8FF"] { fill: #EFEAF6; }
+text[fill="#DAB8FF"] { fill: #4A1D7C; }
+[stroke="#DAB8FF"] { stroke: #914BDD; }
+stop[stop-color="#DAB8FF"] { stop-color: #E8E0F0; }
+:not(text)[fill="#DFE8FF"] { fill: #EAEDF6; }
+text[fill="#DFE8FF"] { fill: #1D387C; }
+[stroke="#DFE8FF"] { stroke: #4B74DD; }
+stop[stop-color="#DFE8FF"] { stop-color: #E0E5F0; }
+:not(text)[fill="#E9E5FF"] { fill: #ECEAF6; }
+text[fill="#E9E5FF"] { fill: #2C1D7C; }
+[stroke="#E9E5FF"] { stroke: #614BDD; }
+stop[stop-color="#E9E5FF"] { stop-color: #E3E0F0; }
+:not(text)[fill="#E9F8FF"] { fill: #EAF2F6; }
+text[fill="#E9F8FF"] { fill: #1D5E7C; }
+[stroke="#E9F8FF"] { stroke: #4BAEDD; }
+stop[stop-color="#E9F8FF"] { stop-color: #E0EBF0; }
+:not(text)[fill="#F1F2FF"] { fill: #EAEBF6; }
+text[fill="#F1F2FF"] { fill: #1D247C; }
+[stroke="#F1F2FF"] { stroke: #4B55DD; }
+stop[stop-color="#F1F2FF"] { stop-color: #E0E1F0; }
+:not(text)[fill="#F4E2FF"] { fill: #F1EAF6; }
+text[fill="#F4E2FF"] { fill: #581D7C; }
+[stroke="#F4E2FF"] { stroke: #A54BDD; }
+stop[stop-color="#F4E2FF"] { stop-color: #EAE0F0; }
+:not(text)[fill="#FFB76A"] { fill: #F6F0EA; }
+text[fill="#FFB76A"] { fill: #7C4E1D; }
+[stroke="#FFB76A"] { stroke: #DD964B; }
+stop[stop-color="#FFB76A"] { stop-color: #F0E8E0; }
+:not(text)[fill="#FFB86E"] { fill: #F6F0EA; }
+text[fill="#FFB86E"] { fill: #7C4D1D; }
+[stroke="#FFB86E"] { stroke: #DD954B; }
+stop[stop-color="#FFB86E"] { stop-color: #F0E8E0; }
+:not(text)[fill="#FFC16E"] { fill: #F6F1EA; }
+text[fill="#FFC16E"] { fill: #7C531D; }
+[stroke="#FFC16E"] { stroke: #DD9E4B; }
+stop[stop-color="#FFC16E"] { stop-color: #F0E9E0; }
+:not(text)[fill="#FFD7A3"] { fill: #F6F0EA; }
+text[fill="#FFD7A3"] { fill: #7C531D; }
+[stroke="#FFD7A3"] { stroke: #DD9D4B; }
+stop[stop-color="#FFD7A3"] { stop-color: #F0E9E0; }
+:not(text)[fill="#FFFFFF"] { fill: #F9F3F3; }
+text[fill="#FFFFFF"] { fill: #912222; }
+[stroke="#FFFFFF"] { stroke: #DD4B4B; }
+stop[stop-color="#FFFFFF"] { stop-color: #F9F3F3; }
+#accent stop:nth-child(1) { stop-color: #536D9D; }
+#accent stop:nth-child(2) { stop-color: #6655A8; }
+#accent stop:nth-child(3) { stop-color: #AD6D42; }
+.efa-nodes circle { fill: #5DDAFF; }
+.memory-nodes rect { fill: #D19EFF; }
+</style>
+
+  <rect width="1200" height="675" rx="30" fill="#F1EDFA"/>
+  <text x="64" y="77" fill="#F1F2FF" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.5">AWS PARALLELCLUSTER</text>
+  <rect x="882" y="43" width="254" height="46" rx="23" fill="#1A2B4A" stroke="#7F9FFF" stroke-opacity=".6"/>
+  <text x="913" y="73" fill="#DFE8FF" font-family="Arial, sans-serif" font-size="22" font-weight="600">Secure · governed</text>
+
+  <rect x="64" y="157" width="1072" height="91" rx="20" fill="#1B2851" stroke="#8B83FF" stroke-width="2"/>
+  <circle cx="106" cy="202" r="15" fill="#9B83FF"/>
+  <text x="139" y="196" fill="#C9C1FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">CONTROLLED ACCESS</text>
+  <text x="139" y="228" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="27" font-weight="700">IAM + MFA</text>
+  <rect x="466" y="174" width="212" height="56" rx="16" fill="#192F4D"/>
+  <text x="491" y="210" fill="#E9F8FF" font-family="Arial, sans-serif" font-size="26" font-weight="700">SSM tunnel</text>
+  <rect x="695" y="174" width="183" height="56" rx="16" fill="#28305A"/>
+  <text x="725" y="210" fill="#E9E5FF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Simple AD</text>
+  <rect x="895" y="174" width="211" height="56" rx="16" fill="#123B45"/>
+  <text x="920" y="210" fill="#D8FFF5" font-family="Arial, sans-serif" font-size="25" font-weight="700">No public SSH</text>
+
+  <path class="queue-connectors" d="M600 248V274M326 274H874M326 274V296M874 274V296" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <rect x="64" y="296" width="516" height="194" rx="24" fill="url(#mpi)" stroke="#54D4FF" stroke-width="2"/>
+  <text x="101" y="342" fill="#9AEAFF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">QUEUE 01 · MPI</text>
+  <text x="101" y="393" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="35" font-weight="700">EFA-enabled</text>
+  <text x="101" y="432" fill="#D7F7FF" font-family="Arial, sans-serif" font-size="27">Multi-node parallel jobs</text>
+  <g class="efa-nodes" fill="#5DDAFF"><circle cx="109" cy="466" r="7"/><circle cx="133" cy="466" r="7"/><circle cx="157" cy="466" r="7"/><circle cx="181" cy="466" r="7"/></g>
+  <path d="M196 466H515" stroke="#5DDAFF" stroke-width="3" stroke-dasharray="8 9" opacity=".8"/>
+
+  <rect x="620" y="296" width="516" height="194" rx="24" fill="url(#mem)" stroke="#C08BFF" stroke-width="2"/>
+  <text x="657" y="342" fill="#DAB8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">QUEUE 02 · MEMORY</text>
+  <text x="657" y="393" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="35" font-weight="700">High-memory</text>
+  <text x="657" y="432" fill="#F4E2FF" font-family="Arial, sans-serif" font-size="27">Single-node research jobs</text>
+  <g class="memory-nodes" fill="#D19EFF"><rect x="657" y="457" width="60" height="17" rx="8"/><rect x="728" y="457" width="60" height="17" rx="8"/><rect x="799" y="457" width="60" height="17" rx="8"/></g>
+  <path d="M877 465H1070" stroke="#D19EFF" stroke-width="3" stroke-dasharray="8 9" opacity=".8"/>
+
+  <rect x="64" y="548" width="666" height="77" rx="18" fill="#153448" stroke="#59CDE1" stroke-opacity=".8" stroke-width="2"/>
+  <text x="94" y="580" fill="#A9F2FF" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing=".8">SHARED STORAGE</text>
+  <text x="94" y="611" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">EFS  ·  FSx Lustre  ·  NVMe</text>
+
+  <rect x="752" y="548" width="384" height="77" rx="18" fill="#402D46" stroke="#FFB86E" stroke-width="2"/>
+  <circle cx="783" cy="586" r="10" fill="#FFC16E"/>
+  <text x="809" y="580" fill="#FFD7A3" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing=".8">BUDGET DAEMON</text>
+  <text x="809" y="611" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Track · block · resume</text>
+</svg>

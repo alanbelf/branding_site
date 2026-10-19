@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="65" y1="30" x2="1110" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10122B"/>
+      <stop offset=".52" stop-color="#101B36"/>
+      <stop offset="1" stop-color="#082B40"/>
+    </linearGradient>
+    <linearGradient id="pool" x1="420" y1="190" x2="930" y2="490" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5527A9"/>
+      <stop offset=".55" stop-color="#333AB7"/>
+      <stop offset="1" stop-color="#087E9B"/>
+    </linearGradient>
+    <linearGradient id="line" x1="250" y1="0" x2="950" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B88BFF"/>
+      <stop offset=".55" stop-color="#6B9DFF"/>
+      <stop offset="1" stop-color="#53E2E7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(420 235 -210 375 715 320)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5145D6" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#10122B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" rx="30" fill="url(#bg)"/>
+  <rect width="1200" height="675" rx="30" fill="url(#glow)"/>
+  <path d="M0 132H1200M0 548H1200" stroke="#B2C5FF" stroke-opacity=".1"/>
+  <text x="64" y="77" fill="#F2EEFF" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.5">AZURE HPC PLATFORM</text>
+  <rect x="555" y="43" width="250" height="46" rx="23" fill="#20234A" stroke="#9380FF" stroke-opacity=".65"/>
+  <circle cx="579" cy="66" r="6" fill="#72E0C0"/>
+  <text x="680" y="72" text-anchor="middle" fill="#E0E6FF" font-family="Arial, sans-serif" font-size="16" font-weight="600">Production · 10–20 users</text>
+  <rect x="820" y="43" width="316" height="46" rx="23" fill="#17394A" stroke="#51D7C2" stroke-opacity=".75"/>
+  <path d="M844 63V60a7 7 0 0 1 14 0v3m-16 0h18v13h-18z" stroke="#8FFFE5" stroke-width="2" stroke-linejoin="round"/>
+  <text x="874" y="72" fill="#D6FFF5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Secure · Governed</text>
+
+  <rect x="64" y="188" width="210" height="108" rx="20" fill="#1B2852" stroke="#888BFF" stroke-width="2"/>
+  <text x="92" y="229" fill="#B5B9FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">ACCESS</text>
+  <text x="92" y="267" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="27" font-weight="700">SSO + MFA</text>
+  <path d="M274 242H350" stroke="url(#line)" stroke-width="4"/>
+  <path d="m344 233 11 9-11 9" stroke="#A9A5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="355" y="173" width="300" height="138" rx="22" fill="#271F59" stroke="#A286FF" stroke-width="2"/>
+  <text x="385" y="213" fill="#C8B8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">CONTROL PLANE</text>
+  <text x="505" y="255" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">CycleCloud + Slurm</text>
+  <text x="505" y="286" text-anchor="middle" fill="#D8D2FF" font-family="Arial, sans-serif" font-size="17">Flexible pool · fair-share policy</text>
+  <path d="M655 242H710" stroke="url(#line)" stroke-width="4"/>
+  <path d="m704 233 11 9-11 9" stroke="#79D8F2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="716" y="157" width="420" height="170" rx="24" fill="url(#pool)" stroke="#83DDF0" stroke-opacity=".85" stroke-width="2"/>
+  <text x="750" y="199" fill="#D1F8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">COMPUTE FABRIC</text>
+  <text x="750" y="244" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="34" font-weight="700">Homogeneous pool</text>
+  <text x="750" y="283" fill="#D5F6FF" font-family="Arial, sans-serif" font-size="27">200 Gb/s InfiniBand · MPI</text>
+  <g fill="#8FEBF0">
+    <rect x="750" y="299" width="27" height="8" rx="4"/><rect x="786" y="299" width="27" height="8" rx="4"/>
+    <rect x="822" y="299" width="27" height="8" rx="4"/><rect x="858" y="299" width="27" height="8" rx="4"/>
+    <rect x="894" y="299" width="27" height="8" rx="4"/><rect x="930" y="299" width="27" height="8" rx="4"/>
+    <rect x="966" y="299" width="27" height="8" rx="4"/><rect x="1002" y="299" width="27" height="8" rx="4"/>
+  </g>
+
+  <rect x="64" y="372" width="394" height="118" rx="20" fill="#152A4E" stroke="#50BFF2" stroke-width="2"/>
+  <circle cx="105" cy="418" r="15" fill="#34B9E8"/>
+  <text x="136" y="426" fill="#D7F5FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">DATA</text>
+  <text x="92" y="465" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Home + high-perf scratch</text>
+
+  <rect x="479" y="372" width="394" height="118" rx="20" fill="#2A1E54" stroke="#B384FF" stroke-width="2"/>
+  <circle cx="521" cy="418" r="15" fill="#C27BFF"/>
+  <text x="552" y="426" fill="#E6D8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">SOFTWARE</text>
+  <text x="507" y="465" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Spack + Lmod + Apptainer</text>
+
+  <rect x="894" y="372" width="242" height="118" rx="20" fill="#183C48" stroke="#51D7C2" stroke-width="2"/>
+  <circle cx="933" cy="418" r="15" fill="#51D7C2"/>
+  <text x="964" y="426" fill="#C8FFF3" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">BUDGET</text>
+  <text x="924" y="465" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Peak −11%</text>
+
+  <rect x="64" y="526" width="1072" height="94" rx="20" fill="#171C3B" stroke="#766DE5" stroke-opacity=".8" stroke-width="2"/>
+  <rect x="64" y="526" width="12" height="94" rx="6" fill="url(#line)"/>
+  <text x="102" y="562" fill="#C4B5FD" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">VALIDATED MPI PERFORMANCE</text>
+  <text x="102" y="600" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="29" font-weight="700">23,584 MB/s</text>
+  <text x="326" y="600" fill="#AFC4FF" font-family="Arial, sans-serif" font-size="22">@ 4 MiB</text>
+  <path d="M484 548V598" stroke="#8D8CBA" stroke-opacity=".55" stroke-width="2"/>
+  <text x="524" y="600" fill="#6BE5F3" font-family="Arial, sans-serif" font-size="29" font-weight="700">1.7 μs</text>
+  <text x="640" y="600" fill="#C7D1ED" font-family="Arial, sans-serif" font-size="22">small-message latency</text>
+</svg>

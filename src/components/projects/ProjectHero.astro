@@ -16,6 +16,7 @@ interface Props {
   url?: string;
   repo?: string;
   image?: ImageMetadata;
+  imageLight?: ImageMetadata;
   imageAlt?: string;
   gallery?: GallerySlide[];
   tags?: string[];
@@ -28,6 +29,7 @@ const {
   url,
   repo,
   image,
+  imageLight,
   imageAlt,
   gallery = [],
   tags = [],
@@ -106,7 +108,11 @@ const locale = getLocaleFromPath(Astro.url.pathname);
       <!-- Media column (carousel, single image, or branded placeholder) -->
       <div class="animate-hero-slide-up [animation-delay:300ms]">
         {hasMedia ? (
-          <ProjectCarousel slides={slides} label={`${title} screenshots`} />
+          <ProjectCarousel
+            slides={slides}
+            imageLight={gallery.length === 0 ? imageLight : undefined}
+            label={`${title} screenshots`}
+          />
         ) : (
           <div
             class="aspect-video w-full rounded-xl border border-border bg-gradient-to-br from-brand-500/20 via-brand-500/5 to-transparent flex items-center justify-center shadow-lg"

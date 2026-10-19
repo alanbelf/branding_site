@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="pool" x1="420" y1="190" x2="930" y2="490" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5527A9"/>
+      <stop offset=".55" stop-color="#333AB7"/>
+      <stop offset="1" stop-color="#087E9B"/>
+    </linearGradient>
+    <linearGradient id="line" x1="250" y1="0" x2="950" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B88BFF"/>
+      <stop offset=".55" stop-color="#6B9DFF"/>
+      <stop offset="1" stop-color="#53E2E7"/>
+    </linearGradient>
+  </defs>
+  <style>
+:not(text)[fill="#082B40"] { fill: #EEF0F2; }
+text[fill="#082B40"] { fill: #375262; }
+[stroke="#082B40"] { stroke: #6D9EBA; }
+stop[stop-color="#082B40"] { stop-color: #E5E9EB; }
+:not(text)[fill="#087E9B"] { fill: #ECF2F3; }
+text[fill="#087E9B"] { fill: #345B65; }
+[stroke="#087E9B"] { stroke: #6DABBA; }
+stop[stop-color="#087E9B"] { stop-color: #E4EBED; }
+:not(text)[fill="#10122B"] { fill: #EEEEF2; }
+text[fill="#10122B"] { fill: #404472; }
+[stroke="#10122B"] { stroke: #6D73BA; }
+stop[stop-color="#10122B"] { stop-color: #E5E5EB; }
+:not(text)[fill="#101B36"] { fill: #EEEFF2; }
+text[fill="#101B36"] { fill: #404F72; }
+[stroke="#101B36"] { stroke: #6D84BA; }
+stop[stop-color="#101B36"] { stop-color: #E5E7EB; }
+:not(text)[fill="#152A4E"] { fill: #EEEFF2; }
+text[fill="#152A4E"] { fill: #405372; }
+[stroke="#152A4E"] { stroke: #6D8ABA; }
+stop[stop-color="#152A4E"] { stop-color: #E5E7EB; }
+:not(text)[fill="#171C3B"] { fill: #EEEEF2; }
+text[fill="#171C3B"] { fill: #404772; }
+[stroke="#171C3B"] { stroke: #6D78BA; }
+stop[stop-color="#171C3B"] { stop-color: #E5E6EB; }
+:not(text)[fill="#17394A"] { fill: #EEF0F2; }
+text[fill="#17394A"] { fill: #406272; }
+[stroke="#17394A"] { stroke: #6DA1BA; }
+stop[stop-color="#17394A"] { stop-color: #E5E9EB; }
+:not(text)[fill="#183C48"] { fill: #EEF1F2; }
+text[fill="#183C48"] { fill: #406672; }
+[stroke="#183C48"] { stroke: #6DA7BA; }
+stop[stop-color="#183C48"] { stop-color: #E5EAEB; }
+:not(text)[fill="#1B2852"] { fill: #EDEEF2; }
+text[fill="#1B2852"] { fill: #404C72; }
+[stroke="#1B2852"] { stroke: #6D80BA; }
+stop[stop-color="#1B2852"] { stop-color: #E5E6EB; }
+:not(text)[fill="#20234A"] { fill: #EDEEF2; }
+text[fill="#20234A"] { fill: #404472; }
+[stroke="#20234A"] { stroke: #6D73BA; }
+stop[stop-color="#20234A"] { stop-color: #F5F5F7; }
+:not(text)[fill="#271F59"] { fill: #EEEDF2; }
+text[fill="#271F59"] { fill: #474072; }
+[stroke="#271F59"] { stroke: #786DBA; }
+stop[stop-color="#271F59"] { stop-color: #E6E5EB; }
+:not(text)[fill="#2A1E54"] { fill: #EEEDF2; }
+text[fill="#2A1E54"] { fill: #4B4072; }
+[stroke="#2A1E54"] { stroke: #7E6DBA; }
+stop[stop-color="#2A1E54"] { stop-color: #E6E5EB; }
+:not(text)[fill="#333AB7"] { fill: #EBEBF5; }
+text[fill="#333AB7"] { fill: #303582; }
+[stroke="#333AB7"] { stroke: #6368C5; }
+stop[stop-color="#333AB7"] { stop-color: #E2E2EF; }
+:not(text)[fill="#34B9E8"] { fill: #EAF2F6; }
+text[fill="#34B9E8"] { fill: #226177; }
+[stroke="#34B9E8"] { stroke: #58B0D0; }
+stop[stop-color="#34B9E8"] { stop-color: #E0ECF0; }
+:not(text)[fill="#50BFF2"] { fill: #EAF2F6; }
+text[fill="#50BFF2"] { fill: #1D5E7C; }
+[stroke="#50BFF2"] { stroke: #50ADD8; }
+stop[stop-color="#50BFF2"] { stop-color: #E0EBF0; }
+:not(text)[fill="#5145D6"] { fill: #EBEAF6; }
+text[fill="#5145D6"] { fill: #30288B; }
+[stroke="#5145D6"] { stroke: #6258CF; }
+stop[stop-color="#5145D6"] { stop-color: #E2E0F0; }
+:not(text)[fill="#51D7C2"] { fill: #EAF6F4; }
+text[fill="#51D7C2"] { fill: #258D7D; }
+[stroke="#51D7C2"] { stroke: #56D2BF; }
+stop[stop-color="#51D7C2"] { stop-color: #E0F0ED; }
+:not(text)[fill="#53E2E7"] { fill: #EAF5F6; }
+text[fill="#53E2E7"] { fill: #1D787C; }
+[stroke="#53E2E7"] { stroke: #52D1D6; }
+stop[stop-color="#53E2E7"] { stop-color: #E0EFF0; }
+:not(text)[fill="#5527A9"] { fill: #EEEBF4; }
+text[fill="#5527A9"] { fill: #4F357E; }
+[stroke="#5527A9"] { stroke: #8768C0; }
+stop[stop-color="#5527A9"] { stop-color: #E6E2EE; }
+:not(text)[fill="#6B9DFF"] { fill: #EAEEF6; }
+text[fill="#6B9DFF"] { fill: #1D3D7C; }
+[stroke="#6B9DFF"] { stroke: #4B7CDD; }
+stop[stop-color="#6B9DFF"] { stop-color: #E0E6F0; }
+:not(text)[fill="#6BE5F3"] { fill: #EAF4F6; }
+text[fill="#6BE5F3"] { fill: #1D727C; }
+[stroke="#6BE5F3"] { stroke: #4BCEDD; }
+stop[stop-color="#6BE5F3"] { stop-color: #E0EEF0; }
+:not(text)[fill="#72E0C0"] { fill: #EAF6F2; }
+text[fill="#72E0C0"] { fill: #229170; }
+[stroke="#72E0C0"] { stroke: #4DDBB2; }
+stop[stop-color="#72E0C0"] { stop-color: #E0F0EB; }
+:not(text)[fill="#766DE5"] { fill: #EBEAF6; }
+text[fill="#766DE5"] { fill: #241D7C; }
+[stroke="#766DE5"] { stroke: #584DDB; }
+stop[stop-color="#766DE5"] { stop-color: #E1E0F0; }
+:not(text)[fill="#79D8F2"] { fill: #EAF3F6; }
+text[fill="#79D8F2"] { fill: #1D687C; }
+[stroke="#79D8F2"] { stroke: #4BBDDD; }
+stop[stop-color="#79D8F2"] { stop-color: #E0ECF0; }
+:not(text)[fill="#83DDF0"] { fill: #EAF3F6; }
+text[fill="#83DDF0"] { fill: #1D6B7C; }
+[stroke="#83DDF0"] { stroke: #4BC3DD; }
+stop[stop-color="#83DDF0"] { stop-color: #E0EDF0; }
+:not(text)[fill="#888BFF"] { fill: #EAEAF6; }
+text[fill="#888BFF"] { fill: #1D1F7C; }
+[stroke="#888BFF"] { stroke: #4B4FDD; }
+stop[stop-color="#888BFF"] { stop-color: #E0E1F0; }
+:not(text)[fill="#8D8CBA"] { fill: #F3F3F9; }
+text[fill="#8D8CBA"] { fill: #242291; }
+[stroke="#8D8CBA"] { stroke: #524FD8; }
+stop[stop-color="#8D8CBA"] { stop-color: #F3F3F9; }
+:not(text)[fill="#8FEBF0"] { fill: #EAF5F6; }
+text[fill="#8FEBF0"] { fill: #1D777C; }
+[stroke="#8FEBF0"] { stroke: #4BD5DD; }
+stop[stop-color="#8FEBF0"] { stop-color: #E0EFF0; }
+:not(text)[fill="#8FFFE5"] { fill: #EAF6F3; }
+text[fill="#8FFFE5"] { fill: #1D7C66; }
+[stroke="#8FFFE5"] { stroke: #4BDDBB; }
+stop[stop-color="#8FFFE5"] { stop-color: #E0F0EC; }
+:not(text)[fill="#9380FF"] { fill: #ECEAF6; }
+text[fill="#9380FF"] { fill: #2B1D7C; }
+[stroke="#9380FF"] { stroke: #614BDD; }
+stop[stop-color="#9380FF"] { stop-color: #E3E0F0; }
+:not(text)[fill="#A286FF"] { fill: #EDEAF6; }
+text[fill="#A286FF"] { fill: #331D7C; }
+[stroke="#A286FF"] { stroke: #6D4BDD; }
+stop[stop-color="#A286FF"] { stop-color: #E4E0F0; }
+:not(text)[fill="#A9A5FF"] { fill: #EAEAF6; }
+text[fill="#A9A5FF"] { fill: #211D7C; }
+[stroke="#A9A5FF"] { stroke: #524BDD; }
+stop[stop-color="#A9A5FF"] { stop-color: #E1E0F0; }
+:not(text)[fill="#AFC4FF"] { fill: #EAEDF6; }
+text[fill="#AFC4FF"] { fill: #1D367C; }
+[stroke="#AFC4FF"] { stroke: #4B71DD; }
+stop[stop-color="#AFC4FF"] { stop-color: #E0E4F0; }
+:not(text)[fill="#B2C5FF"] { fill: #EAEDF6; }
+text[fill="#B2C5FF"] { fill: #1D347C; }
+[stroke="#B2C5FF"] { stroke: #4B6FDD; }
+stop[stop-color="#B2C5FF"] { stop-color: #E0E4F0; }
+:not(text)[fill="#B384FF"] { fill: #EEEAF6; }
+text[fill="#B384FF"] { fill: #411D7C; }
+[stroke="#B384FF"] { stroke: #834BDD; }
+stop[stop-color="#B384FF"] { stop-color: #E6E0F0; }
+:not(text)[fill="#B5B9FF"] { fill: #EAEBF6; }
+text[fill="#B5B9FF"] { fill: #1D227C; }
+[stroke="#B5B9FF"] { stroke: #4B53DD; }
+stop[stop-color="#B5B9FF"] { stop-color: #E0E1F0; }
+:not(text)[fill="#B88BFF"] { fill: #EEEAF6; }
+text[fill="#B88BFF"] { fill: #421D7C; }
+[stroke="#B88BFF"] { stroke: #844BDD; }
+stop[stop-color="#B88BFF"] { stop-color: #E6E0F0; }
+:not(text)[fill="#C27BFF"] { fill: #F0EAF6; }
+text[fill="#C27BFF"] { fill: #501D7C; }
+[stroke="#C27BFF"] { stroke: #994BDD; }
+stop[stop-color="#C27BFF"] { stop-color: #E9E0F0; }
+:not(text)[fill="#C4B5FD"] { fill: #ECEAF6; }
+text[fill="#C4B5FD"] { fill: #311D7C; }
+[stroke="#C4B5FD"] { stroke: #694BDD; }
+stop[stop-color="#C4B5FD"] { stop-color: #E3E0F0; }
+:not(text)[fill="#C7D1ED"] { fill: #EAEDF6; }
+text[fill="#C7D1ED"] { fill: #223F91; }
+[stroke="#C7D1ED"] { stroke: #4B71DD; }
+stop[stop-color="#C7D1ED"] { stop-color: #E0E4F0; }
+:not(text)[fill="#C8B8FF"] { fill: #EDEAF6; }
+text[fill="#C8B8FF"] { fill: #321D7C; }
+[stroke="#C8B8FF"] { stroke: #6C4BDD; }
+stop[stop-color="#C8B8FF"] { stop-color: #E4E0F0; }
+:not(text)[fill="#C8FFF3"] { fill: #EAF6F3; }
+text[fill="#C8FFF3"] { fill: #1D7C67; }
+[stroke="#C8FFF3"] { stroke: #4BDDBD; }
+stop[stop-color="#C8FFF3"] { stop-color: #E0F0EC; }
+:not(text)[fill="#D1F8FF"] { fill: #EAF4F6; }
+text[fill="#D1F8FF"] { fill: #1D6D7C; }
+[stroke="#D1F8FF"] { stroke: #4BC7DD; }
+stop[stop-color="#D1F8FF"] { stop-color: #E0EDF0; }
+:not(text)[fill="#D5F6FF"] { fill: #EAF3F6; }
+text[fill="#D5F6FF"] { fill: #1D687C; }
+[stroke="#D5F6FF"] { stroke: #4BBEDD; }
+stop[stop-color="#D5F6FF"] { stop-color: #E0EDF0; }
+:not(text)[fill="#D6FFF5"] { fill: #EAF6F3; }
+text[fill="#D6FFF5"] { fill: #1D7C65; }
+[stroke="#D6FFF5"] { stroke: #4BDDB9; }
+stop[stop-color="#D6FFF5"] { stop-color: #E0F0EC; }
+:not(text)[fill="#D7F5FF"] { fill: #EAF3F6; }
+text[fill="#D7F5FF"] { fill: #1D647C; }
+[stroke="#D7F5FF"] { stroke: #4BB8DD; }
+stop[stop-color="#D7F5FF"] { stop-color: #E0ECF0; }
+:not(text)[fill="#D8D2FF"] { fill: #EBEAF6; }
+text[fill="#D8D2FF"] { fill: #2A1D7C; }
+[stroke="#D8D2FF"] { stroke: #5E4BDD; }
+stop[stop-color="#D8D2FF"] { stop-color: #E2E0F0; }
+:not(text)[fill="#E0E6FF"] { fill: #EAECF6; }
+text[fill="#E0E6FF"] { fill: #1D2F7C; }
+[stroke="#E0E6FF"] { stroke: #4B67DD; }
+stop[stop-color="#E0E6FF"] { stop-color: #E0E3F0; }
+:not(text)[fill="#E6D8FF"] { fill: #EEEAF6; }
+text[fill="#E6D8FF"] { fill: #3F1D7C; }
+[stroke="#E6D8FF"] { stroke: #7F4BDD; }
+stop[stop-color="#E6D8FF"] { stop-color: #E6E0F0; }
+:not(text)[fill="#F2EEFF"] { fill: #EDEAF6; }
+text[fill="#F2EEFF"] { fill: #331D7C; }
+[stroke="#F2EEFF"] { stroke: #6D4BDD; }
+stop[stop-color="#F2EEFF"] { stop-color: #E4E0F0; }
+:not(text)[fill="#FFFFFF"] { fill: #F9F3F3; }
+text[fill="#FFFFFF"] { fill: #912222; }
+[stroke="#FFFFFF"] { stroke: #DD4B4B; }
+stop[stop-color="#FFFFFF"] { stop-color: #F9F3F3; }
+.arrow-shaft { stroke: #4D6FBD; }
+.arrow-head { stroke: #5944B8; }
+.performance-accent { fill: #8052D6; }
+</style>
+
+  <rect width="1200" height="675" rx="30" fill="#F1EDFA"/>
+  <text x="64" y="77" fill="#F2EEFF" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.5">AZURE HPC PLATFORM</text>
+  <rect x="555" y="43" width="250" height="46" rx="23" fill="#20234A" stroke="#9380FF" stroke-opacity=".65"/>
+  <circle cx="579" cy="66" r="6" fill="#72E0C0"/>
+  <text x="680" y="72" text-anchor="middle" fill="#E0E6FF" font-family="Arial, sans-serif" font-size="16" font-weight="600">Production · 10–20 users</text>
+  <rect x="820" y="43" width="316" height="46" rx="23" fill="#17394A" stroke="#51D7C2" stroke-opacity=".75"/>
+  <path d="M844 63V60a7 7 0 0 1 14 0v3m-16 0h18v13h-18z" stroke="#8FFFE5" stroke-width="2" stroke-linejoin="round"/>
+  <text x="874" y="72" fill="#D6FFF5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Secure · Governed</text>
+
+  <rect x="64" y="188" width="210" height="108" rx="20" fill="#1B2852" stroke="#888BFF" stroke-width="2"/>
+  <text x="92" y="229" fill="#B5B9FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">ACCESS</text>
+  <text x="92" y="267" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="27" font-weight="700">SSO + MFA</text>
+  <path class="arrow-shaft" d="M274 242H350" stroke="url(#line)" stroke-width="4"/>
+  <path class="arrow-head" d="m344 233 11 9-11 9" stroke="#A9A5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="355" y="173" width="300" height="138" rx="22" fill="#271F59" stroke="#A286FF" stroke-width="2"/>
+  <text x="385" y="213" fill="#C8B8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">CONTROL PLANE</text>
+  <text x="505" y="255" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">CycleCloud + Slurm</text>
+  <text x="505" y="286" text-anchor="middle" fill="#D8D2FF" font-family="Arial, sans-serif" font-size="17">Flexible pool · fair-share policy</text>
+  <path class="arrow-shaft" d="M655 242H710" stroke="url(#line)" stroke-width="4"/>
+  <path class="arrow-head" d="m704 233 11 9-11 9" stroke="#79D8F2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="716" y="157" width="420" height="170" rx="24" fill="url(#pool)" stroke="#83DDF0" stroke-opacity=".85" stroke-width="2"/>
+  <text x="750" y="199" fill="#D1F8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.1">COMPUTE FABRIC</text>
+  <text x="750" y="244" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="34" font-weight="700">Homogeneous pool</text>
+  <text x="750" y="283" fill="#D5F6FF" font-family="Arial, sans-serif" font-size="27">200 Gb/s InfiniBand · MPI</text>
+  <g fill="#8FEBF0">
+    <rect x="750" y="299" width="27" height="8" rx="4"/><rect x="786" y="299" width="27" height="8" rx="4"/>
+    <rect x="822" y="299" width="27" height="8" rx="4"/><rect x="858" y="299" width="27" height="8" rx="4"/>
+    <rect x="894" y="299" width="27" height="8" rx="4"/><rect x="930" y="299" width="27" height="8" rx="4"/>
+    <rect x="966" y="299" width="27" height="8" rx="4"/><rect x="1002" y="299" width="27" height="8" rx="4"/>
+  </g>
+
+  <rect x="64" y="372" width="394" height="118" rx="20" fill="#152A4E" stroke="#50BFF2" stroke-width="2"/>
+  <circle cx="105" cy="418" r="15" fill="#34B9E8"/>
+  <text x="136" y="426" fill="#D7F5FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">DATA</text>
+  <text x="92" y="465" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Home + high-perf scratch</text>
+
+  <rect x="479" y="372" width="394" height="118" rx="20" fill="#2A1E54" stroke="#B384FF" stroke-width="2"/>
+  <circle cx="521" cy="418" r="15" fill="#C27BFF"/>
+  <text x="552" y="426" fill="#E6D8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">SOFTWARE</text>
+  <text x="507" y="465" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Spack + Lmod + Apptainer</text>
+
+  <rect x="894" y="372" width="242" height="118" rx="20" fill="#183C48" stroke="#51D7C2" stroke-width="2"/>
+  <circle cx="933" cy="418" r="15" fill="#51D7C2"/>
+  <text x="964" y="426" fill="#C8FFF3" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">BUDGET</text>
+  <text x="924" y="465" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Peak −11%</text>
+
+  <rect x="64" y="526" width="1072" height="94" rx="20" fill="#171C3B" stroke="#766DE5" stroke-opacity=".8" stroke-width="2"/>
+  <rect class="performance-accent" x="64" y="526" width="12" height="94" rx="6" fill="url(#line)"/>
+  <text x="102" y="562" fill="#C4B5FD" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">VALIDATED MPI PERFORMANCE</text>
+  <text x="102" y="600" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="29" font-weight="700">23,584 MB/s</text>
+  <text x="326" y="600" fill="#AFC4FF" font-family="Arial, sans-serif" font-size="22">@ 4 MiB</text>
+  <path d="M484 548V598" stroke="#8D8CBA" stroke-opacity=".55" stroke-width="2"/>
+  <text x="524" y="600" fill="#6BE5F3" font-family="Arial, sans-serif" font-size="29" font-weight="700">1.7 μs</text>
+  <text x="640" y="600" fill="#C7D1ED" font-family="Arial, sans-serif" font-size="22">small-message latency</text>
+</svg>

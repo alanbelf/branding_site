@@ -72,6 +72,8 @@ const projects = defineCollection({
       url: z.string().url().optional(),
       repo: z.string().url().optional(),
       image: image().optional(),
+      /** Optional light-mode counterpart for an SVG project cover. */
+      imageLight: image().optional(),
       imageAlt: z.string().optional(),
       /**
        * Optional gallery — when provided, renders a swipeable carousel in the

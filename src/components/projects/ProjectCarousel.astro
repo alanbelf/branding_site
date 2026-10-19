@@ -11,6 +11,7 @@
  *   playing video pauses it
  */
 import { Image, getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { isVideoSlide, type GallerySlide } from '@/lib/gallery';
 import { t, getLocaleFromPath } from '@/i18n';
 
@@ -18,11 +19,13 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 
 interface Props {
   slides: GallerySlide[];
+  /** Light-mode replacement for a single SVG cover image. */
+  imageLight?: ImageMetadata;
   /** Optional aria-label for the carousel region. */
   label?: string;
 }
 
-const { slides, label = 'Project screenshots' } = Astro.props;
+const { slides, imageLight, label = 'Project screenshots' } = Astro.props;
 const carouselId = `carousel-${Math.random().toString(36).slice(2, 9)}`;
 const hasMultiple = slides.length > 1;
 // A single image slide is shown complete at its natural ratio (no crop), so
@@ -80,6 +83,37 @@ const posters = await Promise.all(
               playsinline
               preload="none"
               aria-label={slide.alt}
+            />
+          ) : slide.src.format === 'svg' && imageLight?.format === 'svg' && slides.length === 1 ? (
+            <>
+              <img
+                src={imageLight.src}
+                alt={slide.alt}
+                width={imageLight.width}
+                height={imageLight.height}
+                class:list={[imageClass, 'dark:hidden']}
+                loading="eager"
+                decoding="async"
+              />
+              <img
+                src={slide.src.src}
+                alt={slide.alt}
+                width={slide.src.width}
+                height={slide.src.height}
+                class:list={[imageClass, 'hidden dark:block']}
+                loading="eager"
+                decoding="async"
+              />
+            </>
+          ) : slide.src.format === 'svg' ? (
+            <img
+              src={slide.src.src}
+              alt={slide.alt}
+              width={slide.src.width}
+              height={slide.src.height}
+              class={imageClass}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
             />
           ) : (
             <Image

@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="screen" x1="60" y1="130" x2="1140" y2="605" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171E3E"/><stop offset="1" stop-color="#102B3C"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8A63FF"/><stop offset="1" stop-color="#D279FF"/>
+    </linearGradient>
+    <linearGradient id="aqua" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#45D9E9"/><stop offset="1" stop-color="#62F0B8"/>
+    </linearGradient>
+  </defs>
+  <style>
+:not(text)[fill="#073B47"] { fill: #EEF1F2; }
+text[fill="#073B47"] { fill: #375A62; }
+[stroke="#073B47"] { stroke: #6DACBA; }
+stop[stop-color="#073B47"] { stop-color: #E5EAEB; }
+:not(text)[fill="#102442"] { fill: #EEEFF2; }
+text[fill="#102442"] { fill: #405472; }
+[stroke="#102442"] { stroke: #6D8CBA; }
+stop[stop-color="#102442"] { stop-color: #E5E7EB; }
+:not(text)[fill="#102B3C"] { fill: #EEF0F2; }
+text[fill="#102B3C"] { fill: #405F72; }
+[stroke="#102B3C"] { stroke: #6D9DBA; }
+stop[stop-color="#102B3C"] { stop-color: #E5E9EB; }
+:not(text)[fill="#13112C"] { fill: #EEEEF2; }
+text[fill="#13112C"] { fill: #444072; }
+[stroke="#13112C"] { stroke: #736DBA; }
+stop[stop-color="#13112C"] { stop-color: #E5E5EB; }
+:not(text)[fill="#145B67"] { fill: #EDF2F2; }
+text[fill="#145B67"] { fill: #406B72; }
+[stroke="#145B67"] { stroke: #6DAFBA; }
+stop[stop-color="#145B67"] { stop-color: #E5EAEB; }
+:not(text)[fill="#155A5A"] { fill: #EDF2F2; }
+text[fill="#155A5A"] { fill: #407272; }
+[stroke="#155A5A"] { stroke: #6DBABA; }
+stop[stop-color="#155A5A"] { stop-color: #E5EBEB; }
+:not(text)[fill="#155D64"] { fill: #EDF2F2; }
+text[fill="#155D64"] { fill: #406E72; }
+[stroke="#155D64"] { stroke: #6DB4BA; }
+stop[stop-color="#155D64"] { stop-color: #E5EBEB; }
+:not(text)[fill="#171E3E"] { fill: #EEEFF2; }
+text[fill="#171E3E"] { fill: #404972; }
+[stroke="#171E3E"] { stroke: #6D7BBA; }
+stop[stop-color="#171E3E"] { stop-color: #E5E6EB; }
+:not(text)[fill="#174A64"] { fill: #EDF1F2; }
+text[fill="#174A64"] { fill: #406172; }
+[stroke="#174A64"] { stroke: #6DA0BA; }
+stop[stop-color="#174A64"] { stop-color: #E5E9EB; }
+:not(text)[fill="#18284C"] { fill: #EEEFF2; }
+text[fill="#18284C"] { fill: #405072; }
+[stroke="#18284C"] { stroke: #6D85BA; }
+stop[stop-color="#18284C"] { stop-color: #E5E7EB; }
+:not(text)[fill="#185878"] { fill: #EDF1F3; }
+text[fill="#185878"] { fill: #406272; }
+[stroke="#185878"] { stroke: #6DA1BA; }
+stop[stop-color="#185878"] { stop-color: #E4E9EC; }
+:not(text)[fill="#197FB0"] { fill: #EBF1F4; }
+text[fill="#197FB0"] { fill: #2E576B; }
+[stroke="#197FB0"] { stroke: #6AA3BE; }
+stop[stop-color="#197FB0"] { stop-color: #E2EAEE; }
+:not(text)[fill="#201D47"] { fill: #EEEEF2; }
+text[fill="#201D47"] { fill: #444072; }
+[stroke="#201D47"] { stroke: #736DBA; }
+stop[stop-color="#201D47"] { stop-color: #E5E5EB; }
+:not(text)[fill="#251D3D"] { fill: #F6F5F7; }
+text[fill="#251D3D"] { fill: #4D4072; }
+[stroke="#251D3D"] { stroke: #816DBA; }
+stop[stop-color="#251D3D"] { stop-color: #F5F5F7; }
+:not(text)[fill="#273355"] { fill: #F5F5F8; }
+text[fill="#273355"] { fill: #404D72; }
+[stroke="#273355"] { stroke: #6D81BA; }
+stop[stop-color="#273355"] { stop-color: #F5F5F7; }
+:not(text)[fill="#2A2859"] { fill: #F5F4F8; }
+text[fill="#2A2859"] { fill: #424072; }
+[stroke="#2A2859"] { stroke: #706DBA; }
+stop[stop-color="#2A2859"] { stop-color: #F5F5F7; }
+:not(text)[fill="#362951"] { fill: #F6F5F8; }
+text[fill="#362951"] { fill: #514072; }
+[stroke="#362951"] { stroke: #866DBA; }
+stop[stop-color="#362951"] { stop-color: #F6F5F7; }
+:not(text)[fill="#3A2B78"] { fill: #EEECF3; }
+text[fill="#3A2B78"] { fill: #483D76; }
+[stroke="#3A2B78"] { stroke: #7C6DBA; }
+stop[stop-color="#3A2B78"] { stop-color: #E5E4ED; }
+:not(text)[fill="#453357"] { fill: #F6F4F8; }
+text[fill="#453357"] { fill: #594072; }
+[stroke="#453357"] { stroke: #946DBA; }
+stop[stop-color="#453357"] { stop-color: #F6F5F8; }
+:not(text)[fill="#45D9E9"] { fill: #EAF4F6; }
+text[fill="#45D9E9"] { fill: #1F717A; }
+[stroke="#45D9E9"] { stroke: #54C7D3; }
+stop[stop-color="#45D9E9"] { stop-color: #E0EEF0; }
+:not(text)[fill="#58D7EF"] { fill: #EAF4F6; }
+text[fill="#58D7EF"] { fill: #1D6D7C; }
+[stroke="#58D7EF"] { stroke: #4FC3D9; }
+stop[stop-color="#58D7EF"] { stop-color: #E0EDF0; }
+:not(text)[fill="#62E6C6"] { fill: #EAF6F3; }
+text[fill="#62E6C6"] { fill: #1D7C65; }
+[stroke="#62E6C6"] { stroke: #4FD9B7; }
+stop[stop-color="#62E6C6"] { stop-color: #E0F0EC; }
+:not(text)[fill="#62F0B8"] { fill: #EAF6F1; }
+text[fill="#62F0B8"] { fill: #1D7C57; }
+[stroke="#62F0B8"] { stroke: #4DDBA3; }
+stop[stop-color="#62F0B8"] { stop-color: #E0F0EA; }
+:not(text)[fill="#63E7BD"] { fill: #EAF6F2; }
+text[fill="#63E7BD"] { fill: #1D7C5E; }
+[stroke="#63E7BD"] { stroke: #4FD9AD; }
+stop[stop-color="#63E7BD"] { stop-color: #E0F0EB; }
+:not(text)[fill="#64E0B9"] { fill: #EAF6F2; }
+text[fill="#64E0B9"] { fill: #22916E; }
+[stroke="#64E0B9"] { stroke: #50D8AD; }
+stop[stop-color="#64E0B9"] { stop-color: #E0F0EB; }
+:not(text)[fill="#6CDCE7"] { fill: #EAF4F6; }
+text[fill="#6CDCE7"] { fill: #1D737C; }
+[stroke="#6CDCE7"] { stroke: #4DCEDB; }
+stop[stop-color="#6CDCE7"] { stop-color: #E0EEF0; }
+:not(text)[fill="#6E91FF"] { fill: #EAEDF6; }
+text[fill="#6E91FF"] { fill: #1D347C; }
+[stroke="#6E91FF"] { stroke: #4B6EDD; }
+stop[stop-color="#6E91FF"] { stop-color: #E0E4F0; }
+:not(text)[fill="#75E9BE"] { fill: #EAF6F1; }
+text[fill="#75E9BE"] { fill: #1D7C59; }
+[stroke="#75E9BE"] { stroke: #4BDDA7; }
+stop[stop-color="#75E9BE"] { stop-color: #E0F0EA; }
+:not(text)[fill="#7C7DFF"] { fill: #EAEAF6; }
+text[fill="#7C7DFF"] { fill: #1D1E7C; }
+[stroke="#7C7DFF"] { stroke: #4B4CDD; }
+stop[stop-color="#7C7DFF"] { stop-color: #E0E0F0; }
+:not(text)[fill="#82B6FF"] { fill: #EAEFF6; }
+text[fill="#82B6FF"] { fill: #1D457C; }
+[stroke="#82B6FF"] { stroke: #4B88DD; }
+stop[stop-color="#82B6FF"] { stop-color: #E0E7F0; }
+:not(text)[fill="#8A63FF"] { fill: #EDEAF6; }
+text[fill="#8A63FF"] { fill: #351D7C; }
+[stroke="#8A63FF"] { stroke: #6F4BDD; }
+stop[stop-color="#8A63FF"] { stop-color: #E4E0F0; }
+:not(text)[fill="#944DF3"] { fill: #EFEAF6; }
+text[fill="#944DF3"] { fill: #461D7C; }
+[stroke="#944DF3"] { stroke: #8A51D7; }
+stop[stop-color="#944DF3"] { stop-color: #E7E0F0; }
+:not(text)[fill="#9A83FF"] { fill: #ECEAF6; }
+text[fill="#9A83FF"] { fill: #2F1D7C; }
+[stroke="#9A83FF"] { stroke: #664BDD; }
+stop[stop-color="#9A83FF"] { stop-color: #E3E0F0; }
+:not(text)[fill="#A89BFF"] { fill: #EBEAF6; }
+text[fill="#A89BFF"] { fill: #291D7C; }
+[stroke="#A89BFF"] { stroke: #5E4BDD; }
+stop[stop-color="#A89BFF"] { stop-color: #E2E0F0; }
+:not(text)[fill="#AFC4FF"] { fill: #EAEDF6; }
+text[fill="#AFC4FF"] { fill: #1D367C; }
+[stroke="#AFC4FF"] { stroke: #4B71DD; }
+stop[stop-color="#AFC4FF"] { stop-color: #E0E4F0; }
+:not(text)[fill="#B7F4FF"] { fill: #EAF4F6; }
+text[fill="#B7F4FF"] { fill: #1D6D7C; }
+[stroke="#B7F4FF"] { stroke: #4BC6DD; }
+stop[stop-color="#B7F4FF"] { stop-color: #E0EDF0; }
+:not(text)[fill="#BD87FF"] { fill: #EFEAF6; }
+text[fill="#BD87FF"] { fill: #481D7C; }
+[stroke="#BD87FF"] { stroke: #8D4BDD; }
+stop[stop-color="#BD87FF"] { stop-color: #E7E0F0; }
+:not(text)[fill="#BDFFF0"] { fill: #EAF6F3; }
+text[fill="#BDFFF0"] { fill: #1D7C66; }
+[stroke="#BDFFF0"] { stroke: #4BDDBC; }
+stop[stop-color="#BDFFF0"] { stop-color: #E0F0EC; }
+:not(text)[fill="#BEB6FF"] { fill: #EBEAF6; }
+text[fill="#BEB6FF"] { fill: #271D7C; }
+[stroke="#BEB6FF"] { stroke: #5B4BDD; }
+stop[stop-color="#BEB6FF"] { stop-color: #E2E0F0; }
+:not(text)[fill="#C2FFF0"] { fill: #EAF6F3; }
+text[fill="#C2FFF0"] { fill: #1D7C65; }
+[stroke="#C2FFF0"] { stroke: #4BDDB9; }
+stop[stop-color="#C2FFF0"] { stop-color: #E0F0EC; }
+:not(text)[fill="#D279FF"] { fill: #F2EAF6; }
+text[fill="#D279FF"] { fill: #5C1D7C; }
+[stroke="#D279FF"] { stroke: #AC4BDD; }
+stop[stop-color="#D279FF"] { stop-color: #EBE0F0; }
+:not(text)[fill="#DCD7FF"] { fill: #EBEAF6; }
+text[fill="#DCD7FF"] { fill: #291D7C; }
+[stroke="#DCD7FF"] { stroke: #5D4BDD; }
+stop[stop-color="#DCD7FF"] { stop-color: #E2E0F0; }
+:not(text)[fill="#E39DFF"] { fill: #F2EAF6; }
+text[fill="#E39DFF"] { fill: #611D7C; }
+[stroke="#E39DFF"] { stroke: #B34BDD; }
+stop[stop-color="#E39DFF"] { stop-color: #EBE0F0; }
+:not(text)[fill="#E3C8FF"] { fill: #F0EAF6; }
+text[fill="#E3C8FF"] { fill: #4C1D7C; }
+[stroke="#E3C8FF"] { stroke: #934BDD; }
+stop[stop-color="#E3C8FF"] { stop-color: #E8E0F0; }
+:not(text)[fill="#E3F4FF"] { fill: #EAF1F6; }
+text[fill="#E3F4FF"] { fill: #1D577C; }
+[stroke="#E3F4FF"] { stroke: #4BA4DD; }
+stop[stop-color="#E3F4FF"] { stop-color: #E0EAF0; }
+:not(text)[fill="#E6E9FF"] { fill: #EAEBF6; }
+text[fill="#E6E9FF"] { fill: #1D287C; }
+[stroke="#E6E9FF"] { stroke: #4B5DDD; }
+stop[stop-color="#E6E9FF"] { stop-color: #E0E2F0; }
+:not(text)[fill="#ECE7FF"] { fill: #ECEAF6; }
+text[fill="#ECE7FF"] { fill: #311D7C; }
+[stroke="#ECE7FF"] { stroke: #694BDD; }
+stop[stop-color="#ECE7FF"] { stop-color: #E3E0F0; }
+:not(text)[fill="#EDDFFF"] { fill: #EFEAF6; }
+text[fill="#EDDFFF"] { fill: #471D7C; }
+[stroke="#EDDFFF"] { stroke: #8B4BDD; }
+stop[stop-color="#EDDFFF"] { stop-color: #E7E0F0; }
+:not(text)[fill="#F7F0FF"] { fill: #EFEAF6; }
+text[fill="#F7F0FF"] { fill: #491D7C; }
+[stroke="#F7F0FF"] { stroke: #8F4BDD; }
+stop[stop-color="#F7F0FF"] { stop-color: #E8E0F0; }
+:not(text)[fill="#FF7F9B"] { fill: #F6EAEC; }
+text[fill="#FF7F9B"] { fill: #7C1D32; }
+[stroke="#FF7F9B"] { stroke: #DD4B6B; }
+stop[stop-color="#FF7F9B"] { stop-color: #F0E0E4; }
+:not(text)[fill="#FFC56F"] { fill: #F6F1EA; }
+text[fill="#FFC56F"] { fill: #7C561D; }
+[stroke="#FFC56F"] { stroke: #DDA24B; }
+stop[stop-color="#FFC56F"] { stop-color: #F0EAE0; }
+:not(text)[fill="#FFFFFF"] { fill: #F9F3F3; }
+text[fill="#FFFFFF"] { fill: #912222; }
+[stroke="#FFFFFF"] { stroke: #DD4B4B; }
+stop[stop-color="#FFFFFF"] { stop-color: #F9F3F3; }
+#violet stop:nth-child(1) { stop-color: #8A63FF; }
+#violet stop:nth-child(2) { stop-color: #D279FF; }
+.capacity-violet[fill="#3A2B78"] { fill: #3A2B78; }
+.capacity-blue[fill="#185878"] { fill: #185878; }
+.capacity-teal[fill="#155D64"] { fill: #155D64; }
+.capacity-violet-lines rect { fill: #DCD7FF; }
+.capacity-blue-lines rect { fill: #B7F4FF; }
+.capacity-teal-lines rect { fill: #C2FFF0; }
+.spend-track[fill="#251D3D"] { fill: #251D3D; }
+</style>
+
+  <rect width="1200" height="675" rx="30" fill="#F1EDFA"/>
+  <text x="64" y="76" fill="#F7F0FF" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.5">RGCP · GPU COMPUTE BRIDGE</text>
+  <rect x="862" y="43" width="274" height="46" rx="23" fill="#273355" stroke="#82B6FF" stroke-opacity=".65"/>
+  <circle cx="890" cy="66" r="6" fill="#63E7BD"/>
+  <text x="999" y="72" text-anchor="middle" fill="#E3F4FF" font-family="Arial, sans-serif" font-size="18" font-weight="600">Self-service · temporary</text>
+
+  <rect x="64" y="128" width="1072" height="472" rx="25" fill="url(#screen)" stroke="#7C7DFF" stroke-opacity=".6" stroke-width="2"/>
+  <rect x="64" y="128" width="1072" height="58" rx="25" fill="#201D47"/>
+  <path d="M64 161V186H1136V161" fill="#201D47"/>
+  <circle cx="98" cy="157" r="7" fill="#FF7F9B"/>
+  <circle cx="123" cy="157" r="7" fill="#FFC56F"/>
+  <circle cx="148" cy="157" r="7" fill="#64E0B9"/>
+  <text x="191" y="165" fill="#ECE7FF" font-family="Arial, sans-serif" font-size="25" font-weight="700">Research compute portal</text>
+  <rect x="927" y="140" width="177" height="34" rx="17" fill="#155A5A"/>
+  <text x="951" y="164" fill="#BDFFF0" font-family="Arial, sans-serif" font-size="22" font-weight="700">BRIDGE MODE</text>
+
+  <text x="100" y="236" fill="#BEB6FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">RESEARCHER FLOW</text>
+  <g>
+    <rect x="100" y="260" width="205" height="88" rx="18" fill="#2A2859" stroke="#9A83FF" stroke-width="2"/>
+    <text x="132" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Request</text>
+    <path d="M312 304H352" stroke="#A89BFF" stroke-width="4"/>
+    <path d="m344 296 10 8-10 8" stroke="#A89BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="364" y="260" width="205" height="88" rx="18" fill="#174A64" stroke="#58D7EF" stroke-width="2"/>
+    <text x="394" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Provision</text>
+    <path d="M576 304H616" stroke="#6CDCE7" stroke-width="4"/>
+    <path d="m608 296 10 8-10 8" stroke="#6CDCE7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="628" y="260" width="205" height="88" rx="18" fill="#145B67" stroke="#62E6C6" stroke-width="2"/>
+    <text x="699" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Run</text>
+    <path d="M840 304H880" stroke="#75E9BE" stroke-width="4"/>
+    <path d="m872 296 10 8-10 8" stroke="#75E9BE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="892" y="260" width="205" height="88" rx="18" fill="#453357" stroke="#E39DFF" stroke-width="2"/>
+    <text x="929" y="314" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">Monitor</text>
+  </g>
+
+  <rect x="100" y="386" width="464" height="167" rx="20" fill="#18284C" stroke="#6E91FF" stroke-opacity=".85" stroke-width="2"/>
+  <text x="132" y="426" fill="#AFC4FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing=".9">GPU CAPACITY</text>
+  <rect class="capacity-violet" x="132" y="449" width="90" height="62" rx="12" fill="#3A2B78"/>
+  <rect class="capacity-blue" x="238" y="449" width="90" height="62" rx="12" fill="#185878"/>
+  <rect class="capacity-teal" x="344" y="449" width="90" height="62" rx="12" fill="#155D64"/>
+  <g class="capacity-violet-lines" fill="#DCD7FF"><rect x="150" y="462" width="54" height="5" rx="2"/><rect x="150" y="475" width="54" height="5" rx="2"/><rect x="150" y="488" width="54" height="5" rx="2"/></g>
+  <g class="capacity-blue-lines" fill="#B7F4FF"><rect x="256" y="462" width="54" height="5" rx="2"/><rect x="256" y="475" width="54" height="5" rx="2"/><rect x="256" y="488" width="54" height="5" rx="2"/></g>
+  <g class="capacity-teal-lines" fill="#C2FFF0"><rect x="362" y="462" width="54" height="5" rx="2"/><rect x="362" y="475" width="54" height="5" rx="2"/><rect x="362" y="488" width="54" height="5" rx="2"/></g>
+  <text x="132" y="537" fill="#E6E9FF" font-family="Arial, sans-serif" font-size="23">Provisioned when researchers need it</text>
+
+  <rect x="588" y="386" width="509" height="167" rx="20" fill="#362951" stroke="#BD87FF" stroke-opacity=".9" stroke-width="2"/>
+  <text x="622" y="426" fill="#E3C8FF" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing=".9">COST GUARDRAILS</text>
+  <text x="622" y="474" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="31" font-weight="700">Visibility + limits</text>
+  <rect class="spend-track" x="622" y="497" width="420" height="15" rx="7" fill="#251D3D"/>
+  <rect x="622" y="497" width="274" height="15" rx="7" fill="url(#violet)"/>
+  <text x="622" y="537" fill="#EDDFFF" font-family="Arial, sans-serif" font-size="23">Spend monitored before it runs away</text>
+
+</svg>

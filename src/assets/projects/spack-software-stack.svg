@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="78" y1="20" x2="1100" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11132D"/><stop offset=".55" stop-color="#17213B"/><stop offset="1" stop-color="#0A3443"/>
+    </linearGradient>
+    <linearGradient id="foundation" x1="105" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#482785"/><stop offset=".55" stop-color="#343D9B"/><stop offset="1" stop-color="#155D79"/>
+    </linearGradient>
+    <linearGradient id="apps" x1="105" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23518C"/><stop offset=".55" stop-color="#236F9A"/><stop offset="1" stop-color="#1D7D83"/>
+    </linearGradient>
+    <linearGradient id="user" x1="105" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B347E"/><stop offset=".55" stop-color="#654283"/><stop offset="1" stop-color="#795064"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="30" fill="url(#bg)"/>
+  <circle cx="1040" cy="105" r="210" fill="#4F66DD" opacity=".11"/>
+  <path d="M0 132H1200M0 572H1200" stroke="#B2C5FF" stroke-opacity=".13"/>
+  <text x="64" y="77" fill="#F2EFFF" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2.5">SPACK SOFTWARE ARCHITECTURE</text>
+  <rect x="890" y="43" width="246" height="46" rx="23" fill="#1D2C4C" stroke="#70C9EB" stroke-opacity=".65"/>
+  <text x="1013" y="72" text-anchor="middle" fill="#DDF7FF" font-family="Arial, sans-serif" font-size="18" font-weight="600">One stack · four platforms</text>
+
+  <rect x="64" y="161" width="1072" height="111" rx="21" fill="url(#foundation)" stroke="#C09AFF" stroke-opacity=".9" stroke-width="2"/>
+  <rect x="64" y="161" width="12" height="111" rx="6" fill="#DAA5FF"/>
+  <text x="103" y="207" fill="#F1DBFF" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">01 · FOUNDATION</text>
+  <text x="103" y="247" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="33" font-weight="700">Compilers · MPI · core libraries</text>
+  <rect x="829" y="188" width="270" height="52" rx="26" fill="#2B2454" stroke="#C2A1FF" stroke-opacity=".8"/>
+  <text x="870" y="222" fill="#F2E9FF" font-family="Arial, sans-serif" font-size="23" font-weight="700">ADMIN-MANAGED</text>
+
+  <path d="M600 272V299" stroke="#8BA4FF" stroke-width="4"/>
+  <path d="m591 291 9 11 9-11" stroke="#8BA4FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="64" y="307" width="1072" height="111" rx="21" fill="url(#apps)" stroke="#6EE1F2" stroke-opacity=".9" stroke-width="2"/>
+  <rect x="64" y="307" width="12" height="111" rx="6" fill="#62E1F2"/>
+  <text x="103" y="353" fill="#C9FAFF" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">02 · APPLICATION</text>
+  <text x="103" y="393" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="33" font-weight="700">Validated research software</text>
+  <rect x="829" y="334" width="270" height="52" rx="26" fill="#155966" stroke="#7DE7F2" stroke-opacity=".8"/>
+  <text x="850" y="368" fill="#E0FFFF" font-family="Arial, sans-serif" font-size="23" font-weight="700">CURATED + TESTED</text>
+
+  <path d="M600 418V445" stroke="#C38BFF" stroke-width="4"/>
+  <path d="m591 437 9 11 9-11" stroke="#C38BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="64" y="453" width="1072" height="111" rx="21" fill="url(#user)" stroke="#FFA4CB" stroke-opacity=".9" stroke-width="2"/>
+  <rect x="64" y="453" width="12" height="111" rx="6" fill="#FF9DCB"/>
+  <text x="103" y="499" fill="#FFD8E8" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">03 · USER</text>
+  <text x="103" y="539" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="33" font-weight="700">Researcher-built environments</text>
+  <rect x="829" y="480" width="270" height="52" rx="26" fill="#593D67" stroke="#FFADD0" stroke-opacity=".8"/>
+  <text x="872" y="514" fill="#FFE9F2" font-family="Arial, sans-serif" font-size="23" font-weight="700">USER-MANAGED</text>
+
+  <text x="64" y="622" fill="#D5E2FF" font-family="Arial, sans-serif" font-size="23" font-weight="600">Shared dependencies · reproducible builds · four different HPC platforms</text>
+  <text x="64" y="653" fill="#C8AFFF" font-family="Arial, sans-serif" font-size="23" font-weight="700">Spack standardizes the lifecycle from admins to researchers.</text>
+</svg>
