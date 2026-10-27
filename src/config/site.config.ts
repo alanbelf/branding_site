@@ -18,6 +18,10 @@ export interface SiteConfig {
   author: string;
   email: string;
   phone?: string;
+  twitter?: {
+    site?: string;
+    creator?: string;
+  };
   address?: {
     street: string;
     city: string;
