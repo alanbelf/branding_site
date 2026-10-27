@@ -20,10 +20,10 @@ placeholder: false
 ## The situation
 
 Research teams needed production HPC capacity on AWS for molecular
-dynamics, atmospheric chemistry, genomics pipelines, and Python-based
-data science. I independently designed and delivered a multi-user
-ParallelCluster v3 environment, with Slurm scheduling, shared scientific
-software, secure access, and project-level cost controls.
+dynamics, atmospheric chemistry, genomics, and Python-based data science.
+I designed and delivered a multi-user ParallelCluster v3 environment with
+Slurm scheduling, shared scientific software, controlled access, and
+project-level cost limits.
 
 ## Constraints
 
@@ -34,69 +34,53 @@ software, secure access, and project-level cost controls.
 
 ## Approach
 
-I built two purpose-specific Slurm queues: an EFA-enabled queue for MPI
-workloads and a high-memory queue for single-node jobs. Encrypted EFS
-provided shared home directories, with a 4.8 TB persistent FSx for
-Lustre filesystem for high-performance storage and local NVMe SSDs for
-scratch. I delivered the software environment through Spack, Conda,
-Apptainer, and Lmod, and published user documentation from onboarding
-through advanced usage.
+I configured two Slurm queues: one with EFA for MPI workloads and another
+with high-memory nodes for single-node jobs. Encrypted EFS provided shared
+home directories, while a 4.8 TB persistent FSx for Lustre filesystem
+provided high-performance storage and local NVMe SSDs served as scratch.
+The software environment used Spack, Conda, Apptainer, and Lmod. I also
+wrote user documentation covering onboarding and advanced use.
 
 I implemented a scheduled budget daemon that read Slurm accounting data
-and compared each project's month-to-date node-hours with its configured
-monthly budget. It costed usage by queue because AWS bills for nodes,
-not cores, then blocked further submissions when a project reached its
-budget. Submissions resumed automatically after a top-up, and the budget
-reset at the start of each month.
+and compared each project's month-to-date node-hours with its monthly
+budget. Since AWS bills for nodes rather than cores, the daemon calculated
+cost by queue. It blocked submissions when a project reached its limit,
+restored access after a top-up, and reset budgets each month.
 
-For access, IAM Identity Center controlled authentication and
-authorization, with SSH carried through an SSM tunnel and no public port
-22. AWS Simple AD separately resolved authenticated usernames to Linux
-identities and home directories. I also hardened the account with
-CloudTrail, VPC Flow Logs, AWS Config, GuardDuty, Security Hub, Inspector,
-IAM Access Analyzer, cost guardrails and an EC2 kill-switch SCP, plus a
-dedicated OU with region, IMDSv2, and instance-type service controls.
-As part of that work, I migrated shared home storage from unencrypted to
-encrypted EFS.
+IAM Identity Center handled authentication and authorization. Users
+connected over SSH through an SSM tunnel, with no public port 22. AWS
+Simple AD mapped authenticated usernames to Linux identities and home
+directories. I configured CloudTrail, VPC Flow Logs, AWS Config,
+GuardDuty, Security Hub, Inspector, IAM Access Analyzer, cost guardrails,
+an EC2 kill-switch SCP, and a dedicated OU with region, IMDSv2, and
+instance-type service controls. I also migrated shared home storage from
+unencrypted to encrypted EFS.
 
 ## Key decisions
 
-**Automated project budgets from Slurm accounting, instead of manual spend checks.**
-I costed node-hours per queue to match AWS billing, then had the daemon
-enforce each project's monthly budget by blocking submissions at the
-limit. Automatic unblocking after a top-up and monthly resets kept
-enforcement consistent without relying on someone to monitor usage.
+I used Slurm accounting to enforce project budgets automatically. The
+daemon priced node-hours by queue to match AWS billing, blocked submissions
+at the monthly limit, and restored access after a top-up.
 
-**Standardized the replacement queue on c7a.32xlarge, accepting standard ENA networking.**
-The lower-cost hpc6a and hpc7a options were unavailable in us-east-1.
-The less expensive hpc7g option used ARM and would have required
-migrating the scientific software stack; moving regions or building a
-multi-region VPC would have added substantial rework. I chose eight
-c7a.32xlarge nodes, available in-region, rather than take on that work
-for a platform nearing end-of-life. This meant MPI on that queue would
-use standard ENA rather than EFA, a trade-off acceptable for the user
-base's needs. Configuration was underway when the Azure successor was
-confirmed, so this queue never entered full production.
+The lower-cost hpc6a and hpc7a instance types were unavailable in
+us-east-1. The cheaper hpc7g option used ARM, which would have required
+migrating the scientific software stack. Moving regions or building a
+multi-region VPC would also have added substantial work. I chose eight
+c7a.32xlarge nodes available in-region, accepting standard ENA networking
+instead of EFA for MPI on this queue. That trade-off fit the users' needs
+and avoided a larger change for a platform nearing end of life. The Azure
+replacement was confirmed while configuration was underway, so the queue
+did not enter full production.
 
-**Separated IAM-gated machine access from Linux identity resolution.**
-IAM Identity Center and MFA controlled whether a user could reach the
-cluster; Simple AD resolved that username to the user's Linux identity.
-Keeping those responsibilities distinct provided controlled access
-without needing the two identity systems to synchronize. Tunneling SSH
-through SSM kept port 22 private while preserving interactive SSH
-features such as command history, file transfer, X11, and port
-forwarding.
-
-**Shaped Slurm queues and storage around the workload mix.**
-An EFA-enabled MPI queue and a high-memory single-node queue gave the
-different jobs an appropriate place to run. Pairing them with encrypted
-shared homes, persistent Lustre storage, and local NVMe provided the
-distinct storage roles these workloads required.
+I kept cluster access separate from Linux identity resolution. IAM Identity
+Center and MFA controlled access to the cluster; Simple AD mapped usernames
+to Linux identities. SSH over SSM kept port 22 private while retaining
+command history, file transfer, X11, and port forwarding.
 
 ## Outcome
 
 The AWS ParallelCluster platform restored production research computing
-capacity and provided scheduled access, a shared scientific software
-environment, user documentation, and automated project budget
-enforcement. It was later decommissioned after being succeeded by
+capacity with scheduled access, shared scientific software, user
+documentation, and automatic project budget enforcement. It was later
+decommissioned after being succeeded by
 [the Azure CycleCloud platform](/projects/acc).

@@ -17,51 +17,39 @@ imageAlt: "Diagram of the self-service GPU compute platform, showing workflow, c
 
 ## The situation
 
-A university research computing group needed continued access to GPU
-compute after its on-prem systems were taken offline. Researchers
-couldn't pause their work while a new on-prem system was procured and
-built out — a compute gap that could stretch for months had to be
-bridged with something usable almost immediately.
+A university research computing group needed GPU compute after its
+on-premises systems were taken offline. Researchers needed to keep working
+while replacement hardware was procured and built, a process that could
+take months.
 
 ## Constraints
 
-- No dedicated ops team — this had to be built and run by one person alongside other full-time responsibilities
-- Temporary by design — the platform needed to be easy to wind down once new hardware went live, not a permanent fixture
-- Cost had to stay predictable and visible — researchers are not infrastructure specialists and can easily overspend on cloud GPU time without guardrails
-- Users ranged from GPU beginners to advanced researchers, so onboarding had to work for both
+- There was no dedicated operations team; one person had to build and run the platform alongside other full-time responsibilities.
+- The platform was temporary and needed to be easy to wind down when the new hardware went live.
+- Researchers needed clear usage limits and cost visibility to manage cloud GPU spending.
+- Onboarding had to support both GPU beginners and experienced researchers.
 
 ## Approach
 
-I designed and stood up a self-service GPU cloud platform on
-HyperStack, giving researchers a way to provision compute themselves
-rather than filing tickets and waiting. On top of that, I built cost
-governance into the platform from day one — usage visibility and
-limits — so that self-service didn't turn into runaway spend. I also
-produced onboarding material covering both beginner and advanced
-usage scenarios, and ran live onboarding sessions to get users
-comfortable quickly.
+I built a self-service GPU cloud platform on HyperStack so researchers
+could provision compute without filing tickets. The platform included
+usage visibility and limits to help control spending. I wrote onboarding
+materials for beginner and advanced users and ran live sessions.
 
 ## Key decisions
 
-**Self-service provisioning instead of a ticket-based request queue.**
-A ticket queue doesn't scale with one person behind it, and it adds
-friction exactly when researchers need to move fast. Self-service
-removed me as a bottleneck, at the cost of needing stronger guardrails
-around spend.
+Self-service provisioning let researchers request compute without waiting
+for a one-person ticket queue. It also required usage limits to manage
+spending.
 
-**Cost governance built into the platform, not bolted on as reporting.**
-After-the-fact usage reports catch overspend too late to prevent it.
-Building limits and visibility into the platform itself meant problems
-were caught before they became a budget conversation.
+I included cost visibility and limits in the platform rather than relying
+on reports after the spending had occurred.
 
-**Treated as explicitly temporary, not over-built.**
-Over-engineering a bridge solution wastes effort that should go toward
-the permanent on-prem system. Scoping it as temporary kept the build
-lean and easy to decommission cleanly.
+I kept the platform scoped as a temporary bridge so it could be
+decommissioned when the replacement on-premises system was ready.
 
 ## Outcome
 
-Researchers kept working through the hardware transition without a
-compute gap. The platform is now being wound down in a controlled way
-as the new on-prem system approaches go-live, exactly as designed from
-the start.
+Researchers continued working during the hardware transition. The
+platform is now being wound down as the replacement on-premises system
+approaches go-live.

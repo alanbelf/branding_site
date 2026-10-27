@@ -35,43 +35,37 @@ manage their own environments.
 
 ## Approach
 
-I designed and deployed a three-layer software stack architecture using
-Spack. The **Foundation** layer contains administrator-managed compilers, MPI
-implementations, and core libraries. The **Application** layer provides
-administrator-curated, production-validated research applications. The
-**User** layer lets researchers build their own environments on top of the
-shared foundation.
+I designed and deployed a three-layer software stack with Spack. The
+Foundation layer contains administrator-managed compilers, MPI
+implementations, and core libraries. The Application layer provides research
+applications selected and validated by administrators. Researchers can use
+the User layer to build environments on top of the shared foundation.
 
-I built out a catalog spanning the Intel oneAPI toolchain, Python, PyTorch,
-TensorFlow, GROMACS, LAMMPS, CP2K, GATE, and core libraries including FFTW,
-OpenBLAS, HDF5, and NetCDF. This required resolving compatibility issues that
-varied by platform, including on the Cray XC40. I also created focused
-environments for geospatial processing with PDAL, GDAL, and rasterio, and for
-molecular dynamics with GROMACS, Intel MPI, and OpenMP.
+The catalog includes the Intel oneAPI toolchain, Python, PyTorch,
+TensorFlow, GROMACS, LAMMPS, CP2K, GATE, and core libraries such as FFTW,
+OpenBLAS, HDF5, and NetCDF. I resolved compatibility issues specific to each
+platform, including the Cray XC40. I also created environments for
+geospatial processing with PDAL, GDAL, and rasterio, and for molecular
+dynamics with GROMACS, Intel MPI, and OpenMP.
 
 ## Key decisions
 
-**Separate software into layers with distinct ownership.**
-The Foundation layer keeps core build dependencies under administrator
-management. The Application layer exposes curated software validated for
-production use. The User layer enables self-service builds while reusing the
-shared foundation rather than duplicating its dependencies.
+I separated software into layers with distinct ownership. Administrators
+manage core build dependencies in Foundation and curate the production
+applications in Application. Researchers can build their own environments in
+User while reusing the shared foundation.
 
-**Use Spack as the standard build and lifecycle platform.**
-Spack provided a common way to build and manage software across the four
-platforms, while leaving room to resolve each system's compatibility
-requirements.
+Spack is the common platform for building and managing software across all
+four systems. Platform-specific compatibility requirements are handled on
+each system.
 
-**Make support expectations part of the architecture.**
-I authored RCCG's software governance policy around three support tiers:
-system-wide, community-managed, and user-managed software. The policy sets
-expectations for each tier and standards for efficient, reproducible use of
-GPU and network resources, including containerized workflows.
+I wrote RCCG's software governance policy to define support for
+system-wide, community-managed, and user-managed software. It also sets
+standards for reproducible use of GPU and network resources, including
+containerized workflows.
 
 ## Outcome
 
-The three-layer Spack architecture is in production across four HPC platforms
-and supports a broad scientific software catalog alongside research-specific
-environments. It also formed the basis for RCCG's software governance policy,
-which establishes Spack as the standard build and lifecycle platform and
-defines software support expectations and resource-use standards.
+The three-layer Spack architecture is in production across four HPC platforms.
+It supports the scientific software catalog and research-specific
+environments, and provided the basis for RCCG's software governance policy.
