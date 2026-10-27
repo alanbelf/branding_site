@@ -71,10 +71,10 @@
     "heroBadge": "Selected work",
     "heroDescription": "Case studies in GPU infrastructure, cloud HPC, and scientific software.",
     "allProjects": "All projects",
-    "pageMetaTitle": "Projects — Page {page}",
+    "pageMetaTitle": "Projects, page {page}",
     "pageMetaDescription": "Page {page} of {total} of Alan Belferrag's case studies in GPU infrastructure, cloud HPC, and scientific software.",
     "pageBadge": "Page {page} of {total}",
-    "tagMetaTitle": "#{tag} — Projects",
+    "tagMetaTitle": "#{tag} | Projects",
     "tagMetaDescription": "Projects tagged \"{tag}\".",
     "tagBadge": "Tag",
     "tagCountOne": "{count} project tagged \"{tag}\".",
@@ -103,11 +103,11 @@
     "pageNotFoundMessage": "The page you're looking for doesn't exist or has moved.",
     "goHome": "Go to homepage",
     "metaTitle": "Page not found",
-    "metaDescription": "This page has moved, been removed, or never existed in the first place.",
-    "badge": "404 — page not found",
+    "metaDescription": "This page may have moved or been removed.",
+    "badge": "404: page not found",
     "titleLead": "Page not",
     "titleHighlight": "found.",
-    "description": "This page has moved, been removed, or never existed in the first place. Let's get you back on track.",
+    "description": "This page may have moved or been removed. Head back home or browse my projects.",
     "backHome": "Back to home",
     "browseProjects": "View projects",
     "tryInstead": "Try one of these instead",
@@ -117,13 +117,13 @@
   },
   "newsletter": {
     "heading": "Subscribe to the newsletter",
-    "description": "Get occasional updates in your inbox.",
+    "description": "Occasional updates, sent straight to your inbox.",
     "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "subscribing": "Subscribing…",
     "success": "Thanks for subscribing!",
     "genericError": "Something went wrong",
-    "notConfigured": "Not configured yet — set RESEND_API_KEY and RESEND_AUDIENCE_ID to switch this on. Only you can see this line.",
+    "notConfigured": "Not configured yet. Set RESEND_API_KEY and RESEND_AUDIENCE_ID to enable signups. Only you can see this line.",
     "unavailable": "Signups are not available right now.",
     "error": "Subscription failed. Please try again."
   },
@@ -137,7 +137,7 @@
     "sending": "Sending…",
     "success": "Message sent successfully!",
     "genericError": "Something went wrong",
-    "notConfigured": "Not configured yet — set RESEND_API_KEY to switch this on. Only you can see this line.",
+    "notConfigured": "Not configured yet. Set RESEND_API_KEY to enable the form. Only you can see this line.",
     "unavailable": "This form is not available right now.",
     "error": "Failed to send message. Please try again."
   },
@@ -158,7 +158,7 @@
     "inputLabel": "Search query",
     "resultsLabel": "Search results",
     "hint": "Start typing to search the site.",
-    "noResults": "No results for “{query}”",
+    "noResults": "No results for \"{query}\"",
     "unavailable": "The search index is generated at build time and isn’t available in <code class=\"rounded bg-secondary px-1.5 py-0.5 text-xs\">astro dev</code>.<br />Run <code class=\"rounded bg-secondary px-1.5 py-0.5 text-xs\">pnpm build &amp;&amp; pnpm preview</code> to try it locally."
   },
   "video": {
@@ -179,49 +179,49 @@
   "pages": {
     "about": {
       "meta": {
-        "title": "About Alan Belferrag — HPC & Cloud Infrastructure",
-        "description": "Alan Belferrag is an HPC and cloud infrastructure engineer working independently on GPU infrastructure and cloud HPC consulting."
+        "title": "About Alan Belferrag | HPC and Cloud Infrastructure",
+        "description": "I’m Alan Belferrag, an HPC and cloud infrastructure engineer. I consult independently on GPU infrastructure and cloud HPC."
       },
       "photoAlt": "Alan Belferrag",
       "hero": {
         "badge": "About",
-        "titleLead": "Alan Belferrag —",
+        "titleLead": "Alan Belferrag:",
         "typingWords": ["HPC Engineer", "Cloud Infrastructure", "Research Computing", "GPU Systems"],
         "typingWordsMobile": ["HPC Engineer", "Cloud Infrastructure", "GPU Systems"],
-        "description": "I’m Alan Belferrag, an HPC and cloud infrastructure engineer. I work as a Research Computing Specialist in university research computing and consult independently on GPU infrastructure and cloud HPC. My project work includes RGCP: A Self-Service GPU Compute Bridge and the design of ACC: A Production Azure HPC Platform."
+        "description": "I’m Alan Belferrag, an HPC and cloud infrastructure engineer and a Research Computing Specialist at a university. I also consult independently on GPU infrastructure and cloud HPC. My projects include RGCP, a self-service GPU compute bridge, and the design of ACC, an Azure HPC platform."
       },
       "whatYouGet": {
         "badge": "Case studies",
         "heading": "Selected infrastructure work",
-        "lead": "RGCP covers GPU infrastructure and cost governance. My ParallelCluster and ACC work covers AWS delivery and Azure HPC design, while Spack Stack focuses on scientific software governance across HPC systems. Each case study explains my role and the constraints behind the work."
+        "lead": "RGCP covers GPU infrastructure and cost governance. ParallelCluster and ACC cover AWS delivery and Azure HPC design. Spack Stack covers scientific software governance across HPC systems. Each case study outlines my role and the project's constraints."
       },
       "principles": {
         "badge": "How I approach infrastructure",
         "heading": "Design around the workload",
-        "lead": "I make infrastructure decisions around how a platform will be operated, the workloads it needs to run, and its cost limits.",
+        "lead": "I design platforms around how they’ll be operated, the workloads they’ll run, and their cost limits.",
         "items": [
-          { "icon": "users", "title": "Fit the operating model", "description": "Choose orchestration and automation with the size and capacity of the team operating the platform in mind." },
-          { "icon": "layers", "title": "Fit the workload mix", "description": "Account for both tightly coupled MPI jobs and memory-heavy single-node workloads when shaping the cluster and scheduler policy." },
-          { "icon": "scale", "title": "Plan for cost limits", "description": "Use capacity planning and visible usage controls rather than treating cloud compute as an unconstrained resource." }
+          { "icon": "users", "title": "Fit the operating model", "description": "Choose orchestration and automation that the team has the capacity to operate." },
+          { "icon": "layers", "title": "Fit the workload mix", "description": "Plan for tightly coupled MPI jobs and memory-heavy, single-node workloads when shaping the cluster and scheduler policy." },
+          { "icon": "scale", "title": "Plan for cost limits", "description": "Use capacity planning and visible usage controls to keep cloud compute within budget." }
         ]
       },
       "stack": {
         "badge": "Platforms and technologies",
         "title": "HPC and cloud infrastructure",
-        "description": "My project work has involved Azure CycleCloud, Slurm, MPI, Spack, Lmod, and HyperStack, as well as cloud cluster design for research workloads."
+        "description": "My project work includes Azure CycleCloud, Slurm, MPI, Spack, Lmod, HyperStack, and cloud cluster design for research workloads."
       },
       "faq": {
         "badge": "Working together",
         "heading": "Questions about my consulting work",
-        "lead": "A few practical details about the work and how I operate.",
+        "lead": "A few details about my services and how I work.",
         "cards": [
           {
             "icon": "rocket",
             "title": "GPU infrastructure",
             "items": [
-              { "question": "What does the GPU cost-reduction offer cover?", "answer": "I review GPU and model-serving spend, identify opportunities to reduce GPU or token costs, and help implement changes. The scope and savings baseline need to be agreed for each engagement." },
-              { "question": "Is there an upfront fee for that offer?", "answer": "No upfront fee for the GPU cost-reduction offer. Payment is due only after I have demonstrated real savings." },
-              { "question": "How do you establish savings?", "answer": "The method depends on the workloads and agreed scope. Before work starts, we agree on the cost baseline, comparison period, and how savings will be verified." },
+              { "question": "What does the GPU cost-reduction offer cover?", "answer": "I review GPU and model-serving costs, find ways to reduce GPU or token spend, and help put changes in place. We agree on the scope and savings baseline before each engagement." },
+              { "question": "Is there an upfront fee for this offer?", "answer": "There’s no upfront fee. You pay only after I demonstrate real savings." },
+              { "question": "How do you measure savings?", "answer": "Before work starts, we agree on the cost baseline, comparison period, and how to verify savings. The method depends on the workloads and scope." },
               { "question": "What GPU work have you done?", "answer": "The <a href=\"/projects/rgcp\" class=\"underline underline-offset-2 decoration-brand-500 hover:text-brand-400 transition-colors\">RGCP case study</a> describes a self-service GPU compute platform with cost governance." }
             ]
           },
@@ -230,9 +230,9 @@
             "title": "Cloud HPC and consulting",
             "items": [
               { "question": "What kind of cloud HPC work do you take on?", "answer": "Cluster and cloud-compute planning and design for research-oriented organizations, including Slurm-based environments on platforms such as AWS ParallelCluster or Azure CycleCloud." },
-              { "question": "What HPC work can I review?", "answer": "The <a href=\"/projects/acc\" class=\"underline underline-offset-2 decoration-brand-500 hover:text-brand-400 transition-colors\">ACC case study</a> describes my Azure HPC platform design work." },
+              { "question": "What HPC work have you done?", "answer": "The <a href=\"/projects/acc\" class=\"underline underline-offset-2 decoration-brand-500 hover:text-brand-400 transition-colors\">ACC case study</a> describes my Azure HPC platform design work." },
               { "question": "Who would I work with?", "answer": "I work independently and directly with clients. This consulting activity is separate from my day job in university research computing." },
-              { "question": "Where are you available to work?", "answer": "I’m prioritizing clients in Qatar and the GCC, and I’m open to remote clients beyond the region." }
+              { "question": "Where are you available to work?", "answer": "I’m based in Qatar and travel frequently in France/Europe. I’m also open to remote work with clients elsewhere." }
             ]
           }
         ]
@@ -240,45 +240,45 @@
       "openSource": {
         "badge": "Independent practice",
         "heading": "Work with me directly",
-        "description": "I work independently with clients. This is my personal consulting practice, not a separate company or team.",
+        "description": "I work directly with clients through my independent consulting practice.",
         "button": "Contact me",
         "cards": [
           { "title": "RGCP", "text": "A GPU compute bridge for a research group during a hardware transition, designed with self-service provisioning and cost governance." },
-          { "title": "ACC", "text": "An Azure HPC platform designed for a university research community, with implementation carried out by the university’s cloud infrastructure team from my specifications." },
+          { "title": "ACC", "text": "An Azure HPC platform I designed for a university research community. The university’s cloud infrastructure team implemented it from my specifications." },
           { "title": "Engagement scope", "text": "Project scope, responsibilities, and the way outcomes are measured should be agreed directly before work starts." }
         ]
       },
       "cta": {
         "badge": "Contact",
         "heading": "Discuss your infrastructure needs",
-        "description": "Share the workload and constraints you’re dealing with, and we can see where I can help.",
+        "description": "Tell me about your workload and constraints, and we can discuss where I can help.",
         "button": "Contact me"
       }
     },
     "services": {
       "meta": {
-        "title": "HPC and GPU Infrastructure Consulting — Alan Belferrag",
-        "description": "GPU infrastructure and demonstrated-savings cost reduction for AI teams, plus cloud HPC consulting for research and engineering organizations."
+        "title": "HPC and GPU infrastructure consulting | Alan Belferrag",
+        "description": "GPU infrastructure and cost reduction for AI teams, with payment tied to demonstrated savings. Cloud HPC consulting for research and engineering organizations."
       },
       "includedLabel": "What you get",
       "hero": {
         "badge": "Services",
         "titleLead": "GPU infrastructure,",
         "titleHighlight": "cloud HPC consulting",
-        "description": "I help AI teams address GPU and token spend, and help research and engineering organizations plan cloud HPC environments.",
+        "description": "I help AI teams reduce GPU and token costs, and help research and engineering organizations plan cloud HPC environments.",
         "jumpLabels": ["GPU cost reduction", "Cloud HPC", "Cost controls"]
       },
       "design": {
         "badge": "AI infrastructure",
         "heading": "GPU cost reduction for AI teams",
         "paragraphs": [
-          "As an AI workload grows, GPU capacity and model-serving costs can be hard to track. I review compute use, look for ways to reduce GPU and token spend, and help put changes in place.",
-          "There’s no upfront fee for this cost-reduction offer. Payment is due only after I demonstrate real savings. The RGCP case study covers my work on self-service GPU compute and cost governance."
+          "As AI workloads grow, GPU capacity and model-serving costs can be harder to track. I review compute use, find ways to reduce GPU and token spend, and help put changes in place.",
+          "There’s no upfront fee. You pay only after I demonstrate real savings. The RGCP case study covers my work on self-service GPU compute and cost governance."
         ],
         "included": [
           {
             "lead": "Review current spend",
-            "text": "examine GPU and model-serving usage and establish an agreed baseline."
+            "text": "review GPU and model-serving usage and agree on a cost baseline."
           },
           {
             "lead": "Find cost opportunities",
@@ -286,14 +286,14 @@
           },
           {
             "lead": "Implement and measure",
-            "text": "agree the comparison method, apply the changes, and assess the demonstrated savings."
+            "text": "agree on how to compare costs, apply the changes, and measure savings."
           },
           {
             "lead": "No upfront fee for this offer",
             "text": "payment is due only after I demonstrate real savings."
           },
           {
-            "lead": "Relevant proof",
+            "lead": "Case study",
             "text": "see RGCP for an example of GPU compute provisioning and cost governance."
           }
         ],
@@ -303,13 +303,13 @@
         "badge": "Research and engineering",
         "heading": "Cloud HPC consulting",
         "paragraphs": [
-          "I help research and engineering teams plan cloud-compute environments around their workloads, operating capacity, security requirements, and budget. This includes Slurm-based platforms using services such as AWS ParallelCluster or Azure CycleCloud.",
-          "The ACC case study covers my design for an Azure CycleCloud-managed Slurm platform, including scheduling policy, storage, identity, budget controls, and scientific software environments."
+          "I help research and engineering teams plan cloud compute around their workloads, operational capacity, security requirements, and budget. This includes Slurm platforms on AWS ParallelCluster or Azure CycleCloud.",
+          "The ACC case study covers my Azure CycleCloud-managed Slurm platform design, including scheduling, storage, identity, budget controls, and scientific software environments."
         ],
         "included": [
           {
             "lead": "Cluster architecture",
-            "text": "plan the cloud HPC platform and its operational model around the organization’s needs."
+            "text": "design the cloud HPC platform and operating model around the organization’s needs."
           },
           {
             "lead": "Scheduling and workload fit",
@@ -324,7 +324,7 @@
             "text": "account for institutional access, identity requirements, capacity limits, and cost controls."
           },
           {
-            "lead": "Relevant proof",
+            "lead": "Case study",
             "text": "see ACC for an example of Azure cloud HPC platform design."
           }
         ],
@@ -334,7 +334,7 @@
         "badge": "Capacity and spend",
         "heading": "Cost controls for compute platforms",
         "paragraphs": [
-          "Cloud platforms need clear usage limits and visibility to help prevent unplanned spend. I include capacity and cost controls in the infrastructure design instead of leaving them for a later reporting layer.",
+          "Clear usage limits and visibility help prevent unplanned cloud spend. I include capacity and cost controls in the infrastructure design.",
           "The right measures depend on the workload and operating model. RGCP and ACC show how usage limits, capacity planning, and scale-to-zero can work in different compute environments."
         ],
         "included": [
@@ -356,7 +356,7 @@
           },
           {
             "lead": "Measured cost reduction",
-            "text": "for the GPU cost-reduction offer, payment is due only after demonstrated savings."
+            "text": "for the GPU cost-reduction offer, you pay only after I demonstrate savings."
           }
         ],
         "ctaLabel": "Discuss cost controls"
@@ -364,7 +364,7 @@
       "process": {
         "badge": "How it works",
         "heading": "Start with the workload and constraints",
-        "lead": "We’ll define the workload, constraints, and scope, then agree on how to assess the work before it begins.",
+        "lead": "We’ll define the workload, constraints, and scope, then agree on how to assess the work.",
         "steps": [
           { "title": "Describe the workload", "description": "Tell me what you need to run, what compute environment you use now, and what you want to change." },
           { "title": "Set constraints", "description": "Clarify technical, operational, security, and cost constraints that shape the possible approach." },
@@ -375,14 +375,14 @@
       "faq": {
         "badge": "Questions",
         "heading": "Questions about the work",
-        "lead": "The details depend on the engagement. Here’s what to expect from each service.",
+        "lead": "Here are a few practical details about each service.",
         "cards": [
           {
             "icon": "tag",
             "title": "GPU cost reduction",
             "items": [
-              { "question": "Is there an upfront fee?", "answer": "No upfront fee for the GPU and token cost-reduction offer. Payment is due only after I demonstrate real savings." },
-              { "question": "How will savings be demonstrated?", "answer": "The method depends on the workloads and agreed scope. Before work starts, we agree on the cost baseline, comparison period, and how savings will be verified." },
+              { "question": "Is there an upfront fee?", "answer": "There’s no upfront fee. You pay only after I demonstrate real savings." },
+              { "question": "How do you measure savings?", "answer": "Before work starts, we agree on the cost baseline, comparison period, and how to verify savings. The method depends on the workloads and scope." },
               { "question": "What workloads are in scope?", "answer": "The offer focuses on GPU compute and model-serving costs. The specific workloads, access, and review scope need to be agreed for each engagement." }
             ]
           },
@@ -391,9 +391,9 @@
             "title": "Cloud HPC consulting",
             "items": [
               { "question": "What platforms do you work with?", "answer": "My consulting focus includes cloud HPC platforms such as AWS ParallelCluster and Azure CycleCloud. The right fit depends on the organization and workload." },
-              { "question": "What kinds of organizations do you work with?", "answer": "The offer is for research-oriented organizations and engineering teams with scientific or simulation workloads." },
-              { "question": "Are you a company or agency?", "answer": "No. This is my personal, independent consulting activity. I work directly with clients; it is separate from my university role." },
-              { "question": "Where are you available?", "answer": "I operate globally without local restrictions. Based in Qatar and frequently in France/Europe, I support clients seamlessly across the GCC, Europe, and worldwide through flexible remote and hybrid setups." }
+              { "question": "What kinds of organizations do you work with?", "answer": "I work with research organizations and engineering teams running scientific or simulation workloads." },
+              { "question": "Are you a company or agency?", "answer": "No. I work independently and directly with clients. My consulting is separate from my university role." },
+              { "question": "Where are you available?", "answer": "I’m based in Qatar and travel frequently in France/Europe. I’m also open to remote work with clients elsewhere." }
             ]
           }
         ]
@@ -401,7 +401,7 @@
       "cta": {
         "badge": "Contact",
         "heading": "Tell me about your infrastructure needs",
-        "description": "Share the workload and constraints you’re dealing with, and we can see where I can help.",
+        "description": "Tell me about your workload and constraints, and we can discuss where I can help.",
         "primary": "Contact me",
         "secondary": "About me"
       }
@@ -418,9 +418,9 @@
         "description": "Share what you’re running, your current setup, and the cost or capacity issue you want to address."
       },
       "formTitle": "Workload and infrastructure details",
-      "nextStep": "Describe the workload, your current setup, and the cost or capacity issue. I’ll read through it and get back to you about fit and possible next steps.",
+      "nextStep": "Describe your workload, current setup, and cost or capacity challenge. I’ll review it and get back to you about fit and next steps.",
       "channelsTitle": "Direct contact",
-      "channelsSubtitle": "Use the form or reach me through one of these channels.",
+      "channelsSubtitle": "Use the form or contact me through one of these channels.",
       "emailLabel": "Email",
       "emailNote": "Send me an email",
       "socialNote": "Connect with me",
@@ -428,38 +428,38 @@
     },
     "home": {
       "meta": {
-        "title": "Alan Belferrag — HPC & GPU Infrastructure Consulting",
-        "description": "GPU infrastructure and cost optimization for AI teams, plus cloud HPC consulting for research and engineering organizations. Based in Qatar and frequently in France/Europe, serving clients across the GCC, Europe, and globally."
+        "title": "Alan Belferrag | HPC and GPU infrastructure consulting",
+        "description": "GPU infrastructure and cost reduction for AI teams, plus cloud HPC consulting for research and engineering organizations. Based in Qatar and frequently in France and Europe, I work with clients across the GCC and beyond."
       },
       "hero": {
         "badge": "HPC & GPU infrastructure consulting",
         "titleLine1": "GPU Infrastructure",
         "titleLine2": "& Cloud HPC",
         "titleLine3": "Consulting",
-        "description": "I help AI teams set up GPU infrastructure and control compute and token costs. I also design cloud HPC environments for research and engineering workloads.",
-        "descriptionMobile": "I help AI teams set up GPU infrastructure and control compute and token costs. I also design cloud HPC for research and engineering workloads.",
+        "description": "I help AI teams set up GPU infrastructure and reduce compute and token costs. I also design cloud HPC environments for research and engineering workloads.",
+        "descriptionMobile": "I help AI teams set up GPU infrastructure and reduce compute and token costs. I also design cloud HPC for research and engineering workloads.",
         "primaryAction": "Get in touch",
         "secondaryAction": "See my work"
       },
       "services": {
         "badge": "Services",
         "heading": "GPU infrastructure and cloud HPC",
-        "lead": "I work with AI teams on GPU cost and infrastructure, and with research organizations on cloud HPC.",
+        "lead": "I help AI teams with GPU infrastructure and costs, and research organizations with cloud HPC.",
         "learnMore": "Learn more",
         "cards": [
-          { "icon": "server", "title": "GPU infrastructure for AI teams", "description": "I review GPU and model-serving spend, identify ways to reduce GPU and token costs, and help implement changes. For this cost-reduction offer, there is no upfront fee: payment is due only after I demonstrate real savings. RGCP shows my work on self-service GPU compute and cost governance." },
-          { "icon": "network", "title": "Cloud HPC for research and engineering", "description": "I help research-oriented organizations plan and set up cloud compute for scientific and engineering workloads, including Slurm clusters using platforms such as AWS ParallelCluster or Azure CycleCloud. ACC describes my design work for a production Azure HPC platform." }
+          { "icon": "server", "title": "GPU infrastructure for AI teams", "description": "I review GPU and model-serving costs, find ways to reduce GPU and token spend, and help put changes in place. There’s no upfront fee for this offer. You pay only after I demonstrate real savings. RGCP shows my work on self-service GPU compute and cost governance." },
+          { "icon": "network", "title": "Cloud HPC for research and engineering", "description": "I help research organizations plan cloud compute for scientific and engineering workloads, including Slurm clusters on AWS ParallelCluster or Azure CycleCloud. ACC describes my Azure HPC platform design work." }
         ]
       },
       "workWithMe": {
         "badge": "How I work",
-        "heading": "Direct work with an independent consultant",
+        "heading": "Work directly with me",
         "lead": "I work independently on GPU infrastructure and cloud HPC projects, directly with the people responsible for the workloads.",
         "cards": [
-          { "icon": "server", "title": "GPU infrastructure", "description": "GPU compute setup and cost review for AI workloads, with payment for the cost-reduction offer only after demonstrated savings." },
+          { "icon": "server", "title": "GPU infrastructure", "description": "GPU setup and cost reviews for AI workloads. You pay for the cost-reduction offer only after I demonstrate savings." },
           { "icon": "network", "title": "Cloud HPC", "description": "Cluster and cloud-compute design for research and engineering workloads." },
-          { "icon": "user", "title": "Independent consulting", "description": "This is my personal consulting work, separate from my university role. You work directly with me." },
-          { "icon": "globe", "title": "Global & Remote Availability", "description": "Based in Qatar and regularly in France/Europe, I partner with AI and HPC teams across the GCC, Europe, and worldwide with no location restrictions." }
+          { "icon": "user", "title": "Independent consulting", "description": "I work directly with clients, separately from my university role." },
+          { "icon": "globe", "title": "Remote work", "description": "I’m based in Qatar, regularly in France and Europe, and open to remote work with clients across the GCC and beyond." }
         ],
         "cta": "View services"
       },
@@ -472,12 +472,12 @@
       "aboutTeaser": {
         "badge": "About me",
         "headingLine1": "HPC and cloud",
-        "headingLine2": "infrastructure engineer.",
+        "headingLine2": "infrastructure engineer",
         "para1WithLocation": "I’m Alan Belferrag, an HPC and cloud infrastructure engineer. I work in university research computing and consult independently on GPU infrastructure and cloud HPC.",
         "para1NoLocation": "I’m Alan Belferrag, an HPC and cloud infrastructure engineer. I work in university research computing and consult independently on GPU infrastructure and cloud HPC.",
         "para2": "",
         "moreAboutMe": "More about me",
-        "statsIntro": "Areas I work in.",
+        "statsIntro": "Areas I work in",
         "stat1": "GPU infrastructure",
         "stat2": "Cloud HPC",
         "stat3": "Cost governance",
@@ -486,7 +486,7 @@
       "cta": {
         "badge": "Contact",
         "heading": "Tell me about your infrastructure needs",
-        "description": "Tell me what you’re working on, what it runs on, and where cost or capacity is getting in the way.",
+        "description": "Tell me what you’re working on, where it runs, and what cost or capacity challenges you’re facing.",
         "primary": "Contact me",
         "secondary": "About me"
       }
