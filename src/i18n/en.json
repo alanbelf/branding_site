@@ -393,7 +393,7 @@
               { "question": "What platforms do you work with?", "answer": "My consulting focus includes cloud HPC platforms such as AWS ParallelCluster and Azure CycleCloud. The right fit depends on the organization and workload." },
               { "question": "What kinds of organizations do you work with?", "answer": "The offer is for research-oriented organizations and engineering teams with scientific or simulation workloads." },
               { "question": "Are you a company or agency?", "answer": "No. This is my personal, independent consulting activity. I work directly with clients; it is separate from my university role." },
-              { "question": "Where are you available?", "answer": "I’m prioritizing clients in Qatar and the GCC, and I’m open to remote work beyond the region." }
+              { "question": "Where are you available?", "answer": "I operate globally without local restrictions. Based in Qatar and frequently in France/Europe, I support clients seamlessly across the GCC, Europe, and worldwide through flexible remote and hybrid setups." }
             ]
           }
         ]
@@ -429,7 +429,7 @@
     "home": {
       "meta": {
         "title": "Alan Belferrag — HPC & GPU Infrastructure Consulting",
-        "description": "GPU infrastructure and cost optimization for AI teams, plus cloud HPC consulting for research and engineering organizations. Prioritizing clients in Qatar/GCC and open to remote work."
+        "description": "GPU infrastructure and cost optimization for AI teams, plus cloud HPC consulting for research and engineering organizations. Based in Qatar and frequently in France/Europe, serving clients across the GCC, Europe, and globally."
       },
       "hero": {
         "badge": "HPC & GPU infrastructure consulting",
@@ -459,7 +459,7 @@
           { "icon": "server", "title": "GPU infrastructure", "description": "GPU compute setup and cost review for AI workloads, with payment for the cost-reduction offer only after demonstrated savings." },
           { "icon": "network", "title": "Cloud HPC", "description": "Cluster and cloud-compute design for research and engineering workloads." },
           { "icon": "user", "title": "Independent consulting", "description": "This is my personal consulting work, separate from my university role. You work directly with me." },
-          { "icon": "globe", "title": "Qatar/GCC and remote", "description": "I’m prioritizing clients in Qatar and the GCC, and I’m open to remote work beyond the region." }
+          { "icon": "globe", "title": "Global & Remote Availability", "description": "Based in Qatar and regularly in France/Europe, I partner with AI and HPC teams across the GCC, Europe, and worldwide with no location restrictions." }
         ],
         "cta": "View services"
       },
