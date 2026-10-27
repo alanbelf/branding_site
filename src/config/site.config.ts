@@ -184,7 +184,7 @@ const siteConfig: SiteConfig = {
   },
   authorImage: '/avatar.svg',
   effects: {
-    cursorTrail: true,
+    cursorTrail: false,
   },
   articleFeatures: {
     toc: {
