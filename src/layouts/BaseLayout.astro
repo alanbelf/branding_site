@@ -67,7 +67,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html lang={locale} class="scroll-smooth dark" data-theme="blue" data-theme-mode="system">
+<html lang={locale} class="scroll-smooth" data-theme="blue" data-theme-mode="system">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -141,7 +141,9 @@ const locale = getLocaleFromPath(Astro.url.pathname);
           el.setAttribute('data-theme-mode', mode);
           const isDark =
             mode === 'dark' ||
-            (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            (mode === 'system' &&
+              typeof window.matchMedia === 'function' &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
           if (isDark) el.classList.add('dark');
           else el.classList.remove('dark');
         }
@@ -247,12 +249,16 @@ const locale = getLocaleFromPath(Astro.url.pathname);
           window.__themeListenersInit = true;
 
           // Live-update when the OS flips colour scheme AND the user is on 'system'.
-          const mql = window.matchMedia('(prefers-color-scheme: dark)');
-          const onSchemeChange = function () {
-            if (getMode() === 'system') applyMode(document.documentElement);
-          };
-          if (mql.addEventListener) mql.addEventListener('change', onSchemeChange);
-          else if (mql.addListener) mql.addListener(onSchemeChange); // Safari < 14
+          if (typeof window.matchMedia === 'function') {
+            const mql = window.matchMedia('(prefers-color-scheme: dark)');
+            const onSchemeChange = function () {
+              if (document.documentElement.getAttribute('data-theme-mode') === 'system') {
+                applyMode(document.documentElement);
+              }
+            };
+            if (mql.addEventListener) mql.addEventListener('change', onSchemeChange);
+            else if (mql.addListener) mql.addListener(onSchemeChange); // Safari < 14
+          }
 
           // Re-apply across Astro view transitions (no flash on swap).
           document.addEventListener('astro:before-swap', function (e) {

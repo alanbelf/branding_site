@@ -145,7 +145,7 @@
     "selectColourTheme": "Select colour theme",
     "colourTheme": "Colour theme",
     "colourMode": "Colour mode",
-    "modeTrigger": "Theme: {mode}. Click to change.",
+    "modeTrigger": "Switch to {mode} mode.",
     "system": "System",
     "light": "Light",
     "dark": "Dark",
